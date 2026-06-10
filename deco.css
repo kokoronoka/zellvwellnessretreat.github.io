@@ -233,109 +233,148 @@ p {
    NAVIGATION — lives inside hero, becomes fixed on scroll
 ============================================================ */
 .navbar {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-
-.navbar.scrolled {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: padding 0.4s ease;
+}
+
+/* Logo — left */
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: var(--font-cinzel);
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: white;
+  transition: color 0.4s ease;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.4s ease;
+}
+
+/* Nav links — centred absolutely so logo and CTA stay flush */
+.nav-links {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover { color: white; }
+.nav-links a:hover::after { width: 100%; }
+
+/* CTA — right */
+.navbar-cta { flex-shrink: 0; }
+
+.btn-nav {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-nav:hover {
+  background: white;
+  color: var(--dark);
+  border-color: white;
+}
+
+/* Scrolled state */
+.navbar.scrolled {
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 48px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  transition: padding 0.5s ease;
-}
+.navbar.scrolled .navbar-container { padding: 16px 48px; }
 
-.navbar.scrolled .nav-container { padding: 20px 48px; }
+.navbar.scrolled .logo-text { color: var(--dark); }
+.navbar.scrolled .logo-sub  { color: rgba(0,0,0,0.4); }
 
-.nav-logo {
-  font-family: var(--font-cinzel);
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--white);
-  letter-spacing: 6px;
-  flex-shrink: 0;
-  margin-right: auto;
-  transition: color 0.5s ease;
-}
-
-.navbar.scrolled .nav-logo { color: var(--dark); }
-
-.nav-links {
-  display: none;
-  gap: 0;
-  list-style: none;
-}
-
-.nav-links a {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  margin-left: 40px;
-  display: inline-block;
-}
-
-.nav-links a:hover                  { color: var(--white); }
 .navbar.scrolled .nav-links a       { color: #6F6F6F; }
 .navbar.scrolled .nav-links a:hover { color: var(--dark); }
 
-/* Reserve Now CTA */
-.nav-cta {
-  display: none;
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 0;
-  padding: 12px 28px;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.nav-cta:hover {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-.navbar.scrolled .nav-cta {
+.navbar.scrolled .btn-nav {
   color: var(--dark);
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,0.3);
 }
 
-.navbar.scrolled .nav-cta:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+.navbar.scrolled .btn-nav:hover {
+  background: var(--dark);
+  color: white;
+  border-color: var(--dark);
 }
 
 /* Hamburger */
 .nav-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -343,7 +382,6 @@ p {
   border: none;
   cursor: pointer;
   padding: 6px;
-  margin-left: auto;
   flex-shrink: 0;
 }
 
@@ -352,11 +390,12 @@ p {
   width: 22px;
   height: 1px;
   background: var(--white);
-  transition: transform 0.3s ease, opacity 0.3s ease, background 0.5s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.4s ease;
 }
 
 .navbar.scrolled .nav-toggle span { background: var(--charcoal); }
 
+/* Mobile open menu */
 .nav-links.open {
   display: flex;
   flex-direction: column;
@@ -371,24 +410,28 @@ p {
   border-bottom: 1px solid rgba(0,0,0,0.08);
   gap: 0;
   z-index: 100;
+  transform: none;
 }
 
 .nav-links.open a {
   color: var(--charcoal);
-  margin-left: 0;
   padding: 10px 0;
   display: block;
 }
 
-@media (min-width: 768px) {
+.nav-links.open a::after { display: none; }
+
+@media (min-width: 769px) {
   .nav-links  { display: flex; }
-  .nav-cta    { display: inline-flex; align-items: center; }
   .nav-toggle { display: none; }
 }
 
 @media (max-width: 768px) {
-  .nav-container { padding: 20px 24px; }
-  .navbar.scrolled .nav-container { padding: 16px 24px; }
+  .navbar-container { padding: 20px 24px; }
+  .navbar.scrolled .navbar-container { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .navbar-cta { display: none; }
+  .nav-toggle { display: flex; }
 }
 
 
