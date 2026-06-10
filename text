@@ -1,0 +1,27 @@
+<div class="amenity-grid">
+
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrap" aria-hidden="true">🛏️</div>
+                    <h3 class="amenity-title">Comfortable Accommodation</h3>
+                    <p class="amenity-desc">Luxury suite designed for deep rest</p>
+                </div>
+
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrap" aria-hidden="true">🥗</div>
+                    <h3 class="amenity-title">Healthy Meals</h3>
+                    <p class="amenity-desc">Nutritionally balanced dining</p>
+                </div>
+
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrap" aria-hidden="true">🚗</div>
+                    <h3 class="amenity-title">Private Airport Transfer</h3>
+                    <p class="amenity-desc">Seamless door-to-door service</p>
+                </div>
+
+                <div class="amenity-card fade-in">
+                    <div class="amenity-icon-wrap" aria-hidden="true">🎧</div>
+                    <h3 class="amenity-title">Concierge Coordination</h3>
+                    <p class="amenity-desc">Personalized attention throughout</p>
+                </div>
+
+            </div>
