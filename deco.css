@@ -3226,9 +3226,12 @@ video.hero-video,
    IS THIS RETREAT FOR YOU?
 ============================================================ */
 .ideal-for {
-  background: var(--white);
-  color: var(--text-body);
-  border-top: 1px solid var(--warm-grey);
+  background-color: #0D1B2A;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  color: rgba(255,255,255,0.65);
+  position: relative;
+  overflow: hidden;
 }
 
 .ideal-for .section-container {
@@ -3245,11 +3248,13 @@ video.hero-video,
 
 .ideal-for .section-label { color: var(--gold); }
 
+.ideal-for .gold-rule { background: var(--gold); opacity: 0.6; }
+
 .ideal-heading {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 300;
-  color: var(--dark);
+  color: white;
   letter-spacing: 0.04em;
   text-align: center;
   line-height: 1.15;
@@ -3266,23 +3271,64 @@ video.hero-video,
 .ideal-card {
   flex: 0 0 calc(33.333% - 16px);
   max-width: calc(33.333% - 16px);
-  background: var(--white);
-  border: 1px solid var(--warm-grey);
-  border-radius: 0;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
   padding: 48px 36px;
-  transition: border-color 0.35s ease;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
 }
 
+.ideal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(200,169,81,0.08) 40%,
+    rgba(200,169,81,0.15) 50%,
+    rgba(200,169,81,0.08) 60%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ideal-card:hover::before { left: 100%; }
+
+.ideal-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ideal-card:hover::after { opacity: 1; }
+
 .ideal-card:hover {
-  border-color: var(--gold);
-  border-top: 2px solid var(--gold);
+  border-color: rgba(200,169,81,0.5);
+  background: rgba(200,169,81,0.06);
+  box-shadow: 0 0 0 1px rgba(200,169,81,0.2), 0 0 40px rgba(200,169,81,0.12);
+  transform: translateY(-4px);
 }
 
 .ideal-icon-wrap {
   width: 48px;
   height: 48px;
-  background: var(--ivory);
-  border: 1px solid var(--warm-grey);
+  background: rgba(200,169,81,0.12);
+  border: 1px solid rgba(200,169,81,0.25);
   border-radius: 0;
   display: flex;
   align-items: center;
@@ -3290,25 +3336,32 @@ video.hero-video,
   font-size: 1.2rem;
   line-height: 1;
   margin-bottom: 24px;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
 }
 
 .ideal-card-title {
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 400;
-  color: var(--dark);
+  color: var(--gold-light);
   letter-spacing: 0.04em;
   margin-bottom: 12px;
   line-height: 1.2;
+  position: relative;
+  z-index: 1;
 }
 
 .ideal-card-desc {
   font-family: var(--font-sans);
   font-size: 15px;
   font-weight: 300;
-  color: var(--text-body);
+  color: rgba(255,255,255,0.6);
   line-height: 1.75;
   max-width: none;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -3316,7 +3369,7 @@ video.hero-video,
 }
 
 @media (max-width: 767px) {
-  .ideal-card { flex: 0 0 100%; max-width: 100%; }
+  .ideal-card { flex: 0 0 100%; max-width: 100%; padding: 28px 20px; }
 }
 
 
