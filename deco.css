@@ -1771,9 +1771,159 @@ video.hero-video,
   .audience-headline-gold { font-size: clamp(22px, 5vw, 28px); }
 }
 
+/* ── MOBILE FIX ── */
 @media (max-width: 768px) {
-  .audience-bg-split { flex-direction: column; }
-  .audience-bg-col { width: 100%; height: 50%; }
+
+  .audience-section {
+    min-height: auto;
+    padding: 60px 0;
+    overflow: visible;
+  }
+
+  .audience-bg-split {
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .audience-bg-col {
+    width: 100%;
+    height: 50%;
+    min-height: 300px;
+  }
+
+  .audience-bg-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .audience-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 1;
+  }
+
+  .audience-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 16px;
+  }
+
+  .audience-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+
+  .audience-header .section-label {
+    color: var(--gold);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .audience-header h2 {
+    color: white;
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.2;
+  }
+
+  .audience-cards-row {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .audience-card {
+    width: 100%;
+    height: auto;
+    min-height: 480px;
+    border-radius: 12px;
+    flex: none;
+  }
+
+  .audience-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.4) 60%,
+      rgba(0,0,0,0.15) 100%
+    );
+  }
+
+  .audience-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px 20px 0 20px;
+  }
+
+  .audience-card .card-headline,
+  .audience-card h3,
+  .audience-card .card-title {
+    font-size: clamp(20px, 5vw, 26px);
+    line-height: 1.15;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .audience-card .card-headline em,
+  .audience-card .card-headline .italic-line {
+    font-size: clamp(18px, 4.5vw, 24px);
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .audience-card .card-symptoms,
+  .audience-card .card-symptoms li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .audience-card .card-italic,
+  .audience-card .card-question {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+  }
+
+  .audience-card-band {
+    margin: 16px -20px 0 -20px;
+    padding: 18px 20px 22px 20px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .audience-card-band .band-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .audience-card-band .band-badges {
+    font-size: 12px;
+    line-height: 1.7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+  }
+
+  .audience-card-band .band-tagline {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    padding-bottom: 2px;
+  }
+
   .audience-bg-col:first-child::after {
     top: auto;
     bottom: 0;
@@ -1783,22 +1933,35 @@ video.hero-video,
     background: linear-gradient(
       to right,
       transparent 0%,
-      rgba(200,169,81,0.5) 20%,
-      rgba(200,169,81,0.5) 80%,
+      rgba(200,169,81,0.4) 20%,
+      rgba(200,169,81,0.4) 80%,
       transparent 100%
     );
   }
-  .audience-cards-row {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 16px;
-  }
+
+}
+
+/* ── EXTRA SMALL MOBILE ── */
+@media (max-width: 480px) {
+
   .audience-card {
-    width: 100%;
-    height: 520px;
+    min-height: 440px;
   }
-  .audience-card-band { padding: 16px 20px 22px 20px; }
-  .audience-content { padding: 0 16px; }
+
+  .audience-card .card-headline,
+  .audience-card h3,
+  .audience-card .card-title {
+    font-size: 20px;
+  }
+
+  .audience-card-band .band-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-header h2 {
+    font-size: 26px;
+  }
+
 }
 
 /* ============================================================
