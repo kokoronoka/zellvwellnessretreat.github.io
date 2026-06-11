@@ -1561,7 +1561,7 @@ video.hero-video,
   flex: 1;
   width: 50%;
   min-width: 0;
-  height: 520px;
+  height: 560px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -1600,8 +1600,37 @@ video.hero-video,
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 32px 36px;
+  justify-content: space-between;
+  padding: 24px 28px 0 28px;
+}
+
+.card-logo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+}
+
+.card-logo-name {
+  font-family: var(--font-cinzel);
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: white;
+  line-height: 1;
+}
+
+.card-logo-sub {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+.card-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .audience-card-content .card-logo {
@@ -1632,8 +1661,8 @@ video.hero-video,
 
 .audience-card-band {
   background: linear-gradient(135deg, rgba(200,169,81,0.92), rgba(168,115,42,0.92));
-  margin: 0 -36px -32px;
-  padding: 20px 36px;
+  margin: 0 -28px 0;
+  padding: 20px 28px;
 }
 
 .audience-card-band .band-title {
@@ -1655,7 +1684,7 @@ video.hero-video,
 }
 
 @media (max-width: 1024px) {
-  .audience-card { height: 460px; }
+  .audience-card { height: 500px; }
 }
 
 @media (max-width: 768px) {
@@ -1682,7 +1711,7 @@ video.hero-video,
   }
   .audience-card {
     width: 100%;
-    height: 440px;
+    height: 460px;
   }
   .audience-content { padding: 0 16px; }
 }
@@ -3610,23 +3639,32 @@ video.hero-video,
 }
 
 .locations-image-placeholder {
-  width: 100%;
-  height: 300px;
-  background: var(--cream);
-  border: 1px solid var(--warm-grey);
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-  font-style: italic;
-  font-size: 13px;
-  margin-bottom: 72px;
+  display: none;
 }
 
-@media (max-width: 767px) {
-  .locations-image-placeholder { height: 180px; margin-bottom: 48px; }
+.locations-hero-img {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 480px;
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+
+.locations-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .locations-hero-img {
+    height: 280px;
+    margin-bottom: 40px;
+  }
 }
 
 .locations-header { text-align: center; margin-bottom: 72px; }
