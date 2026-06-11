@@ -2,11 +2,27 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N5D4L9N5');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZÉLL-V Wellness Retreat — 3 Days 2 Nights, Kuala Lumpur</title>
     <meta name="description"
         content="A guided recovery experience combining advanced wellness assessment, cellular wellness treatments, and warm Malaysian hospitality. All-inclusive from RM 7,500.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6Y8P6H242"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G6Y8P6H242');
+    </script>
 
     <!-- Google Fonts: Instrument Serif | Inter | Cinzel | Cormorant Garamond | DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +35,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5D4L9N5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- ========================================
        SECTION: HERO (nav lives inside so it overlays video)
@@ -65,8 +85,8 @@
                 </div>
 
                 <!-- Mobile hamburger -->
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu"
-                    aria-expanded="false" aria-controls="nav-links">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="nav-links">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -131,42 +151,55 @@
     <!-- ========================================
        SECTION: THE ZÉLL-V DIFFERENCE (Comparison)
   ======================================== -->
-    <section class="zv-difference" id="difference" aria-labelledby="difference-heading">
-        <div class="zv-diff-container">
+    <section class="comparison-section" id="why" aria-labelledby="comparison-heading">
 
-            <p class="section-label section-label--light fade-in">WHY WE'RE DIFFERENT</p>
-            <h2 class="zv-diff-heading fade-in" id="difference-heading">Not a Vacation. A Transformation.</h2>
-            <p class="zv-diff-subtext fade-in">Most retreats treat the symptom. We treat the source.</p>
+        <!-- Full section background split -->
+        <div class="comparison-bg-split">
+            <div class="comparison-bg-left" id="comparison-bg-left">
+                <!-- Replace with tree image:
+                <img src="assets/images/comparison.png"> -->
+                <img src="assets/images/comparison.png" alt="Tree of transformation">
+            </div>
+        </div>
 
-            <div class="zv-diff-grid">
+        <!-- Dark overlay -->
+        <div class="comparison-overlay"></div>
 
-                <!-- ZÉLL-V card — appears first on mobile, right column on desktop -->
-                <div class="diff-card diff-card--zelv fade-in" aria-label="The ZÉLL-V Approach">
-                    <span class="diff-card-badge diff-card-badge--gold">ZÉLL-V Method</span>
-                    <h3 class="diff-card-heading diff-card-heading--dark">The ZÉLL-V Approach</h3>
+        <!-- Content layer -->
+        <div class="comparison-content">
 
-                    <ul class="diff-list" aria-label="ZÉLL-V inclusions">
-                        <!-- Group 1: Assessment -->
-                        <li class="diff-list-item diff-list-item--check">Comprehensive blood analysis</li>
-                        <li class="diff-list-item diff-list-item--check">Bio Resonance Scan</li>
-                        <li class="diff-list-item diff-list-item--check">Body composition insight</li>
-                        <!-- Gold divider between groups -->
-                        <li class="diff-list-divider" aria-hidden="true"></li>
-                        <!-- Group 2: Programme -->
-                        <li class="diff-list-item diff-list-item--check">Personalized nutrition plan</li>
-                        <li class="diff-list-item diff-list-item--check">Doctor consultation</li>
-                        <li class="diff-list-item diff-list-item--check">Lasting body awareness</li>
-                    </ul>
+            <div class="comparison-header">
+                <span class="section-label">WHY WE'RE DIFFERENT</span>
+                <h2 id="comparison-heading">Not a Vacation. A Transformation.</h2>
+                <p class="comparison-sub">Most retreats treat the symptom. We treat the source.</p>
+            </div>
 
-                    <div class="diff-callout diff-callout--gold">
-                        <p class="diff-callout-heading">The ZÉLL-V Difference:</p>
-                        <p class="diff-callout-body">We don't guess; we measure. By combining medical science with
-                            luxury wellness, we <strong class="diff-callout-highlight">find the root cause of your
-                                fatigue or stress in 3 days,</strong> and give you the tools (and supplements) to keep
-                            it away permanently.</p>
+            <div class="comparison-cards">
+
+                <!-- LEFT CARD: Conventional -->
+                <div class="comparison-card card-left fade-in">
+                    <div class="card-badge badge-grey">Conventional</div>
+                    <h3 class="card-title-left">Typical Wellness Retreat</h3>
+                    <div class="card-callout callout-red">
+                        <p class="callout-heading">The Problem with Typical Retreats:</p>
+                        <p>They give you a "vacation high." You drink green juice and get a massage, but 48 hours after
+                            returning home to work, your stress, bloating, and fatigue come right back — because the
+                            root cause was never found.</p>
                     </div>
+                </div>
 
-                    <ul class="diff-bullets" aria-label="ZÉLL-V highlights">
+                <!-- RIGHT CARD: ZÉLL-V -->
+                <div class="comparison-card card-right fade-in">
+                    <div class="card-badge badge-gold">ZÉLL-V Method</div>
+                    <h3 class="card-title-right">The ZÉLL-V Approach</h3>
+                    <div class="card-callout callout-gold">
+                        <p class="callout-heading">The ZÉLL-V Difference:</p>
+                        <p>We don't guess; we measure. By combining medical science with luxury wellness, we
+                            <strong>find the root cause of your fatigue or stress in 3 days,</strong> and give you the
+                            tools (and supplements) to keep it away permanently.
+                        </p>
+                    </div>
+                    <ul class="card-bullets">
                         <li>Heal from Within, Root Cause Retreat</li>
                         <li>Comprehensive Medical Assessment</li>
                         <li>Doctor &amp; Nutritionist Consultation</li>
@@ -175,30 +208,9 @@
                     </ul>
                 </div>
 
-                <!-- Conventional card — appears second on mobile, left column on desktop -->
-                <div class="diff-card diff-card--conventional fade-in" aria-label="Typical Wellness Retreat">
-                    <span class="diff-card-badge diff-card-badge--grey">Conventional</span>
-                    <h3 class="diff-card-heading diff-card-heading--muted">Typical Wellness Retreat</h3>
-
-                    <ul class="diff-list" aria-label="Typical retreat limitations">
-                        <li class="diff-list-item diff-list-item--cross">Spa &amp; massage only</li>
-                        <li class="diff-list-item diff-list-item--cross">Detox drinks</li>
-                        <li class="diff-list-item diff-list-item--cross">Yoga sessions</li>
-                        <li class="diff-list-item diff-list-item--cross">Generic relaxation</li>
-                        <li class="diff-list-item diff-list-item--cross">No health assessment</li>
-                        <li class="diff-list-item diff-list-item--cross">Temporary relief</li>
-                    </ul>
-
-                    <div class="diff-callout diff-callout--red">
-                        <p class="diff-callout-heading">The Problem with Typical Retreats:</p>
-                        <p class="diff-callout-body">They give you a "vacation high." You drink green juice and get a
-                            massage, but 48 hours after returning home to work, your stress, bloating, and fatigue come
-                            right back — because the root cause was never found.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
+
     </section>
 
     <!-- ========================================
@@ -206,7 +218,7 @@
   ======================================== -->
     <section class="audience-section" id="audience" aria-labelledby="audience-heading">
 
-        <!-- Three-way split background layer -->
+        <!-- Two-way split background layer -->
         <div class="audience-bg-split">
             <div class="audience-bg-col" id="audience-bg-1">
                 <!-- Replace with:
@@ -219,12 +231,6 @@
                 <img src="assets/images/audience-women.jpg"
                      alt="Women's Rejuvenation"> -->
                 <img src="assets/images/audience-women.jpeg" alt="Women's Rejuvenation">
-            </div>
-            <div class="audience-bg-col" id="audience-bg-3">
-                <!-- Replace with:
-                <img src="assets/images/audience-wellness.jpg"
-                     alt="Cellular Wellness"> -->
-                <img src="assets/images/audience-wellness.jpeg" alt="Cellular Wellness">
             </div>
         </div>
 
@@ -335,58 +341,6 @@
                                 <li class="band-badge">✦ Embrace Your Feminine Vitality</li>
                             </ul>
                             <p class="band-tagline">RENEW YOUR ENERGY. RECLAIM YOUR GLOW.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3: Cellular Wellness (General) -->
-                <article class="audience-card fade-in" aria-label="Cellular Wellness Retreat">
-                    <div class="audience-card-bg" aria-hidden="true">
-                        <!-- Replace this div background with:
-                        <img src="assets/images/card-wellness.jpg"
-                             alt="Cellular Wellness"> -->
-                    </div>
-                    <div class="audience-card-overlay" aria-hidden="true"></div>
-
-                    <div class="audience-card-content">
-                        <div class="audience-card-top">
-                            <div class="audience-card-brand">
-                                <span class="audience-brand-logo">ZÉLL-V</span>
-                                <span class="audience-brand-sub">CELLULAR THERAPY</span>
-                            </div>
-
-                            <h3 class="audience-card-headline">
-                                <span class="audience-headline-white">WHEN DID THIS BECOME</span>
-                                <span class="audience-headline-gold">NORMAL?</span>
-                            </h3>
-
-                            <div class="audience-compare-grid" aria-label="Problems vs results comparison">
-                                <div class="audience-compare-col">
-                                    <p class="compare-item compare-item--cross">Feeling tired every day</p>
-                                    <p class="compare-item compare-item--cross">Losing motivation</p>
-                                    <p class="compare-item compare-item--cross">Poor recovery</p>
-                                    <p class="compare-item compare-item--cross">Declining performance</p>
-                                    <p class="compare-item compare-item--cross">Weight gain</p>
-                                    <p class="compare-item compare-item--cross">Low confidence</p>
-                                </div>
-                                <div class="audience-compare-col">
-                                    <p class="compare-item compare-item--check">High energy</p>
-                                    <p class="compare-item compare-item--check">Strong drive</p>
-                                    <p class="compare-item compare-item--check">Fast recovery</p>
-                                    <p class="compare-item compare-item--check">Peak performance</p>
-                                    <p class="compare-item compare-item--check">Lean &amp; healthy</p>
-                                    <p class="compare-item compare-item--check">Unshakable confidence</p>
-                                </div>
-                            </div>
-
-                            <p class="audience-italic-line audience-italic-line--gold">It doesn't have to be.</p>
-                            <p class="audience-headline-white audience-headline-white--small">DISCOVER THE NEW ERA OF
-                                CELLULAR WELLNESS</p>
-                        </div>
-
-                        <div class="audience-card-band">
-                            <p class="band-duration">3 DAYS 2 NIGHTS TRANSFORMATION EXPERIENCE</p>
-                            <a href="#pricing" class="band-cta-btn">RESERVE YOUR SPOT TODAY &rarr;</a>
                         </div>
                     </div>
                 </article>
@@ -519,7 +473,7 @@
                             <!-- Replace with:
                 <img src="assets/images/assessment.jpg"
                      alt="Assessment"> -->
-                            <img src="assets/images/assessment.png" alt="Assessment">
+                            <img src="assets/images/assessment.webp" alt="Assessment">
                         </div>
                     </div>
                 </div>
@@ -780,105 +734,185 @@
     </section>
 
     <!-- ========================================
-       SECTION C: ANTI-AGING & AESTHETIC SERVICES
+       SECTION C: WHAT'S INCLUDED — Full-width image rows
   ======================================== -->
-    <section class="aesthetic-services" id="services" aria-labelledby="services-heading">
-        <div class="services-container">
+    <section class="included-section" id="services" aria-labelledby="services-heading">
 
-            <p class="section-label fade-in">WHAT'S INCLUDED IN YOUR RETREAT</p>
-            <h2 class="services-heading fade-in" id="services-heading">Everything Your Body Has Been Waiting For</h2>
-            <div class="services-underline fade-in" aria-hidden="true"></div>
-
-            <ul class="services-list" role="list">
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🔬</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Predictive Health Intelligence</p>
-                        <p class="service-body">Understand your health at a deeper level through advanced assessments
-                            that reveal your current status, hidden risks, and future health tendencies. By analyzing at
-                            the cellular level, we detect early signs of stress and inflammation, shifting you from
-                            reactive care to preventive wellness.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🌿</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Cellular Detoxification &amp; Reset</p>
-                        <p class="service-body">Clear what your body no longer needs. Our protocols support natural
-                            cellular detox pathways, reduce internal toxic load, and create an optimal internal
-                            environment for regeneration. A true biological reset — not a superficial cleanse.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">⚡</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Boosting to a New Biological High</p>
-                        <p class="service-body">Activate your body's full potential. This phase enhances energy
-                            production, metabolic performance, and overall physiological efficiency, helping your body
-                            function beyond its normal baseline.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">✨</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Cellular Rejuvenation</p>
-                        <p class="service-body">Physician-guided regenerative therapies using cellular therapy that
-                            support energy, recovery, healthy aging, and tissue repair at the cellular level, helping
-                            your body restore and function more optimally from within.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🌍</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Global Medical Excellence</p>
-                        <p class="service-body">Guided by longevity and cellular therapy experts from Germany,
-                            Switzerland, and France, ensuring international standards of science-based, high-quality
-                            medical care.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🏨</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Luxury Wellness Experience</p>
-                        <p class="service-body">Premium accommodation, restorative spa therapies, seamless transport,
-                            and personalized hospitality in a private, curated wellness environment.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🥗</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Nutrition for Longevity</p>
-                        <p class="service-body">Personalized wellness meals designed by in-house nutritionists to
-                            support metabolic health, cellular function, and long-term vitality based on your individual
-                            needs.</p>
-                    </div>
-                </li>
-
-                <li class="service-row fade-in">
-                    <div class="service-icon-wrap" aria-hidden="true"><span class="service-icon">🎯</span></div>
-                    <div class="service-text">
-                        <p class="service-name">Wellness Beyond Your Stay</p>
-                        <p class="service-body">Leave with a personalized health roadmap and targeted supplements to
-                            sustain and continue your transformation beyond the retreat.</p>
-                    </div>
-                </li>
-
-            </ul>
-
-            <blockquote class="services-quote fade-in">
-                <p class="services-quote-text">This is not a checklist of treatments. It is a carefully sequenced
-                    programme where every element works together — so you leave not just rested, but genuinely
-                    transformed.</p>
-            </blockquote>
-
+      <!-- Section header — outside the rows -->
+      <div class="included-header-wrap">
+        <div class="included-header">
+          <span class="section-label">WHAT'S INCLUDED IN YOUR RETREAT</span>
+          <h2 id="services-heading">Everything Your Body Has Been Waiting For</h2>
+          <div class="gold-rule"></div>
         </div>
+      </div>
+
+      <!-- Full width rows — no container restriction -->
+      <div class="included-rows-full">
+
+        <!-- ROW 1 -->
+        <div class="included-row-full">
+          <div class="row-bg" id="row-bg-1">
+            <!-- Replace with:
+            <img src="assets/images/service-health.jpg" alt="Predictive Health Intelligence"> -->
+            <img src="assets/images/doctor.png" alt="Predictive Health Intelligence">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">01</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">🔬</div>
+                <h3>Predictive Health Intelligence</h3>
+                <p>Understand your health at a deeper level through advanced assessments that reveal your
+                  current status, hidden risks, and future health tendencies. By analyzing at the cellular level,
+                  we detect early signs of stress and inflammation, shifting you from reactive care to
+                  preventive wellness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="included-row-full row-reverse">
+          <div class="row-bg" id="row-bg-2">
+            <!-- Replace with:
+            <img src="assets/images/service-detox.jpg" alt="Cellular Detoxification"> -->
+            <img src="assets/images/service-detox.png" alt="Cellular Detoxification">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">02</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">🌿</div>
+                <h3>Cellular Detoxification &amp; Reset</h3>
+                <p>Clear what your body no longer needs. Our protocols support natural cellular detox pathways,
+                  reduce internal toxic load, and create an optimal internal environment for regeneration.
+                  A true biological reset — not a superficial cleanse.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="included-row-full">
+          <div class="row-bg" id="row-bg-3">
+            <!-- Replace with:
+            <img src="assets/images/service-boost.jpg" alt="Boosting"> -->
+            <img src="assets/images/service-boost.png" alt="Boosting">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">03</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">⚡</div>
+                <h3>Boosting to a New Biological High</h3>
+                <p>Activate your body's full potential. This phase enhances energy production, metabolic
+                  performance, and overall physiological efficiency, helping your body function beyond its
+                  normal baseline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="included-row-full row-reverse">
+          <div class="row-bg" id="row-bg-4">
+            <!-- Replace with:
+            <img src="assets/images/service-rejuvenate.jpg" alt="Cellular Rejuvenation"> -->
+            <img src="assets/images/service-rejuvenate.png" alt="Cellular Rejuvenation">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">04</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">✨</div>
+                <h3>Cellular Rejuvenation</h3>
+                <p>Physician-guided regenerative therapies using cellular therapy that support energy, recovery,
+                  healthy aging, and tissue repair at the cellular level, helping your body restore and function
+                  more optimally from within.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ROW 6 -->
+        <div class="included-row-full row-reverse">
+          <div class="row-bg" id="row-bg-6">
+            <!-- Replace with:
+            <img src="assets/images/service-luxury.jpg" alt="Luxury Wellness"> -->
+            <img src="assets/images/service-luxury.png" alt="Luxury Wellness">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">05</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">🏨</div>
+                <h3>Luxury Wellness Experience</h3>
+                <p>Premium accommodation, restorative spa therapies, seamless transport, and personalized
+                  hospitality in a private, curated wellness environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 7 -->
+        <div class="included-row-full">
+          <div class="row-bg" id="row-bg-7">
+            <!-- Replace with:
+            <img src="assets/images/service-nutrition.jpg" alt="Nutrition for Longevity"> -->
+            <img src="assets/images/service-nutrition.png" alt="Nutrition for Longevity">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">07</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">🥗</div>
+                <h3>Nutrition for Longevity</h3>
+                <p>Personalized wellness meals designed by in-house nutritionists to support metabolic health,
+                  cellular function, and long-term vitality based on your individual needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 8 -->
+        <div class="included-row-full row-reverse">
+          <div class="row-bg" id="row-bg-8">
+            <!-- Replace with:
+            <img src="assets/images/service-beyond.jpg" alt="Wellness Beyond Your Stay"> -->
+            <img src="assets/images/service-beyond.png" alt="Wellness Beyond Your Stay">
+          </div>
+          <div class="row-overlay"></div>
+          <div class="row-content-wrap">
+            <div class="row-content">
+              <div class="row-number">08</div>
+              <div class="row-body">
+                <div class="row-icon-wrap">🎯</div>
+                <h3>Wellness Beyond Your Stay</h3>
+                <p>Leave with a personalized health roadmap and targeted supplements to sustain and continue
+                  your transformation beyond the retreat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom quote -->
+      <div class="included-quote-wrap">
+        <div class="included-quote">
+          <p>"This is not a checklist of treatments. It is a carefully sequenced programme where every element
+            works together — so you leave not just rested, but genuinely transformed."</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- ========================================
@@ -1030,8 +1064,8 @@
 
                 <p class="section-label section-label--light fade-in">REAL PEOPLE. REAL EXPERIENCES.</p>
                 <h2 class="ba-heading fade-in" id="ba-heading">
-                    <span class="ba-line-1">Result-Proven</span>
-                    <span class="ba-line-2">Wellness Experience</span>
+                    <span class="ba-line-1">3 DAYS 2 NIGHTS</span>
+                    <span class="ba-line-2">TRANSFORMATION EXPERIENCE</span>
                 </h2>
 
                 <div class="ba-cards" aria-label="Before and after comparison">
@@ -1048,11 +1082,12 @@
                             <div class="ba-corner-accent" aria-hidden="true"></div>
                             <p class="ba-card-label ba-card-label--before">BEFORE</p>
                             <ul class="ba-list ba-list--before">
-                                <li>Burnt out</li>
-                                <li>Fatigued</li>
-                                <li>Mentally overwhelmed</li>
-                                <li>Physically drained</li>
-                                <li>Disconnected</li>
+                                <li>Feeling tired every day</li>
+                                <li>Losing motivation</li>
+                                <li>Poor recovery</li>
+                                <li>Declining performance</li>
+                                <li>Weight gain</li>
+                                <li>Low confidence</li>
                             </ul>
                         </div>
                     </div>
@@ -1071,11 +1106,12 @@
                         <div class="results-card-content">
                             <p class="ba-card-label ba-card-label--after">AFTER</p>
                             <ul class="ba-list ba-list--after">
-                                <li>Better energy</li>
-                                <li>Improved sleep</li>
-                                <li>Feeling lighter &amp; clearer</li>
-                                <li>Better emotional state</li>
-                                <li>Increased body awareness</li>
+                                <li>High energy</li>
+                                <li>Strong drive</li>
+                                <li>Fast recovery</li>
+                                <li>Peak performance</li>
+                                <li>Lean & healthy</li>
+                                <li>Unshakable confidence</li>
                             </ul>
                         </div>
                     </div>
@@ -1092,52 +1128,6 @@
 
             </div>
         </div><!-- /.results-content -->
-    </section>
-
-    <!-- ========================================
-       SECTION: IS THIS RETREAT FOR YOU?
-  ======================================== -->
-    <section class="ideal-for" id="ideal-for" aria-labelledby="ideal-heading">
-        <div class="section-container">
-
-            <p class="section-label fade-in">IDEAL FOR</p>
-            <h2 class="ideal-heading fade-in" id="ideal-heading">Is This Retreat For You?</h2>
-
-            <div class="ideal-grid">
-
-                <div class="ideal-card fade-in">
-                    <div class="ideal-icon-wrap" aria-hidden="true">💼</div>
-                    <h3 class="ideal-card-title">Busy Professionals</h3>
-                    <p class="ideal-card-desc">Who feel constantly exhausted and mentally overloaded.</p>
-                </div>
-
-                <div class="ideal-card fade-in">
-                    <div class="ideal-icon-wrap" aria-hidden="true">🛡️</div>
-                    <h3 class="ideal-card-title">Health-Conscious Individuals</h3>
-                    <p class="ideal-card-desc">Who want to optimize wellness before serious problems appear.</p>
-                </div>
-
-                <div class="ideal-card fade-in">
-                    <div class="ideal-icon-wrap" aria-hidden="true">✈️</div>
-                    <h3 class="ideal-card-title">International Travelers</h3>
-                    <p class="ideal-card-desc">Who want to combine travel, recovery, and wellness in Malaysia.</p>
-                </div>
-
-                <div class="ideal-card fade-in">
-                    <div class="ideal-icon-wrap" aria-hidden="true">🔄</div>
-                    <h3 class="ideal-card-title">Individuals Seeking A Reset</h3>
-                    <p class="ideal-card-desc">Who feel disconnected from their body and want to feel alive again.</p>
-                </div>
-
-                <div class="ideal-card fade-in">
-                    <div class="ideal-icon-wrap" aria-hidden="true">🤍</div>
-                    <h3 class="ideal-card-title">Couples &amp; Loved Ones</h3>
-                    <p class="ideal-card-desc">Who want to recharge together physically and emotionally.</p>
-                </div>
-
-            </div>
-
-        </div>
     </section>
 
     <!-- ========================================
@@ -1565,7 +1555,132 @@
                 resultsObs.observe(resultsSection);
             }
 
+            // Comparison section slow-zoom on scroll into view
+            var comparisonSection = document.querySelector('.comparison-section');
+            if (comparisonSection) {
+                var compObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            comparisonSection.classList.add('in-view');
+                        }
+                    });
+                }, { threshold: 0.15 });
+                compObs.observe(comparisonSection);
+            }
+
         }());
+    </script>
+
+    <!-- WhatsApp Floating Button + Outlet Selector -->
+    <div class="wa-widget">
+
+        <div class="wa-popup" id="waPopup">
+            <div class="wa-popup-header">
+                <span class="wa-popup-title">Choose Your Nearest Hub</span>
+                <button class="wa-popup-close" id="waClose">✕</button>
+            </div>
+
+            <div class="wa-outlets">
+
+                <a class="wa-outlet-btn" href="https://wa.me/60127032363" target="_blank" rel="noopener">
+                    <div class="wa-outlet-info">
+                        <span class="wa-outlet-name">KL Hub</span>
+                        <span class="wa-outlet-address">Level 4, Menara Ruyi, Off Jalan Syed Putra, Kuala Lumpur</span>
+                        <span class="wa-outlet-hours">Mon–Sat: 9am–8pm · Sun & PH: 9am–5pm</span>
+                    </div>
+                    <span class="wa-outlet-arrow">→</span>
+                </a>
+
+                <a class="wa-outlet-btn" href="https://wa.me/60123868065" target="_blank" rel="noopener">
+                    <div class="wa-outlet-info">
+                        <span class="wa-outlet-name">JB Hub</span>
+                        <span class="wa-outlet-address">No. 70-A, Ground Floor, Jalan Pertama 1, Danga Utama, Johor Bahru</span>
+                        <span class="wa-outlet-hours">Mon–Sun: 9am–7pm</span>
+                    </div>
+                    <span class="wa-outlet-arrow">→</span>
+                </a>
+
+                <a class="wa-outlet-btn" href="https://wa.me/60642101212" target="_blank" rel="noopener">
+                    <div class="wa-outlet-info">
+                        <span class="wa-outlet-name">ZÉLL-V Wellness @ Penang</span>
+                        <span class="wa-outlet-address">28, 30 Jalan Tanjung Tokong Road, George Town, Pulau Pinang</span>
+                        <span class="wa-outlet-hours">Daily: 9am–7pm</span>
+                    </div>
+                    <span class="wa-outlet-arrow">→</span>
+                </a>
+
+            </div>
+
+            <p class="wa-popup-note">We'll respond within a few minutes 🌿</p>
+        </div>
+
+        <button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="wa-pulse"></span>
+        </button>
+
+    </div>
+
+    <script>
+    (function() {
+        var fab   = document.getElementById('waFab');
+        var popup = document.getElementById('waPopup');
+        var close = document.getElementById('waClose');
+
+        console.log('WA fab:', fab);
+        console.log('WA popup:', popup);
+        console.log('WA close:', close);
+
+        if (!fab || !popup) {
+            console.error('WhatsApp elements not found');
+            return;
+        }
+
+        fab.addEventListener('click', function(e) {
+            e.stopPropagation();
+            popup.classList.toggle('open');
+            console.log('FAB clicked, popup open:', popup.classList.contains('open'));
+        });
+
+        if (close) {
+            close.addEventListener('click', function(e) {
+                e.stopPropagation();
+                popup.classList.remove('open');
+            });
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!fab.contains(e.target) && !popup.contains(e.target)) {
+                popup.classList.remove('open');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                popup.classList.remove('open');
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    // Included rows — scroll reveal + image zoom
+    (function() {
+        var rows = document.querySelectorAll('.included-row-full');
+        if (!rows.length) return;
+
+        var rowObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        rows.forEach(function(row) { rowObserver.observe(row); });
+    })();
     </script>
 
 </body>
