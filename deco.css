@@ -712,12 +712,16 @@ video.hero-video,
   position: absolute;
   bottom: 40px;
   left: 50%;
+  right: auto;
   transform: translateX(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin: 0;
+  width: auto;
+  text-align: center;
   animation: fadeRise 0.8s ease 1s forwards;
   opacity: 0;
 }
@@ -6452,7 +6456,7 @@ img, video, iframe {
     font-size: 11px;
   }
 
-  .scroll-indicator { bottom: 20px; }
+  .scroll-indicator { bottom: 20px; left: 50%; transform: translateX(-50%); right: auto; margin: 0; }
 
   /* Why different */
   .why-section,
@@ -7140,4 +7144,15 @@ img, video, iframe {
     background-position: left top !important;
   }
 
+}
+
+/* ── SCROLL INDICATOR CENTRE FIX ── */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    margin: 0;
+  }
 }
