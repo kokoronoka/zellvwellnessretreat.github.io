@@ -617,147 +617,101 @@
                     cellular wellness optimization.</p>
             </div>
 
-            <!-- Main product display: two column -->
-            <div class="products-display">
+            <!-- 3D tilt product cards -->
+            <div class="products-3d-row">
 
-                <!-- LEFT: Product image viewer -->
-                <div class="product-viewer">
-                    <div class="product-img-wrap">
+              <!-- PRODUCT 1: Phytogreen -->
+              <div class="product-3d-card"
+                data-product="phytogreen"
+                id="card3d-phytogreen">
 
-                        <!-- Product image 1: Phytogreen -->
-                        <div class="product-img active" id="img-phytogreen">
-                            <!-- Replace with:
-                <img src="assets/images/phytogreen.jpg"
-                     alt="ZÉLL-V Phytogreen"> -->
-                            <img src="assets/images/zell-v phytogreen.png" alt="ZÉLL-V Phytogreen">
-                            <div class="product-img-placeholder">
-                                <span>ZÉLL-V Phytogreen</span>
-                            </div>
-                        </div>
-
-                        <!-- Product image 2: Platinum Plus 3 -->
-                        <div class="product-img" id="img-platinum">
-                            <!-- Replace with:
-                <img src="assets/images/platinum-plus3.jpg"
-                     alt="ZÉLL-V Platinum Plus 3"> -->
-                            <img src="assets/images/zell-v platinium plus3.png" alt="ZÉLL-V Platinum Plus 3">
-                            <div class="product-img-placeholder">
-                                <span>ZÉLL-V Platinum Plus 3</span>
-                            </div>
-                        </div>
-
-                        <!-- Product image 3: NMN -->
-                        <div class="product-img" id="img-nmn">
-                            <!-- Replace with:
-                <img src="assets/images/nmn.jpg"
-                     alt="ZÉLL-V NMN"> -->
-                            <img src="assets/images/zell-v nmn.png">
-                            <div class="product-img-placeholder">
-                                <span>ZÉLL-V NMN</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Dot indicators below image -->
-                    <div class="product-dots">
-                        <span class="product-dot active" data-product="phytogreen"></span>
-                        <span class="product-dot" data-product="platinum"></span>
-                        <span class="product-dot" data-product="nmn"></span>
-                    </div>
+                <div class="product-3d-img-wrap">
+                  <div class="product-3d-img" id="float-phytogreen">
+                    <img src="assets/images/zell-v phytogreen.png" alt="ZÉLL-V Phytogreen">
+                  </div>
+                  <div class="product-float-shadow"></div>
                 </div>
 
-                <!-- RIGHT: Product selector + details -->
-                <div class="product-details">
-
-                    <!-- Product selector buttons -->
-                    <div class="product-selector">
-
-                        <button class="product-btn active" data-product="phytogreen">
-                            <div class="product-btn-inner">
-                                <span class="product-btn-name">ZÉLL-V Phytogreen</span>
-                                <span class="product-btn-tag">Plant-Based Cellular Support</span>
-                            </div>
-                            <span class="product-btn-arrow">→</span>
-                        </button>
-
-                        <button class="product-btn" data-product="platinum">
-                            <div class="product-btn-inner">
-                                <span class="product-btn-name">ZÉLL-V Platinum Plus 3</span>
-                                <span class="product-btn-tag">Advanced Cellular Renewal</span>
-                            </div>
-                            <span class="product-btn-arrow">→</span>
-                        </button>
-
-                        <button class="product-btn" data-product="nmn">
-                            <div class="product-btn-inner">
-                                <span class="product-btn-name">ZÉLL-V NMN</span>
-                                <span class="product-btn-tag">NAD+ &amp; Longevity Support</span>
-                            </div>
-                            <span class="product-btn-arrow">→</span>
-                        </button>
-
-                    </div>
-
-                    <!-- Product detail panels -->
-                    <div class="product-info-wrap">
-
-                        <!-- Info: Phytogreen -->
-                        <div class="product-info active" id="info-phytogreen">
-                            <h3>ZÉLL-V Phytogreen</h3>
-                            <p>A premium plant-based cellular supplement formulated
-                                to support detoxification, boost immunity, and enhance
-                                natural cellular regeneration. Rich in phytonutrients
-                                that work synergistically to restore vitality from
-                                the inside out.</p>
-                            <div class="product-benefits">
-                                <div class="benefit-pill">⚡ Energy Support</div>
-                                <div class="benefit-pill">🌿 Detoxification</div>
-                                <div class="benefit-pill">🛡️ Immunity Boost</div>
-                                <div class="benefit-pill">🔄 Cell Renewal</div>
-                            </div>
-                        </div>
-
-                        <!-- Info: Platinum Plus 3 -->
-                        <div class="product-info" id="info-platinum">
-                            <h3>ZÉLL-V Platinum Plus 3</h3>
-                            <p>An advanced cellular renewal formula combining
-                                premium bioactive compounds to support tissue repair,
-                                hormonal balance, and deep cellular rejuvenation.
-                                Designed for those seeking comprehensive biological
-                                restoration and healthy aging support.</p>
-                            <div class="product-benefits">
-                                <div class="benefit-pill">✨ Rejuvenation</div>
-                                <div class="benefit-pill">⚖️ Hormonal Balance</div>
-                                <div class="benefit-pill">🔬 Tissue Repair</div>
-                                <div class="benefit-pill">🤍 Healthy Aging</div>
-                            </div>
-                        </div>
-
-                        <!-- Info: NMN -->
-                        <div class="product-info" id="info-nmn">
-                            <h3>ZÉLL-V NMN</h3>
-                            <p>A next-generation longevity supplement that boosts
-                                NAD+ levels to support mitochondrial function, cognitive
-                                clarity, metabolic efficiency, and cellular repair.
-                                Clinically recognized as one of the most powerful
-                                anti-aging molecules available today.</p>
-                            <div class="product-benefits">
-                                <div class="benefit-pill">🧠 Cognitive Clarity</div>
-                                <div class="benefit-pill">⚡ Mitochondrial Power</div>
-                                <div class="benefit-pill">🏃 Metabolic Support</div>
-                                <div class="benefit-pill">⏱ Anti-Aging</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Included badge -->
-                    <div class="product-included-badge">
-                        ✓ All three products included in your retreat package
-                    </div>
-
+                <div class="product-3d-info">
+                  <span class="product-3d-tag">Plant-Based Cellular Support</span>
+                  <h3 class="product-3d-name">ZÉLL-V Phytogreen</h3>
+                  <p class="product-3d-desc">Detoxification, immunity boost, and
+                    natural cellular regeneration through
+                    premium phytonutrients.</p>
+                  <div class="product-3d-pills">
+                    <span>⚡ Energy</span>
+                    <span>🌿 Detox</span>
+                    <span>🛡️ Immunity</span>
+                  </div>
                 </div>
+
+                <div class="product-3d-glow"></div>
+
+              </div>
+
+              <!-- PRODUCT 2: Platinum Plus 3 -->
+              <div class="product-3d-card"
+                data-product="platinum"
+                id="card3d-platinum">
+
+                <div class="product-3d-img-wrap">
+                  <div class="product-3d-img" id="float-platinum">
+                    <img src="assets/images/zell-v platinium plus3.png" alt="ZÉLL-V Platinum Plus 3">
+                  </div>
+                  <div class="product-float-shadow"></div>
+                </div>
+
+                <div class="product-3d-info">
+                  <span class="product-3d-tag">Advanced Cellular Renewal</span>
+                  <h3 class="product-3d-name">ZÉLL-V Platinum Plus 3</h3>
+                  <p class="product-3d-desc">Tissue repair, hormonal balance, and
+                    deep cellular rejuvenation for
+                    comprehensive biological restoration.</p>
+                  <div class="product-3d-pills">
+                    <span>✨ Rejuvenation</span>
+                    <span>⚖️ Hormones</span>
+                    <span>🤍 Aging</span>
+                  </div>
+                </div>
+
+                <div class="product-3d-glow"></div>
+
+              </div>
+
+              <!-- PRODUCT 3: NMN -->
+              <div class="product-3d-card"
+                data-product="nmn"
+                id="card3d-nmn">
+
+                <div class="product-3d-img-wrap">
+                  <div class="product-3d-img" id="float-nmn">
+                    <img src="assets/images/zell-v nmn.png" alt="ZÉLL-V NMN">
+                  </div>
+                  <div class="product-float-shadow"></div>
+                </div>
+
+                <div class="product-3d-info">
+                  <span class="product-3d-tag">NAD+ &amp; Longevity Support</span>
+                  <h3 class="product-3d-name">ZÉLL-V NMN</h3>
+                  <p class="product-3d-desc">Boosts NAD+ levels for mitochondrial
+                    function, cognitive clarity, and
+                    powerful anti-aging support.</p>
+                  <div class="product-3d-pills">
+                    <span>🧠 Clarity</span>
+                    <span>⚡ Mitochondria</span>
+                    <span>⏱ Anti-Aging</span>
+                  </div>
+                </div>
+
+                <div class="product-3d-glow"></div>
+
+              </div>
+
+            </div>
+
+            <!-- Included badge -->
+            <div class="product-included-badge">
+              ✓ All three products included in your retreat package
             </div>
         </div>
     </section>
@@ -1523,40 +1477,75 @@
                 pfObs.observe(pricingSection);
             }
 
-            // ── Curated Wellness Products selector ─────────────────
-            var productBtns = document.querySelectorAll('.product-btn');
-            var productImgs = document.querySelectorAll('.product-img');
-            var productInfos = document.querySelectorAll('.product-info');
-            var productDots = document.querySelectorAll('.product-dot');
+            // ── 3D tilt effect on product cards ────────────────────
+            (function() {
+              var cards = document.querySelectorAll('.product-3d-card');
+              if (!cards.length) return;
 
-            function switchProduct(productId) {
-                productBtns.forEach(function (b) { b.classList.remove('active'); });
-                productImgs.forEach(function (i) { i.classList.remove('active'); });
-                productInfos.forEach(function (i) { i.classList.remove('active'); });
-                productDots.forEach(function (d) { d.classList.remove('active'); });
+              cards.forEach(function(card) {
+                var glow = card.querySelector('.product-3d-glow');
 
-                var btn = document.querySelector('.product-btn[data-product="' + productId + '"]');
-                var img = document.getElementById('img-' + productId);
-                var info = document.getElementById('info-' + productId);
-                var dot = document.querySelector('.product-dot[data-product="' + productId + '"]');
+                card.addEventListener('mousemove', function(e) {
+                  var rect = card.getBoundingClientRect();
+                  var x = e.clientX - rect.left;
+                  var y = e.clientY - rect.top;
+                  var centreX = rect.width / 2;
+                  var centreY = rect.height / 2;
+                  var tiltX = ((y - centreY) / centreY) * -12;
+                  var tiltY = ((x - centreX) / centreX) * 12;
 
-                if (btn) btn.classList.add('active');
-                if (img) img.classList.add('active');
-                if (info) info.classList.add('active');
-                if (dot) dot.classList.add('active');
-            }
+                  card.style.transform =
+                    'perspective(1000px)' +
+                    'rotateX(' + tiltX + 'deg)' +
+                    'rotateY(' + tiltY + 'deg)' +
+                    'scale3d(1.03, 1.03, 1.03)';
 
-            productBtns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    switchProduct(btn.getAttribute('data-product'));
+                  if (glow) {
+                    var glowX = (x / rect.width) * 100;
+                    var glowY = (y / rect.height) * 100;
+                    glow.style.background =
+                      'radial-gradient(circle at ' +
+                      glowX + '% ' + glowY + '%, ' +
+                      'rgba(200,169,81,0.18) 0%, ' +
+                      'transparent 65%)';
+                  }
                 });
-            });
 
-            productDots.forEach(function (dot) {
-                dot.addEventListener('click', function () {
-                    switchProduct(dot.getAttribute('data-product'));
+                card.addEventListener('mouseleave', function() {
+                  card.style.transition =
+                    'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),' +
+                    'box-shadow 0.3s ease';
+
+                  var index = Array.from(cards).indexOf(card);
+                  if (index === 0) {
+                    card.style.transform =
+                      'perspective(1000px) rotateY(3deg) rotateX(-1deg)';
+                  } else if (index === 1) {
+                    card.style.transform =
+                      'perspective(1000px) rotateX(-2deg)';
+                  } else {
+                    card.style.transform =
+                      'perspective(1000px) rotateY(-3deg) rotateX(-1deg)';
+                  }
+
+                  setTimeout(function() {
+                    card.style.transition =
+                      'transform 0.1s ease, box-shadow 0.3s ease';
+                  }, 600);
                 });
-            });
+
+                card.addEventListener('mouseenter', function() {
+                  card.style.transition =
+                    'transform 0.1s ease, box-shadow 0.3s ease';
+                });
+              });
+
+              if ('ontouchstart' in window) {
+                cards.forEach(function(card) {
+                  card.style.transform = 'none';
+                });
+              }
+            })();
 
             // ── Audience section slow-zoom on scroll into view ─────
             var audienceSection = document.querySelector('.audience-section');
