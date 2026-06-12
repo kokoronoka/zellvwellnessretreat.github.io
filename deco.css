@@ -1635,13 +1635,13 @@ video.hero-video,
 }
 
 .audience-header h2 {
-  color: white;
+  color: var(--gold-light);
   font-family: var(--font-serif);
   font-size: clamp(32px, 5vw, 64px);
   font-weight: 300;
   line-height: 1.1;
   margin: 0;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  text-shadow: none;
 }
 
 .audience-cards-row {
@@ -2297,7 +2297,7 @@ video.hero-video,
 }
 
 .audience-section {
-  background: #0D1B2A;
+  background: var(--cream);
 }
 
 .audience-card {
