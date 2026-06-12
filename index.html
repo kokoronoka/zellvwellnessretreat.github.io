@@ -396,6 +396,122 @@
         </div>
     </section>
 
+    <script>
+(function() {
+
+  function initAudienceSwipe() {
+
+    if (window.innerWidth > 768) return;
+
+    var row = document.querySelector(
+      '.audience-cards-row'
+    );
+    var wrap = document.querySelector(
+      '.audience-swipe-wrap'
+    );
+    var dot0 = document.querySelector(
+      '.swipe-dot[data-index="0"]'
+    );
+    var dot1 = document.querySelector(
+      '.swipe-dot[data-index="1"]'
+    );
+
+    if (!row || !wrap) {
+      console.log('Swipe: elements not found');
+      return;
+    }
+
+    console.log('Swipe: initialised');
+
+    var current = 0;
+    var tX = 0;
+    var tY = 0;
+    var moving = false;
+
+    function goTo(n) {
+      current = n;
+      if (n === 1) {
+        row.classList.add('swiped');
+      } else {
+        row.classList.remove('swiped');
+      }
+      if (dot0) dot0.classList.toggle(
+        'active', n === 0
+      );
+      if (dot1) dot1.classList.toggle(
+        'active', n === 1
+      );
+      console.log('Swipe: goTo', n);
+    }
+
+    /* Touch start */
+    wrap.addEventListener('touchstart',
+      function(e) {
+        tX = e.touches[0].clientX;
+        tY = e.touches[0].clientY;
+        moving = true;
+        console.log('touchstart', tX, tY);
+      },
+      { passive: true }
+    );
+
+    /* Touch end */
+    wrap.addEventListener('touchend',
+      function(e) {
+        if (!moving) return;
+        moving = false;
+
+        var ex = e.changedTouches[0].clientX;
+        var ey = e.changedTouches[0].clientY;
+        var dx = tX - ex;
+        var dy = tY - ey;
+
+        console.log('touchend dx:', dx, 'dy:', dy);
+
+        /* Horizontal swipe only */
+        if (
+          Math.abs(dx) > 40 &&
+          Math.abs(dx) > Math.abs(dy)
+        ) {
+          if (dx > 0 && current === 0) {
+            goTo(1);
+          } else if (dx < 0 && current === 1) {
+            goTo(0);
+          }
+        }
+      },
+      { passive: true }
+    );
+
+    /* Dot clicks */
+    if (dot0) {
+      dot0.addEventListener('click', function() {
+        console.log('dot0 clicked');
+        goTo(0);
+      });
+    }
+
+    if (dot1) {
+      dot1.addEventListener('click', function() {
+        console.log('dot1 clicked');
+        goTo(1);
+      });
+    }
+
+  }
+
+  /* Run on DOM ready */
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded', initAudienceSwipe
+    );
+  } else {
+    initAudienceSwipe();
+  }
+
+})();
+</script>
+
     <!-- ========================================
        SECTION B: GUIDED BY INTERNATIONAL WELLNESS SPECIALISTS
   ======================================== -->
@@ -1663,68 +1779,6 @@
 
         }());
 
-        // ── Mobile swipe for audience cards ────────────────────
-        (function() {
-          if (window.innerWidth > 768) return;
-
-          var cardsRow = document.querySelector('.audience-cards-row');
-          var dots = document.querySelectorAll('.swipe-dot');
-          var currentIndex = 0;
-          var touchStartX = 0;
-          var touchStartY = 0;
-          var isDragging = false;
-
-          if (!cardsRow) return;
-
-          function goTo(index) {
-            currentIndex = Math.max(0, Math.min(index, 1));
-            if (currentIndex === 1) {
-              cardsRow.classList.add('slide-to-2');
-            } else {
-              cardsRow.classList.remove('slide-to-2');
-            }
-            dots.forEach(function(dot, i) {
-              dot.classList.toggle('active', i === currentIndex);
-            });
-          }
-
-          cardsRow.addEventListener('touchstart', function(e) {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            isDragging = true;
-          }, { passive: true });
-
-          cardsRow.addEventListener('touchend', function(e) {
-            if (!isDragging) return;
-            isDragging = false;
-            var diffX = touchStartX - e.changedTouches[0].clientX;
-            var diffY = touchStartY - e.changedTouches[0].clientY;
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-              goTo(diffX > 0 ? currentIndex + 1 : currentIndex - 1);
-            }
-          }, { passive: true });
-
-          dots.forEach(function(dot) {
-            dot.addEventListener('click', function() {
-              goTo(parseInt(this.getAttribute('data-index')));
-            });
-          });
-
-          document.addEventListener('keydown', function(e) {
-            var section = document.getElementById('audience');
-            if (!section) return;
-            var rect = section.getBoundingClientRect();
-            if (rect.top >= window.innerHeight || rect.bottom <= 0) return;
-            if (e.key === 'ArrowRight') goTo(currentIndex + 1);
-            else if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
-          });
-
-          window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-              cardsRow.classList.remove('slide-to-2');
-            }
-          });
-        })();
 
     </script>
 
@@ -1786,19 +1840,12 @@
         var popup = document.getElementById('waPopup');
         var close = document.getElementById('waClose');
 
-        console.log('WA fab:', fab);
-        console.log('WA popup:', popup);
-        console.log('WA close:', close);
+        if (!fab || !popup) return;
 
-        if (!fab || !popup) {
-            console.error('WhatsApp elements not found');
-            return;
-        }
-
+        /* ONLY click — no touchend */
         fab.addEventListener('click', function(e) {
             e.stopPropagation();
             popup.classList.toggle('open');
-            console.log('FAB clicked, popup open:', popup.classList.contains('open'));
         });
 
         if (close) {
@@ -1808,10 +1855,15 @@
             });
         }
 
+        /* Close on outside click only */
         document.addEventListener('click', function(e) {
             if (!fab.contains(e.target) && !popup.contains(e.target)) {
                 popup.classList.remove('open');
             }
+        });
+
+        popup.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
 
         document.addEventListener('keydown', function(e) {
