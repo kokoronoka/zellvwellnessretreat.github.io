@@ -5529,3 +5529,97 @@ video.hero-video,
     100% { opacity: 0; }
   }
 }
+
+/* ── AUDIENCE MOBILE OVERFLOW FIX ── */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .audience-section {
+    overflow: hidden;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .audience-content {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .audience-swipe-wrap {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Track is exactly two viewport widths */
+  .audience-cards-row {
+    width: 200vw !important;
+    max-width: 200vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* Slide exactly one viewport width */
+  .audience-cards-row.slide-to-2 {
+    transform: translateX(-100vw) !important;
+  }
+
+  /* Each card is exactly one viewport width */
+  .audience-card {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-shrink: 0 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .audience-header {
+    padding: 32px 16px 24px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .audience-swipe-dots {
+    margin: 16px 0 0;
+    padding: 0 0 8px;
+  }
+
+  .swipe-hint {
+    margin: 8px 0 0;
+    padding: 0 0 16px;
+  }
+
+  .audience-card-content {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .card-top {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-bottom-band {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
