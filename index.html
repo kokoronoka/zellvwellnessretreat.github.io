@@ -92,8 +92,8 @@
         <div class="hero-content">
             <p class="hero-badge">3 DAYS · 2 NIGHTS · KUALA LUMPUR</p>
             <h1 class="hero-headline">
-                Don't Just Escape,<br>
-                <em>Return Better.</em>
+                <em>Most retreats help you relax.</em><br>
+                <em>We help you heal from within.</em>
             </h1>
             <p class="hero-sub">
                 A guided recovery experience combining advanced wellness
@@ -124,8 +124,8 @@
 
             <h2 class="why-headline" id="why-heading">
                 <!--<span class="why-line-1 fade-in">Most Retreats Help You Relax.</span>-->
-                <span class="why-line-2 fade-in">Most retreats help you relax.</span>
-                <span class="why-line-2 fade-in" >We help you heal from within.</span>
+                <span class="why-line-2 fade-in">Don't Just Escape,</span>
+                <span class="why-line-2 fade-in" >Return Better.</span>
                 <!--<span class="why-line-2 fade-in">We Help You Understand Why You're Exhausted.</span>-->
             </h2>
 
@@ -149,13 +149,19 @@
 
         <!-- Full section background split -->
         <div class="comparison-bg-split">
-            <div class="comparison-bg-split">
-            <div class="comparison-bg-left" id="comparison-bg-left">
-                <!-- Replace with tree image:
-                <img src="assets/images/comparison.png"> -->
-                <img src="assets/images/tree.png" alt="Tree of transformation">
-            </div>
-        </div>
+
+          <!-- Left tree image -->
+          <div class="comparison-bg-left" id="comparison-bg-left">
+            <img src="assets/images/tree-left.png" alt="Withered tree">
+            <!-- Replace with cropped left half of tree image -->
+          </div>
+
+          <!-- Right tree image -->
+          <div class="comparison-bg-right" id="comparison-bg-right">
+            <img src="assets/images/tree-right.png" alt="Flourishing tree">
+            <!-- Replace with cropped right half of tree image -->
+          </div>
+
         </div>
 
 
@@ -247,7 +253,8 @@
                 <h2 class="section-heading fade-in" id="audience-heading">Real People. Real Struggles. Real Results.</h2>
             </div>
 
-            <div class="audience-cards-row">
+            <div class="audience-swipe-wrap">
+              <div class="audience-cards-row">
 
                 <!-- CARD 1: Men — dark forest green theme -->
                 <div class="audience-card card-male">
@@ -374,6 +381,18 @@
                     </div>
                 </div>
 
+              </div>
+            </div>
+
+            <!-- Mobile dot indicators -->
+            <div class="audience-swipe-dots" id="audienceSwipeDots">
+              <span class="swipe-dot active" data-index="0"></span>
+              <span class="swipe-dot" data-index="1"></span>
+            </div>
+
+            <!-- Mobile swipe hint -->
+            <div class="swipe-hint" id="swipeHint">
+              <span>← Swipe to see Women's Retreat →</span>
             </div>
         </div>
     </section>
@@ -474,127 +493,126 @@
             </div>
 
             <!-- Tab content panels -->
-            <div class="holistic-panels">
+            <div class="holistic-layout">
 
-                <!-- PANEL 1: Assessment -->
+              <!-- LEFT: Text panels — changes on tab click -->
+              <div class="holistic-text-panels">
+
                 <div class="holistic-panel active" id="panel-assessment" role="tabpanel">
-                    <div class="panel-text">
-                        <span class="panel-number">01</span>
-                        <h3>Unlock Lifelong Health with Comprehensive Assessments</h3>
-                        <p>A comprehensive cellular and bio-marker analysis to
-                            understand your body's exact needs and deficiencies.
-                            By analyzing at the cellular level, we detect early signs
-                            of stress and inflammation, shifting you from reactive care
-                            to preventive wellness. Our cutting-edge, non-invasive
-                            diagnostic tests reveal your unique health profile —
-                            genetics, environment, and lifestyle — guiding you towards
-                            optimal health through effective disease prevention and
-                            personalized health planning.</p>
-                        <ul class="panel-points">
-                            <li>Comprehensive blood analysis</li>
-                            <li>Bio Resonance Scan</li>
-                            <li>Body composition insight</li>
-                            <li>Personalized health roadmap</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <div class="panel-img-placeholder">
-                            <!-- Replace with:
-                <img src="assets/images/assessment.jpg"
-                     alt="Assessment"> -->
-                            <img src="assets/images/assessment.webp" alt="Assessment">
-                        </div>
-                    </div>
+                  <span class="panel-number">01</span>
+                  <h3>Unlock Lifelong Health with Comprehensive Assessments</h3>
+                  <p>A comprehensive cellular and bio-marker analysis to
+                    understand your body's exact needs and deficiencies.
+                    By analyzing at the cellular level, we detect early signs
+                    of stress and inflammation, shifting you from reactive care
+                    to preventive wellness. Our cutting-edge, non-invasive
+                    diagnostic tests reveal your unique health profile —
+                    genetics, environment, and lifestyle — guiding you towards
+                    optimal health through effective disease prevention and
+                    personalized health planning.</p>
+                  <ul class="panel-points">
+                    <li>Comprehensive blood analysis</li>
+                    <li>Bio Resonance Scan</li>
+                    <li>Body composition insight</li>
+                    <li>Personalized health roadmap</li>
+                  </ul>
                 </div>
 
-                <!-- PANEL 2: Detoxification -->
                 <div class="holistic-panel" id="panel-detoxification" role="tabpanel">
-                    <div class="panel-text">
-                        <span class="panel-number">02</span>
-                        <h3>A True Biological Reset from the Inside Out</h3>
-                        <p>Clear what your body no longer needs. Our protocols
-                            support natural cellular detox pathways, reduce internal
-                            toxic load, and create an optimal internal environment
-                            for regeneration. This is a true biological reset —
-                            not a superficial cleanse. We target accumulated toxins
-                            at the cellular level, restoring your body's natural
-                            healing mechanisms and preparing it for deep renewal.</p>
-                        <ul class="panel-points">
-                            <li>Cellular detox protocols</li>
-                            <li>Internal toxic load reduction</li>
-                            <li>Natural healing pathway support</li>
-                            <li>Biological environment optimisation</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <div class="panel-img-placeholder">
-                            <!-- Replace with:
-                <img src="assets/images/detoxification.jpg"
-                     alt="Detoxification"> -->
-                            <img src="assets/images/detoxification.png" alt="Detoxification">
-                        </div>
-                    </div>
+                  <span class="panel-number">02</span>
+                  <h3>A True Biological Reset from the Inside Out</h3>
+                  <p>Clear what your body no longer needs. Our protocols
+                    support natural cellular detox pathways, reduce internal
+                    toxic load, and create an optimal internal environment
+                    for regeneration. This is a true biological reset —
+                    not a superficial cleanse. We target accumulated toxins
+                    at the cellular level, restoring your body's natural
+                    healing mechanisms and preparing it for deep renewal.</p>
+                  <ul class="panel-points">
+                    <li>Cellular detox protocols</li>
+                    <li>Internal toxic load reduction</li>
+                    <li>Natural healing pathway support</li>
+                    <li>Biological environment optimisation</li>
+                  </ul>
                 </div>
 
-                <!-- PANEL 3: Boosting -->
                 <div class="holistic-panel" id="panel-boosting" role="tabpanel">
-                    <div class="panel-text">
-                        <span class="panel-number">03</span>
-                        <h3>Activate Your Body's Full Biological Potential</h3>
-                        <p>Activate your body's full potential. This phase
-                            enhances energy production, metabolic performance, and
-                            overall physiological efficiency — helping your body
-                            function beyond its normal baseline. Precision nutrient
-                            infusions and cellular boosters replenish energy at the
-                            mitochondrial level, optimising every system so you
-                            leave feeling sharper, stronger, and more alive than
-                            you have in years.</p>
-                        <ul class="panel-points">
-                            <li>Precision nutrient infusions</li>
-                            <li>Mitochondrial energy optimisation</li>
-                            <li>Metabolic performance enhancement</li>
-                            <li>Cellular booster protocols</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <div class="panel-img-placeholder">
-                            <!-- Replace with:
-                <img src="assets/images/boosting.jpg"
-                     alt="Boosting"> -->
-                            <img src="assets/images/boosting.png" alt="Boosting">
-                        </div>
-                    </div>
+                  <span class="panel-number">03</span>
+                  <h3>Activate Your Body's Full Biological Potential</h3>
+                  <p>Activate your body's full potential. This phase
+                    enhances energy production, metabolic performance, and
+                    overall physiological efficiency — helping your body
+                    function beyond its normal baseline. Precision nutrient
+                    infusions and cellular boosters replenish energy at the
+                    mitochondrial level, optimising every system so you
+                    leave feeling sharper, stronger, and more alive than
+                    you have in years.</p>
+                  <ul class="panel-points">
+                    <li>Precision nutrient infusions</li>
+                    <li>Mitochondrial energy optimisation</li>
+                    <li>Metabolic performance enhancement</li>
+                    <li>Cellular booster protocols</li>
+                  </ul>
                 </div>
 
-                <!-- PANEL 4: Rejuvenation -->
                 <div class="holistic-panel" id="panel-rejuvenation" role="tabpanel">
-                    <div class="panel-text">
-                        <span class="panel-number">04</span>
-                        <h3>Restore Cellular Vitality and Radiant Resilience</h3>
-                        <p>Physician-guided regenerative therapies using cellular
-                            therapy that support energy, recovery, healthy aging, and
-                            tissue repair at the cellular level. Advanced regenerative
-                            treatments restore cellular vitality, skin luminosity, and
-                            whole-body resilience — helping your body restore and
-                            function more optimally from within. Leave renewed,
-                            radiant, and equipped with lasting cellular health.</p>
-                        <ul class="panel-points">
-                            <li>Physician-guided cellular therapy</li>
-                            <li>Tissue repair at cellular level</li>
-                            <li>Skin luminosity restoration</li>
-                            <li>Whole-body resilience building</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <div class="panel-img-placeholder">
-                            <!-- Replace with:
-                <img src="assets/images/rejuvenation.jpg"
-                     alt="Rejuvenation"> -->
-                            <img src="assets/images/rejuvenation.png" alt="Rejuvenation">
-
-                        </div>
-                    </div>
+                  <span class="panel-number">04</span>
+                  <h3>Restore Cellular Vitality and Radiant Resilience</h3>
+                  <p>Physician-guided regenerative therapies using cellular
+                    therapy that support energy, recovery, healthy aging, and
+                    tissue repair at the cellular level. Advanced regenerative
+                    treatments restore cellular vitality, skin luminosity, and
+                    whole-body resilience — helping your body restore and
+                    function more optimally from within. Leave renewed,
+                    radiant, and equipped with lasting cellular health.</p>
+                  <ul class="panel-points">
+                    <li>Physician-guided cellular therapy</li>
+                    <li>Tissue repair at cellular level</li>
+                    <li>Skin luminosity restoration</li>
+                    <li>Whole-body resilience building</li>
+                  </ul>
                 </div>
+
+              </div>
+
+              <!-- RIGHT: Single video — always playing -->
+              <div class="holistic-video-panel">
+                <div class="holistic-video-wrap">
+
+                  <video
+                    id="holisticVideo"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="holistic-video">
+                    <source src="assets/videos/holistic.mp4" type="video/mp4">
+                  </video>
+
+                  <!-- Fallback placeholder if no video yet -->
+                  <div class="holistic-video-placeholder" id="holisticPlaceholder">
+                    <span>Your Wellness Video</span>
+                  </div>
+
+                  <!-- Active tab label overlay on video -->
+                  <div class="holistic-video-label" id="holisticVideoLabel">
+                    Assessment
+                  </div>
+
+                  <!-- Gold progress bar at bottom -->
+                  <div class="holistic-video-progress">
+                    <div class="holistic-video-bar" id="holisticVideoBar" style="width: 25%"></div>
+                  </div>
+
+                  <!-- Mute toggle -->
+                  <button class="holistic-mute-btn"
+                    id="holisticMuteBtn"
+                    aria-label="Toggle sound">
+                    🔇
+                  </button>
+
+                </div>
+              </div>
 
             </div>
         </div>
@@ -1121,9 +1139,9 @@
 
             <p class="section-label fade-in">INVESTMENT IN YOUR FUTURE SELF</p>
             <h2 class="pf-heading fade-in" id="pf-heading">
-                <span class="pf-line-1">3 Days 2 Nights</span>
+                <!--<span class="pf-line-1">3 Days 2 Nights</span>
                 <span class="pf-line-2">Wellness Retreat</span>
-            </h2>
+            </h2> -->
 
             <div class="pf-columns">
 
@@ -1424,23 +1442,81 @@
                 });
             });
 
-            // ── Holistic Path tabs ─────────────────────────────────
-            var holisticTabs = document.querySelectorAll('.holistic-tab');
-            var holisticPanels = document.querySelectorAll('.holistic-panel');
-            holisticTabs.forEach(function (tab) {
-                tab.addEventListener('click', function () {
-                    var target = tab.getAttribute('data-tab');
-                    holisticTabs.forEach(function (t) {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    holisticPanels.forEach(function (p) { p.classList.remove('active'); });
-                    tab.classList.add('active');
-                    tab.setAttribute('aria-selected', 'true');
-                    var panel = document.getElementById('panel-' + target);
-                    if (panel) panel.classList.add('active');
+            // ── Holistic Path tabs — text only, video stays playing ──
+            (function() {
+              var tabs = document.querySelectorAll('.holistic-tab');
+              var panels = document.querySelectorAll('.holistic-panel');
+              var videoLabel = document.getElementById('holisticVideoLabel');
+              var videoBar = document.getElementById('holisticVideoBar');
+
+              if (!tabs.length) return;
+
+              var tabNames = {
+                'assessment':     'Assessment',
+                'detoxification': 'Detoxification',
+                'boosting':       'Boosting',
+                'rejuvenation':   'Rejuvenation'
+              };
+
+              var tabIndex = {
+                'assessment':     1,
+                'detoxification': 2,
+                'boosting':       3,
+                'rejuvenation':   4
+              };
+
+              function activateTab(tabId) {
+                tabs.forEach(function(t) {
+                  t.classList.remove('active');
+                  t.setAttribute('aria-selected', 'false');
                 });
-            });
+                var activeTab = document.querySelector(
+                  '.holistic-tab[data-tab="' + tabId + '"]'
+                );
+                if (activeTab) {
+                  activeTab.classList.add('active');
+                  activeTab.setAttribute('aria-selected', 'true');
+                }
+
+                panels.forEach(function(p) { p.classList.remove('active'); });
+                var activePanel = document.getElementById('panel-' + tabId);
+                if (activePanel) activePanel.classList.add('active');
+
+                if (videoLabel) {
+                  videoLabel.style.opacity = '0';
+                  setTimeout(function() {
+                    videoLabel.textContent = tabNames[tabId] || '';
+                    videoLabel.style.opacity = '1';
+                  }, 200);
+                }
+
+                if (videoBar) {
+                  videoBar.style.width = ((tabIndex[tabId] / 4) * 100) + '%';
+                }
+              }
+
+              tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                  activateTab(this.getAttribute('data-tab'));
+                });
+              });
+
+              var video = document.getElementById('holisticVideo');
+              if (video) {
+                video.play().catch(function() {});
+                video.addEventListener('pause', function() {
+                  video.play().catch(function() {});
+                });
+              }
+
+              var muteBtn = document.getElementById('holisticMuteBtn');
+              if (muteBtn && video) {
+                muteBtn.addEventListener('click', function() {
+                  video.muted = !video.muted;
+                  muteBtn.textContent = video.muted ? '🔇' : '🔊';
+                });
+              }
+            })();
 
             // ── Before/After bullet stagger + arrow pulse ──────────
             var baSection = document.querySelector('.before-after');
@@ -1587,6 +1663,70 @@
             }
 
         }());
+
+        // ── Mobile swipe for audience cards ────────────────────
+        (function() {
+          if (window.innerWidth > 768) return;
+
+          var cardsRow = document.querySelector('.audience-cards-row');
+          var dots = document.querySelectorAll('.swipe-dot');
+          var currentIndex = 0;
+          var touchStartX = 0;
+          var touchStartY = 0;
+          var isDragging = false;
+
+          if (!cardsRow) return;
+
+          function goTo(index) {
+            currentIndex = Math.max(0, Math.min(index, 1));
+            if (currentIndex === 1) {
+              cardsRow.classList.add('slide-to-2');
+            } else {
+              cardsRow.classList.remove('slide-to-2');
+            }
+            dots.forEach(function(dot, i) {
+              dot.classList.toggle('active', i === currentIndex);
+            });
+          }
+
+          cardsRow.addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isDragging = true;
+          }, { passive: true });
+
+          cardsRow.addEventListener('touchend', function(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            var diffX = touchStartX - e.changedTouches[0].clientX;
+            var diffY = touchStartY - e.changedTouches[0].clientY;
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+              goTo(diffX > 0 ? currentIndex + 1 : currentIndex - 1);
+            }
+          }, { passive: true });
+
+          dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+              goTo(parseInt(this.getAttribute('data-index')));
+            });
+          });
+
+          document.addEventListener('keydown', function(e) {
+            var section = document.getElementById('audience');
+            if (!section) return;
+            var rect = section.getBoundingClientRect();
+            if (rect.top >= window.innerHeight || rect.bottom <= 0) return;
+            if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+            else if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+          });
+
+          window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+              cardsRow.classList.remove('slide-to-2');
+            }
+          });
+        })();
+
     </script>
 
     <!-- WhatsApp Floating Button + Outlet Selector -->
