@@ -7096,3 +7096,48 @@ img, video, iframe {
   }
 
 }
+
+/* ── AUDIENCE SWIPE DOTS SHRINK ── */
+@media (max-width: 768px) {
+
+  .swipe-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 4px !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  .swipe-dot::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .audience-swipe-dots {
+    gap: 10px !important;
+    padding: 12px 0 8px !important;
+  }
+
+}
+
+/* ── AUDIENCE CARD IMAGE POSITION ── */
+@media (max-width: 768px) {
+
+  .card-male {
+    background-position: left top !important;
+  }
+
+  .card-female {
+    background-position: left top !important;
+  }
+
+}
