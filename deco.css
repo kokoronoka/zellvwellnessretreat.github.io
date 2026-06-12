@@ -1176,8 +1176,8 @@ video.hero-video,
    WHO IS THIS RETREAT FOR? — Portrait cards
 ============================================================ */
 .audience-section {
-  padding: 100px 0;
-  background: var(--dark);
+  padding: 0;
+  background: transparent;
 }
 
 .audience-section .section-container {
@@ -1539,27 +1539,15 @@ video.hero-video,
 }
 
 .audience-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: linear-gradient(
-    to bottom,
-    rgba(13,27,42,1) 0%,
-    rgba(13,27,42,0) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
+  display: none !important;
+  content: none !important;
 }
+
 
 .audience-bg-split {
   position: absolute;
-  top: 160px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
+  inset: 0;
   z-index: 0;
   display: flex;
   flex-direction: row;
@@ -1614,10 +1602,7 @@ video.hero-video,
 
 .audience-bg-overlay {
   position: absolute;
-  top: 160px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 1;
   background: rgba(0,0,0,0.50);
   pointer-events: none;
@@ -1628,19 +1613,17 @@ video.hero-video,
   z-index: 2;
   max-width: 100%;
   padding: 0 32px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .audience-header {
-  background: linear-gradient(
-    to bottom,
-    rgba(13,27,42,1) 0%,
-    rgba(13,27,42,0.85) 60%,
-    rgba(13,27,42,0) 100%
-  );
-  padding: 60px 40px 60px;
+  background: transparent;
+  padding: 32px 40px 48px;
   text-align: center;
   position: relative;
   z-index: 3;
+  margin-top: 0;
 }
 
 .audience-header .section-label {
@@ -1658,7 +1641,7 @@ video.hero-video,
   font-weight: 300;
   line-height: 1.1;
   margin: 0;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 .audience-cards-row {
@@ -1821,12 +1804,8 @@ video.hero-video,
 /* ── MOBILE FIX ── */
 @media (max-width: 768px) {
 
-  .audience-section::before {
-    height: 160px;
-  }
-
   .audience-bg-split {
-    top: 120px;
+    top: 0;
     flex-direction: column;
     height: auto;
   }
@@ -1837,10 +1816,6 @@ video.hero-video,
     min-height: 300px;
   }
 
-  .audience-bg-overlay {
-    top: 120px;
-  }
-
   .audience-content {
     position: relative;
     z-index: 2;
@@ -1848,14 +1823,9 @@ video.hero-video,
   }
 
   .audience-header {
-    padding: 40px 20px 48px;
-    background: linear-gradient(
-      to bottom,
-      rgba(13,27,42,1) 0%,
-      rgba(13,27,42,0.8) 50%,
-      rgba(13,27,42,0) 100%
-    );
+    padding: 24px 20px 32px;
   }
+
 
   .audience-header h2 {
     font-size: clamp(24px, 6vw, 36px);
@@ -2033,6 +2003,11 @@ video.hero-video,
 
 #audience-bg-1 {
   background: linear-gradient(135deg, #0a1f0a 0%, #1a2f0a 100%);
+}
+
+#audience-bg-1 img {
+  object-fit: cover;
+  object-position: center 15%;
 }
 
 #audience-bg-2 {
@@ -2309,6 +2284,62 @@ video.hero-video,
     gap: 4px;
   }
   .card-bottom-band { padding: 18px 20px 22px; }
+}
+
+/* ── CARD-LEVEL BACKGROUND IMAGES ── */
+
+.audience-bg-split {
+  display: none;
+}
+
+.audience-bg-overlay {
+  display: none;
+}
+
+.audience-section {
+  background: #0D1B2A;
+}
+
+.audience-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.card-male {
+  background-image: url('assets/images/audience-men.jpeg');
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.card-female {
+  background-image: url('assets/images/audience-women.jpeg');
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.audience-card-overlay,
+.overlay-male,
+.overlay-female {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.audience-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .card-male {
+    background-position: right center;
+  }
+  .card-female {
+    background-position: right center;
+  }
 }
 
 /* ============================================================
