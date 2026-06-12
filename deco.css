@@ -711,23 +711,22 @@ video.hero-video,
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin: 0;
-  width: auto;
-  text-align: center;
+  z-index: 10;
+  transform: none;
   animation: fadeRise 0.8s ease 1s forwards;
   opacity: 0;
 }
 
 .scroll-indicator span {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-size: 9px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -6456,7 +6455,7 @@ img, video, iframe {
     font-size: 11px;
   }
 
-  .scroll-indicator { bottom: 20px; left: 50%; transform: translateX(-50%); right: auto; margin: 0; }
+  .scroll-indicator { bottom: 20px; left: 0; right: 0; margin: 0 auto; transform: none; }
 
   /* Why different */
   .why-section,
@@ -7150,9 +7149,9 @@ img, video, iframe {
 @media (max-width: 768px) {
   .scroll-indicator {
     bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
-    margin: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: none;
   }
 }
