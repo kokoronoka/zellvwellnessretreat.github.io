@@ -5642,3 +5642,97 @@ video.hero-video,
     box-sizing: border-box;
   }
 }
+
+/* ── AUDIENCE MOBILE BACKGROUND FIX ── */
+@media (max-width: 768px) {
+
+  /* Hide the section-level bg split — each card owns its background */
+  .audience-bg-split {
+    display: none !important;
+  }
+
+  .audience-bg-overlay {
+    display: none !important;
+  }
+
+  /* Hide the empty per-card bg divs */
+  .audience-card-bg {
+    display: none !important;
+  }
+
+  /* Each card carries its own background image */
+  .card-male {
+    background-image: url('assets/images/audience-men.jpeg');
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-female {
+    background-image: url('assets/images/audience-women.jpeg');
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Overlays sit above the card background */
+  .overlay-male {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      rgba(5,20,5,0.80) 0%,
+      rgba(5,20,5,0.65) 35%,
+      rgba(5,20,5,0.25) 65%,
+      rgba(5,20,5,0.05) 100%
+    );
+  }
+
+  .overlay-female {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      rgba(40,10,20,0.80) 0%,
+      rgba(40,10,20,0.65) 35%,
+      rgba(40,10,20,0.25) 65%,
+      rgba(40,10,20,0.05) 100%
+    );
+  }
+
+  /* Cards row — horizontal slide track */
+  .audience-cards-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 200vw !important;
+    max-width: 200vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    transform: translateX(0);
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    will-change: transform;
+  }
+
+  .audience-cards-row.slide-to-2 {
+    transform: translateX(-100vw) !important;
+  }
+
+  /* Each card = exactly one viewport width */
+  .audience-card {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
