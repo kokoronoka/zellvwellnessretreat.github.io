@@ -8628,3 +8628,19 @@ img, video, iframe {
 /* ── PRICING COLOUR OVERRIDE ── */
 .price-display { color: var(--gold) !important; }
 .pricing-included-label { color: var(--gold) !important; }
+
+/* ── PRICING MOBILE ORDER FIX ── */
+@media (max-width: 768px) {
+  .pf-columns {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pricing-card {
+    order: 1 !important;
+  }
+
+  .pf-form-card {
+    order: 2 !important;
+  }
+}
