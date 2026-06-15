@@ -7904,3 +7904,727 @@ img, video, iframe {
     height: 52px !important;
   }
 }
+
+/* ── GOOGLE FORM IFRAME STYLING ── */
+.lead-form-card iframe,
+.form-card iframe,
+[class*="form"] iframe {
+  width: 100% !important;
+  min-height: 600px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .lead-form-card iframe,
+  .form-card iframe,
+  [class*="form"] iframe {
+    min-height: 580px !important;
+    height: 580px !important;
+  }
+}
+
+/* ── RESERVE FORM STYLES ── */
+.form-field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 8px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-field input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.form-field input:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: #00A896;
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-top: 8px;
+  min-height: 52px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-submit:hover {
+  background: #008F7E;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-success {
+  display: none;
+  background: rgba(37,211,102,0.15);
+  border: 1px solid rgba(37,211,102,0.4);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #25D366;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.form-error {
+  display: none;
+  background: rgba(224,85,85,0.15);
+  border: 1px solid rgba(224,85,85,0.4);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: #E08888;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.form-note {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  margin-top: 16px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .form-field input {
+    font-size: 16px;
+    padding: 14px 14px;
+  }
+
+  .btn-submit {
+    font-size: 14px;
+    padding: 16px 14px;
+  }
+}
+
+/* ── PRICING SECTION DESIGN RESTORE ── */
+.pricing-form {
+  background: white;
+  padding: 120px 0;
+}
+
+.pf-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.pricing-form .section-label {
+  color: var(--gold);
+  text-align: center;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.pricing-form h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.pf-columns {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ── LEFT: PRICING CARD ── */
+.pf-pricing-card {
+  background: white;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+}
+
+.pf-price-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pf-original {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pf-save-badge {
+  background: var(--gold);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+
+.pf-price-figure {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.pf-price-per {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #888;
+}
+
+.pf-divider {
+  border: none;
+  border-top: 1px solid var(--gold-border);
+  margin: 28px 0;
+}
+
+.pf-includes-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pf-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.pf-checklist li {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--dark);
+  padding-left: 20px;
+  position: relative;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.pf-check {
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.pf-quote {
+  background: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 8px 0 0;
+}
+
+.pf-quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  color: #777;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── RIGHT: LEAD FORM CARD ── */
+.pf-form-card {
+  background: #0D1B2A;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 40px rgba(13,27,42,0.25);
+  box-sizing: border-box;
+}
+
+.pf-form-heading {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.pf-form-subtext {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .pf-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-form {
+    padding: 60px 0;
+  }
+
+  .pf-container {
+    padding: 0 20px;
+  }
+
+  .pf-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .pf-form-card {
+    order: -1;
+    padding: 28px 20px;
+  }
+
+  .pf-pricing-card {
+    padding: 28px 20px;
+  }
+
+  .pf-checklist {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pf-price-figure {
+    font-size: clamp(40px, 10vw, 56px);
+  }
+
+  .pf-form-heading {
+    font-size: 24px;
+  }
+}
+
+/* ── PRICING CARD REBUILD ── */
+.pricing-card {
+  background: white;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+}
+
+.pricing-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.price-original {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  text-decoration-color: #999;
+}
+
+.price-save-badge {
+  background: var(--gold);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 2px;
+  letter-spacing: 1.5px;
+}
+
+.price-main-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.price-display {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.price-per {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #888;
+  margin-left: 4px;
+}
+
+.pricing-divider {
+  border: none;
+  border-top: 1px solid var(--gold-border);
+  margin: 28px 0;
+}
+
+.pricing-included-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pricing-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.pricing-checklist li {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--charcoal);
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pricing-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.pricing-quote {
+  background: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 20px;
+  margin-top: 4px;
+}
+
+.pricing-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  color: #777;
+  margin: 0;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 28px 20px;
+  }
+
+  .pricing-checklist {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .price-display {
+    font-size: clamp(40px, 10vw, 56px);
+  }
+
+  .pricing-top-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* ── PRICING SECTION CARD RESTORE ── */
+
+/* LEFT CARD — white with gold accents */
+.pricing-card {
+  background: #FFFFFF !important;
+  border: 1px solid #EAEAEA !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+}
+
+.price-original {
+  color: #999 !important;
+  text-decoration: line-through !important;
+  font-size: 16px !important;
+}
+
+.price-save-badge {
+  background: var(--gold) !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 4px 12px !important;
+  border-radius: 2px !important;
+  letter-spacing: 1.5px !important;
+}
+
+.price-display {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(48px, 7vw, 72px) !important;
+  font-weight: 300 !important;
+  color: #1A2B3C !important;
+  line-height: 1 !important;
+}
+
+.price-per {
+  color: #888 !important;
+  font-size: 16px !important;
+}
+
+.pricing-divider {
+  border: none !important;
+  border-top: 1px solid #F0E6CC !important;
+  margin: 24px 0 !important;
+}
+
+.pricing-included-label {
+  color: var(--charcoal) !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.pricing-checklist li {
+  color: var(--charcoal) !important;
+  font-size: 14px !important;
+}
+
+.pricing-checklist li::before {
+  color: var(--gold) !important;
+}
+
+.pricing-quote {
+  background: #FAFAFA !important;
+  border: 1px solid #EAEAEA !important;
+  border-left: 3px solid var(--gold) !important;
+  border-radius: 0 10px 10px 0 !important;
+  padding: 18px 20px !important;
+}
+
+.pricing-quote p {
+  color: #777 !important;
+  font-style: italic !important;
+  font-family: var(--font-serif) !important;
+  font-size: 15px !important;
+}
+
+/* RIGHT CARD — white with gold accents */
+.pf-form-card {
+  background: #FFFFFF !important;
+  border: 1px solid #EAEAEA !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+}
+
+.pf-form-heading {
+  font-family: var(--font-serif) !important;
+  font-size: 32px !important;
+  font-weight: 300 !important;
+  color: #1A2B3C !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+}
+
+.pf-form-subtext {
+  color: #888 !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  line-height: 1.6 !important;
+  margin-bottom: 32px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Field labels */
+.form-field label {
+  color: #999 !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+
+/* Input fields */
+.form-field input {
+  background: #FFFFFF !important;
+  border: 1px solid #D4B47A !important;
+  border-radius: 6px !important;
+  color: var(--charcoal) !important;
+  font-size: 15px !important;
+  padding: 14px 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.form-field input::placeholder {
+  color: #BBBBBB !important;
+}
+
+.form-field input:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(200,169,81,0.1) !important;
+}
+
+/* Reserve Now button — gold */
+.btn-submit {
+  width: 100% !important;
+  padding: 16px !important;
+  background: var(--gold) !important;
+  color: white !important;
+  font-family: var(--font-sans) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  min-height: 52px !important;
+  margin-top: 8px !important;
+  transition: background 0.2s ease !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.btn-submit:hover {
+  background: var(--gold-dark) !important;
+}
+
+.btn-submit:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+/* Note below button */
+.form-note {
+  color: #AAAAAA !important;
+  font-size: 11px !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+  margin-top: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* Success message */
+.form-success {
+  background: rgba(37,211,102,0.1) !important;
+  border: 1px solid rgba(37,211,102,0.3) !important;
+  color: #25A869 !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+}
+
+/* Error message */
+.form-error {
+  background: rgba(224,85,85,0.1) !important;
+  border: 1px solid rgba(224,85,85,0.3) !important;
+  color: #C0392B !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  font-size: 14px !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+}
+
+@media (max-width: 768px) {
+  .pricing-card,
+  .pf-form-card {
+    padding: 28px 20px !important;
+  }
+
+  .pf-form-heading {
+    font-size: 26px !important;
+  }
+
+  .btn-submit {
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+  }
+}
+
+/* ── PRICING COLOUR OVERRIDE ── */
+.price-display { color: var(--gold) !important; }
+.pricing-included-label { color: var(--gold) !important; }

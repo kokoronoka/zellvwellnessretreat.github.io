@@ -1264,38 +1264,47 @@
             <div class="pf-columns">
 
                 <!-- LEFT: Pricing details -->
-                <div class="pf-pricing-card fade-in">
+                <div class="pricing-card fade-in">
 
-                    <div class="pf-price-top">
-                        <span class="pf-original">RM 9,854</span>
-                        <span class="pf-save-badge">SAVE 24%</span>
-                    </div>
+                  <!-- Top row: strikethrough + badge -->
+                  <div class="pricing-top-row">
+                    <span class="price-original">RM 9,854</span>
+                    <span class="price-save-badge">SAVE 24%</span>
+                  </div>
 
-                    <div class="pf-price-main">
-                        <span class="pf-price-figure">RM 7,500</span><span class="pf-price-per">/person</span>
-                    </div>
+                  <!-- Main price -->
+                  <div class="price-main-row">
+                    <span class="price-display">RM 7,500</span>
+                    <span class="price-per">/person</span>
+                  </div>
 
-                    <hr class="pf-divider">
+                  <!-- Divider -->
+                  <hr class="pricing-divider">
 
-                    <p class="pf-includes-label">Everything included:</p>
+                  <!-- Everything included label -->
+                  <p class="pricing-included-label">EVERYTHING INCLUDED:</p>
 
-                    <ul class="pf-checklist" aria-label="Package inclusions">
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Wellness assessments</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Professional consultations</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Wellness therapies</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>SPA treatment</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Accommodation</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Meals</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Airport transfer</li>
-                        <li><span class="pf-check" aria-hidden="true">✓</span>Wellness products</li>
-                    </ul>
+                  <!-- Two column checklist -->
+                  <ul class="pricing-checklist">
+                    <li>Wellness assessments</li>
+                    <li>Professional consultations</li>
+                    <li>Wellness therapies</li>
+                    <li>SPA treatment</li>
+                    <li>Accommodation</li>
+                    <li>Meals</li>
+                    <li>Airport transfer</li>
+                    <li>Wellness products</li>
+                  </ul>
 
-                    <hr class="pf-divider">
+                  <!-- Divider -->
+                  <hr class="pricing-divider">
 
-                    <blockquote class="pf-quote">
-                        <p class="pf-quote-text">This is not a luxury escape alone. It is an investment into your future
-                            self.</p>
-                    </blockquote>
+                  <!-- Quote block -->
+                  <div class="pricing-quote">
+                    <p>"This is not a luxury escape alone.
+                    It is an investment into your
+                    future self."</p>
+                  </div>
 
                 </div>
 
@@ -1305,29 +1314,68 @@
                     <h3 class="pf-form-heading">Reserve Your Spot</h3>
                     <p class="pf-form-subtext">Begin your wellness reset today. We'll reach out within 24 hours.</p>
 
-                    <form class="pf-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                    <form id="reserveForm"
+                      onsubmit="submitToSheets(event)"
+                      novalidate>
 
-                        <div class="pf-field">
-                            <label class="pf-label" for="pf-name">Full Name</label>
-                            <input class="pf-input" type="text" id="pf-name" name="name" placeholder="Your full name"
-                                required autocomplete="name">
-                        </div>
+                      <div class="form-field">
+                        <label for="inputName">Full Name</label>
+                        <input
+                          type="text"
+                          id="inputName"
+                          name="name"
+                          placeholder="Your full name"
+                          required
+                          autocomplete="name">
+                      </div>
 
-                        <div class="pf-field">
-                            <label class="pf-label" for="pf-phone">Phone</label>
-                            <input class="pf-input" type="tel" id="pf-phone" name="phone" placeholder="+60 12 345 6789"
-                                required autocomplete="tel">
-                        </div>
+                      <div class="form-field">
+                        <label for="inputPhone">Phone</label>
+                        <input
+                          type="tel"
+                          id="inputPhone"
+                          name="phone"
+                          placeholder="+60 12 345 6789"
+                          required
+                          autocomplete="tel">
+                      </div>
 
-                        <div class="pf-field">
-                            <label class="pf-label" for="pf-email">Email</label>
-                            <input class="pf-input" type="email" id="pf-email" name="email" placeholder="your@email.com"
-                                required autocomplete="email">
-                        </div>
+                      <div class="form-field">
+                        <label for="inputEmail">Email</label>
+                        <input
+                          type="email"
+                          id="inputEmail"
+                          name="email"
+                          placeholder="your@email.com"
+                          required
+                          autocomplete="email">
+                      </div>
 
-                        <button type="submit" class="pf-submit">&rarr;&nbsp;&nbsp;Reserve Now</button>
+                      <button
+                        type="submit"
+                        class="btn-submit"
+                        id="submitBtn">
+                        → Reserve Now
+                      </button>
 
-                        <p class="pf-form-note">No commitment required. We'll follow up personally.</p>
+                      <!-- Success message -->
+                      <div class="form-success"
+                        id="formSuccess">
+                        ✓ Received! We will contact you
+                        within 24 hours.
+                      </div>
+
+                      <!-- Error message -->
+                      <div class="form-error"
+                        id="formError">
+                        Something went wrong.
+                        Please try again.
+                      </div>
+
+                      <p class="form-note">
+                        No commitment required.
+                        We'll follow up personally.
+                      </p>
 
                     </form>
                 </div>
@@ -1869,6 +1917,54 @@
 
         rows.forEach(function(row) { rowObserver.observe(row); });
     })();
+    </script>
+
+    <script>
+    function submitToSheets(e) {
+      e.preventDefault();
+
+      var btn     = document.getElementById('submitBtn');
+      var success = document.getElementById('formSuccess');
+      var error   = document.getElementById('formError');
+
+      var name  = document.getElementById('inputName').value.trim();
+      var phone = document.getElementById('inputPhone').value.trim();
+      var email = document.getElementById('inputEmail').value.trim();
+
+      if (!name || !phone || !email) {
+        error.textContent = 'Please fill in all fields.';
+        error.style.display = 'block';
+        success.style.display = 'none';
+        return;
+      }
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      error.style.display = 'none';
+      success.style.display = 'none';
+
+      fetch(
+        'https://script.google.com/macros/s/AKfycby_WSZe_RNKjvcx3MrFNdry-LBpkNO9CplRxSIR7bMBHk0TmzV22RwcgO2PSnwtvQFPHw/exec',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, phone: phone, email: email })
+        }
+      )
+      .then(function() {
+        btn.style.display = 'none';
+        success.style.display = 'block';
+        document.getElementById('reserveForm').reset();
+      })
+      .catch(function(err) {
+        console.error('Form error:', err);
+        btn.textContent = '→ Reserve Now';
+        btn.disabled = false;
+        error.textContent = 'Something went wrong. Please try again.';
+        error.style.display = 'block';
+      });
+    }
     </script>
 
 
