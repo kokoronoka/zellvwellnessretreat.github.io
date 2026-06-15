@@ -37,22 +37,20 @@
 
     <section class="hero" id="hero" aria-label="Hero">
 
-        <div class="hero-video-wrap">
-            <div class="hero-vimeo-wrap">
-              <iframe
-                id="heroVideo"
-                src="https://player.vimeo.com/video/1200684211?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0&portrait=0&controls=0&playsinline=1"
+        <!-- VIDEO LAYER — absolute, behind everything -->
+        <div class="hero-video-layer">
+            <iframe
+                src="https://player.vimeo.com/video/1200684211?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0&portrait=0&controls=0&playsinline=1&dnt=1"
                 frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
+                allow="autoplay; fullscreen"
                 allowfullscreen
-                class="hero-vimeo-frame"
-                title="ZÉLL-V Wellness Retreat">
-              </iframe>
-            </div>
-            <!-- Gradient overlays top and bottom -->
-            <div class="hero-gradient-top" aria-hidden="true"></div>
-            <div class="hero-gradient-bottom" aria-hidden="true"></div>
+                class="hero-vimeo-iframe">
+            </iframe>
         </div>
+
+        <!-- GRADIENT OVERLAYS -->
+        <div class="hero-gradient-top" aria-hidden="true"></div>
+        <div class="hero-gradient-bottom" aria-hidden="true"></div>
 
         <!-- Navbar sits inside hero so it overlays video -->
         <nav class="navbar" id="navbar" aria-label="Main navigation">
