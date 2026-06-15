@@ -38,14 +38,17 @@
     <section class="hero" id="hero" aria-label="Hero">
 
         <div class="hero-video-wrap">
-            <video id="heroVideo" muted playsinline poster="assets/images/hero-poster.jpg">
-                <source src="assets/videos/hero.mp4" type="video/mp4">
-            </video>
-            <!--
-              VIDEO: Place hero.mp4 in assets/videos/
-              POSTER: Place hero-poster.jpg in assets/images/
-              Recommended: MP4, H.264, under 8MB, 1920x1080
-            -->
+            <div class="hero-vimeo-wrap">
+              <iframe
+                id="heroVideo"
+                src="https://player.vimeo.com/video/1200684211?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0&portrait=0&controls=0&playsinline=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                class="hero-vimeo-frame"
+                title="ZÉLL-V Wellness Retreat">
+              </iframe>
+            </div>
             <!-- Gradient overlays top and bottom -->
             <div class="hero-gradient-top" aria-hidden="true"></div>
             <div class="hero-gradient-bottom" aria-hidden="true"></div>
@@ -1447,37 +1450,6 @@
             var heroSection = document.getElementById('hero');
             var heroSet = new Set(); // hero has no .fade-in elements; kept for compat
 
-            // ── Video fade-in/out loop ─────────────────────────────
-            (function () {
-                var video = document.getElementById('heroVideo');
-                if (!video) return;
-                var fadeDuration = 0.5;
-
-                function handleVideoFrame() {
-                    if (!video.duration) { requestAnimationFrame(handleVideoFrame); return; }
-                    var t = video.currentTime;
-                    var d = video.duration;
-                    if (t < fadeDuration) {
-                        video.style.opacity = t / fadeDuration;
-                    } else if (t > d - fadeDuration) {
-                        video.style.opacity = (d - t) / fadeDuration;
-                    } else {
-                        video.style.opacity = 1;
-                    }
-                    requestAnimationFrame(handleVideoFrame);
-                }
-
-                video.addEventListener('ended', function () {
-                    video.style.opacity = 0;
-                    setTimeout(function () { video.currentTime = 0; video.play(); }, 100);
-                });
-
-                video.addEventListener('canplay', function () {
-                    video.play();
-                    requestAnimationFrame(handleVideoFrame);
-                });
-            }());
-
             // ── General scroll-reveal ──────────────────────────────
             var generalObs = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
@@ -1893,6 +1865,7 @@
         rows.forEach(function(row) { rowObserver.observe(row); });
     })();
     </script>
+
 
 </body>
 
