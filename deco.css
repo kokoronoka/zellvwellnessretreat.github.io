@@ -7136,11 +7136,11 @@ img, video, iframe {
 @media (max-width: 768px) {
 
   .card-male {
-    background-position: left top !important;
+    background-position: center center !important;
   }
 
   .card-female {
-    background-position: left top !important;
+    background-position: center center !important;
   }
 
 }
@@ -7153,5 +7153,72 @@ img, video, iframe {
     right: 0;
     margin: 0 auto;
     transform: none;
+  }
+}
+
+/* ── AUDIENCE CARD IMG APPROACH ── */
+.card-male,
+.card-female {
+  background-image: none !important;
+}
+
+.card-bg-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card-person-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+}
+
+.card-bg-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 100%
+  );
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .card-person-img {
+    width: 82%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-male,
+  .card-female {
+    background-image: none !important;
+    background: transparent !important;
+  }
+
+  .card-bg-img {
+    display: block !important;
+  }
+
+  .card-person-img {
+    width: 78%;
+    object-position: left top;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-person-img {
+    width: 75%;
+    object-position: left top;
   }
 }
