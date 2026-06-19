@@ -714,6 +714,81 @@
     </section>
 
     <!-- ========================================
+       SECTION: RETREAT TIMELINE
+  ======================================== -->
+    <section class="timeline-section" id="timeline" aria-labelledby="timeline-heading">
+      <div class="timeline-inner">
+
+        <div class="timeline-header">
+          <span class="section-label">THE EXPERIENCE</span>
+          <h2 id="timeline-heading">What Happens During Your 3 Days?</h2>
+          <div class="gold-rule"></div>
+        </div>
+
+        <div class="timeline-track-wrap">
+
+          <!-- The vertical line -->
+          <div class="timeline-line">
+            <div class="timeline-line-progress" id="timelineProgress"></div>
+            <div class="timeline-dot" id="timelineDot"></div>
+          </div>
+
+          <!-- DAY 1 -->
+          <div class="timeline-day timeline-left" data-day="1">
+            <div class="timeline-marker">
+              <span class="timeline-day-num">01</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-day-label">DAY 1</span>
+              <h3>Discover</h3>
+              <ul class="timeline-activities">
+                <li><span class="activity-icon">🛬</span> Arrival</li>
+                <li><span class="activity-icon">📋</span> Assessment</li>
+                <li><span class="activity-icon">🩺</span> Consultation</li>
+                <li><span class="activity-icon">🔬</span> Wellness scan</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DAY 2 -->
+          <div class="timeline-day timeline-right" data-day="2">
+            <div class="timeline-marker">
+              <span class="timeline-day-num">02</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-day-label">DAY 2</span>
+              <h3>Restore</h3>
+              <ul class="timeline-activities">
+                <li><span class="activity-icon">🌿</span> Detox</li>
+                <li><span class="activity-icon">✨</span> Cellular therapies</li>
+                <li><span class="activity-icon">💆</span> Spa treatment</li>
+                <li><span class="activity-icon">🥗</span> Nutrition coaching</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DAY 3 -->
+          <div class="timeline-day timeline-left" data-day="3">
+            <div class="timeline-marker">
+              <span class="timeline-day-num">03</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-day-label">DAY 3</span>
+              <h3>Rejuvenate</h3>
+              <ul class="timeline-activities">
+                <li><span class="activity-icon">🗺️</span> Wellness roadmap</li>
+                <li><span class="activity-icon">💊</span> Product prescription</li>
+                <li><span class="activity-icon">✈️</span> Departure</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
        SECTION B: GUIDED BY INTERNATIONAL WELLNESS SPECIALISTS
   ======================================== -->
     <section class="specialists" id="specialists" aria-labelledby="specialists-heading">
@@ -2257,6 +2332,52 @@
             }, { threshold: 0.2 });
 
             observer.observe(malaysiaSection);
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var section = document.getElementById('timeline');
+            if (!section) return;
+
+            var trackWrap = section.querySelector('.timeline-track-wrap');
+            var progressLine = document.getElementById('timelineProgress');
+            var dot = document.getElementById('timelineDot');
+            var days = section.querySelectorAll('.timeline-day');
+
+            function updateTimeline() {
+                var rect = trackWrap.getBoundingClientRect();
+                var windowHeight = window.innerHeight;
+
+                var trackHeight = rect.height;
+                var scrolled = (windowHeight * 0.5) - rect.top;
+
+                var progress = scrolled / trackHeight;
+                progress = Math.max(0, Math.min(1, progress));
+
+                var progressPercent = progress * 100;
+
+                progressLine.style.height = progressPercent + '%';
+                dot.style.top = progressPercent + '%';
+
+                days.forEach(function(day) {
+                    var marker = day.querySelector('.timeline-marker');
+                    var markerRect = marker.getBoundingClientRect();
+                    var markerOffsetTop = markerRect.top - rect.top + (markerRect.height / 2);
+                    var markerProgress = markerOffsetTop / trackHeight;
+
+                    if (progress >= markerProgress - 0.03) {
+                        day.classList.add('active');
+                    } else {
+                        day.classList.remove('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateTimeline, { passive: true });
+            window.addEventListener('resize', updateTimeline);
+
+            updateTimeline();
         })();
     </script>
 
