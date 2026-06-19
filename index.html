@@ -91,17 +91,24 @@
         <div class="hero-content">
             <p class="hero-badge">3 DAYS · 2 NIGHTS · KUALA LUMPUR</p>
             <h1 class="hero-headline">
-                <em>Most retreats help you relax.</em><br>
+                <em>Transform Yourself in Just 3 Days</em><br>
                 <em>We help you heal from within.</em>
             </h1>
             <p class="hero-sub">
-                A guided recovery experience combining advanced wellness
-                assessment, cellular wellness treatments, and warm
-                Malaysian hospitality.
+                A fully doctor-guided cellular recovery experience combining state-of-the-art personalized health 
+                assessment, cellular rejuvenation therapies, detoxification, anti-aging treatments and luxury wellness 
+                experience.
             </p>
+            <ul class="hero-checklist">
+              <li>Doctor-guided</li>
+              <li>Cellular wellness diagnostics</li>
+              <li>Luxury accommodation</li>
+              <li>Cutting-edge Swiss and German Technology</li>
+              <li>Airport transfer and chauffeur included</li>
+            </ul>
             <div class="hero-ctas">
-                <a href="#pricing" class="btn-hero-primary">Reserve Your Retreat</a>
-                <a href="#journey" class="btn-hero-ghost">Explore the Journey</a>
+                <a href="#pricing" class="btn-hero-primary">Reserve Your Retreat Now</a>
+                <button class="btn-hero-ghost" id="openAssessmentBtn">Take Free Wellness Assessment</button>
             </div>
         </div>
 
@@ -111,6 +118,119 @@
             <div class="scroll-line"></div>
         </div>
 
+    </section>
+
+    <!-- ========================================
+         SECTION: CREDIBILITY TRUST BAR
+    ======================================== -->
+    <section class="trust-bar" id="trust-bar">
+      <div class="trust-bar-inner">
+
+        <span class="section-label">WHY ZÉLL-V</span>
+
+        <h2 class="trust-bar-heading">
+          Trusted By 5,000+<br>
+          Wellness Seekers Across Asia
+        </h2>
+
+        <div class="gold-rule"></div>
+
+        <p class="trust-bar-subtext">
+          A track record built on results, not promises — backed by years of clinical expertise and thousands of transformations.
+        </p>
+
+        <div class="trust-bar-stats">
+
+          <div class="trust-stat-card">
+            <span class="trust-stat-icon">⭐</span>
+            <span class="trust-stat-value">4.8/5</span>
+            <span class="trust-stat-label">Client Satisfaction</span>
+          </div>
+
+          <div class="trust-stat-card">
+            <span class="trust-stat-icon">🏥</span>
+            <span class="trust-stat-value">20+ Years</span>
+            <span class="trust-stat-label">Wellness Experience</span>
+          </div>
+
+          <div class="trust-stat-card">
+            <span class="trust-stat-icon">🌎</span>
+            <span class="trust-stat-value">Germany &amp; Switzerland</span>
+            <span class="trust-stat-label">Medical Expertise</span>
+          </div>
+
+          <div class="trust-stat-card">
+            <span class="trust-stat-icon">📍</span>
+            <span class="trust-stat-value">3 Locations</span>
+            <span class="trust-stat-label">KL • JB • Penang</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SECTION: ARE YOU EXPERIENCING THIS?
+    ======================================== -->
+    <section class="symptoms-section" id="symptoms" aria-labelledby="symptoms-heading">
+      <div class="symptoms-inner">
+
+        <span class="section-label">IS THIS RETREAT FOR YOU?</span>
+
+        <h2 id="symptoms-heading" class="symptoms-heading">Are You Experiencing:</h2>
+
+        <div class="gold-rule"></div>
+
+        <div class="symptoms-grid">
+
+          <div class="symptom-item">
+            <span class="symptom-icon">😴</span>
+            <span class="symptom-text">Constant fatigue</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">🌙</span>
+            <span class="symptom-text">Poor sleep</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">😰</span>
+            <span class="symptom-text">Stress and burnout</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">⚖️</span>
+            <span class="symptom-text">Hormonal imbalance</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">📈</span>
+            <span class="symptom-text">Weight gain</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">🧠</span>
+            <span class="symptom-text">Brain fog</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">🔋</span>
+            <span class="symptom-text">Low energy</span>
+          </div>
+
+          <div class="symptom-item">
+            <span class="symptom-icon">⏳</span>
+            <span class="symptom-text">Premature aging</span>
+          </div>
+
+        </div>
+
+        <p class="symptoms-closing">
+          Then this retreat was designed for <em>you</em>.
+        </p>
+
+      </div>
     </section>
 
     <!-- ========================================
@@ -1953,6 +2073,398 @@
                     error.style.display = 'block';
                 });
         }
+    </script>
+
+    <script>
+        (function() {
+            var cards = document.querySelectorAll('.trust-stat-card');
+            if (!cards.length) return;
+
+            cards.forEach(function(card, i) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(24px)';
+                card.style.transition =
+                    'opacity 0.6s ease ' + (i * 0.1) + 's, ' +
+                    'transform 0.6s ease ' + (i * 0.1) + 's';
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var allCards = entry.target.querySelectorAll('.trust-stat-card');
+                        allCards.forEach(function(c) {
+                            c.style.opacity = '1';
+                            c.style.transform = 'translateY(0)';
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            var trustBar = document.getElementById('trust-bar');
+            if (trustBar) observer.observe(trustBar);
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var items = document.querySelectorAll('.symptom-item');
+            if (!items.length) return;
+
+            items.forEach(function(item, i) {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition =
+                    'opacity 0.5s ease ' + (i * 0.08) + 's, ' +
+                    'transform 0.5s ease ' + (i * 0.08) + 's';
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var allItems = entry.target.querySelectorAll('.symptom-item');
+                        allItems.forEach(function(it) {
+                            it.style.opacity = '1';
+                            it.style.transform = 'translateY(0)';
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            var symptomsSection = document.getElementById('symptoms');
+            if (symptomsSection) observer.observe(symptomsSection);
+        })();
+    </script>
+
+    <!-- ========================================
+         WELLNESS ASSESSMENT POPUP
+    ======================================== -->
+    <div class="assessment-overlay" id="assessmentOverlay">
+      <div class="assessment-modal" id="assessmentModal">
+
+        <button class="assessment-close" id="assessmentClose" aria-label="Close assessment">✕</button>
+
+        <!-- SCREEN 0: Intro -->
+        <div class="assessment-screen active" id="screen-intro">
+          <div class="assessment-intro-content">
+            <span class="section-label">FREE WELLNESS ASSESSMENT</span>
+            <h2>Discover Your Cellular Wellness Score</h2>
+            <p class="assessment-intro-sub">In less than 60 seconds, uncover:</p>
+            <ul class="assessment-intro-list">
+              <li>Your Cellular Wellness Score</li>
+              <li>Estimated Biological Age</li>
+              <li>Key Lifestyle Factors Affecting Your Vitality</li>
+              <li>Personalized Wellness Recommendations</li>
+              <li>Whether a Cellular Wellness Retreat Is Right for You</li>
+            </ul>
+            <button class="btn-assessment-start" id="startAssessment">Start My Free Assessment →</button>
+            <p class="assessment-skip" id="skipAssessment">No thanks, maybe later</p>
+          </div>
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="assessment-progress-wrap" id="progressWrap" style="display:none;">
+          <div class="assessment-progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- QUESTION SCREENS -->
+        <div class="assessment-screen" id="screen-q1" data-q="1">
+          <p class="q-number">Question 1 of 8</p>
+          <h3>What is your age range?</h3>
+          <div class="q-options" data-name="age">
+            <button class="q-option">Under 35</button>
+            <button class="q-option">35 – 44</button>
+            <button class="q-option">45 – 54</button>
+            <button class="q-option">55 – 64</button>
+            <button class="q-option">65+</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q2" data-q="2">
+          <p class="q-number">Question 2 of 8</p>
+          <h3>How often do you wake up feeling refreshed and energized?</h3>
+          <div class="q-options" data-name="energy">
+            <button class="q-option">Almost every day</button>
+            <button class="q-option">Several times a week</button>
+            <button class="q-option">Occasionally</button>
+            <button class="q-option">Rarely</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q3" data-q="3">
+          <p class="q-number">Question 3 of 8</p>
+          <h3>How would you describe your current stress level?</h3>
+          <div class="q-options" data-name="stress">
+            <button class="q-option">Calm and balanced</button>
+            <button class="q-option">Occasionally stressed</button>
+            <button class="q-option">Frequently stressed</button>
+            <button class="q-option">Constantly under pressure</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q4" data-q="4">
+          <p class="q-number">Question 4 of 8</p>
+          <h3>How would you rate your sleep quality?</h3>
+          <div class="q-options" data-name="sleep">
+            <button class="q-option">Excellent – I sleep deeply and wake refreshed</button>
+            <button class="q-option">Good – Most nights are restful</button>
+            <button class="q-option">Fair – Sleep can be inconsistent</button>
+            <button class="q-option">Poor – I often struggle with sleep</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q5" data-q="5">
+          <p class="q-number">Question 5 of 8</p>
+          <h3>How active are you in a typical week?</h3>
+          <div class="q-options" data-name="activity">
+            <button class="q-option">I exercise 4 or more times a week</button>
+            <button class="q-option">2–3 times a week</button>
+            <button class="q-option">Once a week</button>
+            <button class="q-option">Rarely</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q6" data-q="6">
+          <p class="q-number">Question 6 of 8</p>
+          <h3>When was your last comprehensive health screening?</h3>
+          <div class="q-options" data-name="screening">
+            <button class="q-option">Within the past year</button>
+            <button class="q-option">1–2 years ago</button>
+            <button class="q-option">More than 2 years ago</button>
+            <button class="q-option">I can't remember</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q7" data-q="7">
+          <p class="q-number">Question 7 of 8</p>
+          <h3>Which area of your health would you most like to improve?</h3>
+          <div class="q-options" data-name="goal">
+            <button class="q-option">More energy and vitality</button>
+            <button class="q-option">Healthy ageing</button>
+            <button class="q-option">Looking and feeling younger</button>
+            <button class="q-option">Weight management</button>
+            <button class="q-option">Stress resilience</button>
+            <button class="q-option">Better sleep</button>
+            <button class="q-option">Mental clarity and focus</button>
+          </div>
+        </div>
+
+        <div class="assessment-screen" id="screen-q8" data-q="8">
+          <p class="q-number">Question 8 of 8</p>
+          <h3>Which statement best describes you today?</h3>
+          <div class="q-options" data-name="statement">
+            <button class="q-option">I feel energetic and want to maintain my health.</button>
+            <button class="q-option">I feel healthy, but I want to age well.</button>
+            <button class="q-option">I have been feeling more tired or stressed lately.</button>
+            <button class="q-option">I know my body could feel better, but I'm not sure where to start.</button>
+          </div>
+        </div>
+
+        <!-- CONTACT CAPTURE SCREEN -->
+        <div class="assessment-screen" id="screen-contact">
+          <h3>Almost there! Where should we send your results?</h3>
+          <p class="contact-sub">Get your personalized Wellness Score and recommendations instantly.</p>
+          <form id="assessmentForm" onsubmit="submitAssessment(event)">
+            <div class="form-field">
+              <label>Full Name</label>
+              <input type="text" id="assessName" placeholder="Your full name" required>
+            </div>
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" id="assessEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="form-field">
+              <label>WhatsApp Number</label>
+              <input type="tel" id="assessPhone" placeholder="+60 12 345 6789" required>
+            </div>
+            <button type="submit" class="btn-assessment-start" id="assessSubmitBtn">Get My Wellness Score →</button>
+          </form>
+        </div>
+
+        <!-- RESULTS SCREEN -->
+        <div class="assessment-screen" id="screen-results">
+          <div class="results-score-wrap">
+            <span class="results-label">YOUR CELLULAR WELLNESS SCORE</span>
+            <div class="results-score-circle">
+              <span id="scoreNumber">--</span>
+              <span class="score-max">/100</span>
+            </div>
+            <p class="results-bio-age" id="bioAgeText"></p>
+          </div>
+          <div class="results-message">
+            <h3>Your Wellness Score is only the beginning</h3>
+            <p>Discover how our 3D2N Cellular Wellness Retreat helps successful individuals uncover hidden health insights and create a personalized roadmap toward vitality and longevity.</p>
+          </div>
+          <a href="#pricing" class="btn-assessment-start assessment-cta-link" id="exploreRetreatBtn">Explore the Wellness Retreat →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+        (function() {
+
+            var overlay     = document.getElementById('assessmentOverlay');
+            var closeBtn    = document.getElementById('assessmentClose');
+            var startBtn    = document.getElementById('startAssessment');
+            var skipBtn     = document.getElementById('skipAssessment');
+            var progressWrap = document.getElementById('progressWrap');
+            var progressBar = document.getElementById('progressBar');
+
+            var answers = {};
+            var currentQuestion = 0;
+            var totalQuestions = 8;
+
+            var openAssessmentBtn = document.getElementById('openAssessmentBtn');
+            if (openAssessmentBtn) {
+                openAssessmentBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.assessment-screen').forEach(function(s) {
+                        s.classList.remove('active');
+                    });
+                    document.getElementById('screen-intro').classList.add('active');
+                    progressWrap.style.display = 'none';
+                    progressBar.style.width = '0%';
+                    currentQuestion = 0;
+                    answers = {};
+                    document.querySelectorAll('.q-option.selected').forEach(function(opt) {
+                        opt.classList.remove('selected');
+                    });
+                    overlay.classList.add('open');
+                });
+            }
+
+            setTimeout(function() {
+                overlay.classList.add('open');
+            }, 2000);
+
+            function closeAssessment() {
+                overlay.classList.remove('open');
+            }
+
+            closeBtn.addEventListener('click', closeAssessment);
+            skipBtn.addEventListener('click', closeAssessment);
+
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeAssessment();
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeAssessment();
+            });
+
+            function showScreen(id) {
+                document.querySelectorAll('.assessment-screen').forEach(function(s) {
+                    s.classList.remove('active');
+                });
+                document.getElementById(id).classList.add('active');
+            }
+
+            startBtn.addEventListener('click', function() {
+                progressWrap.style.display = 'block';
+                currentQuestion = 1;
+                updateProgress();
+                showScreen('screen-q1');
+            });
+
+            function updateProgress() {
+                progressBar.style.width = ((currentQuestion / totalQuestions) * 100) + '%';
+            }
+
+            document.querySelectorAll('.q-options').forEach(function(group) {
+                var name = group.getAttribute('data-name');
+                group.querySelectorAll('.q-option').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        answers[name] = btn.textContent.trim();
+                        group.querySelectorAll('.q-option').forEach(function(b) {
+                            b.classList.remove('selected');
+                        });
+                        btn.classList.add('selected');
+                        setTimeout(function() {
+                            currentQuestion++;
+                            if (currentQuestion <= totalQuestions) {
+                                updateProgress();
+                                showScreen('screen-q' + currentQuestion);
+                            } else {
+                                progressWrap.style.display = 'none';
+                                showScreen('screen-contact');
+                            }
+                        }, 350);
+                    });
+                });
+            });
+
+            function calculateScore() {
+                var score = 70;
+                var ageMap = { 'Under 35': 0, '35 – 44': -2, '45 – 54': -5, '55 – 64': -8, '65+': -10 };
+                var energyMap = { 'Almost every day': 10, 'Several times a week': 5, 'Occasionally': -5, 'Rarely': -10 };
+                var stressMap = { 'Calm and balanced': 10, 'Occasionally stressed': 0, 'Frequently stressed': -8, 'Constantly under pressure': -12 };
+                var sleepMap = {
+                    'Excellent – I sleep deeply and wake refreshed': 10,
+                    'Good – Most nights are restful': 5,
+                    'Fair – Sleep can be inconsistent': -5,
+                    'Poor – I often struggle with sleep': -10
+                };
+                var activityMap = { 'I exercise 4 or more times a week': 10, '2–3 times a week': 5, 'Once a week': -3, 'Rarely': -8 };
+                score += ageMap[answers.age] || 0;
+                score += energyMap[answers.energy] || 0;
+                score += stressMap[answers.stress] || 0;
+                score += sleepMap[answers.sleep] || 0;
+                score += activityMap[answers.activity] || 0;
+                return Math.max(35, Math.min(95, score));
+            }
+
+            function calculateBioAge() {
+                var score = calculateScore();
+                var diff = Math.round((75 - score) / 3);
+                var ageRangeMap = { 'Under 35': 30, '35 – 44': 40, '45 – 54': 50, '55 – 64': 60, '65+': 68 };
+                var baseAge = ageRangeMap[answers.age] || 40;
+                return baseAge + diff;
+            }
+
+            function animateScore(target) {
+                var el = document.getElementById('scoreNumber');
+                var current = 0;
+                var increment = target / 40;
+                var timer = setInterval(function() {
+                    current += increment;
+                    if (current >= target) { current = target; clearInterval(timer); }
+                    el.textContent = Math.round(current);
+                }, 30);
+            }
+
+            window.submitAssessment = function(e) {
+                e.preventDefault();
+                var name  = document.getElementById('assessName').value;
+                var email = document.getElementById('assessEmail').value;
+                var phone = document.getElementById('assessPhone').value;
+                var btn   = document.getElementById('assessSubmitBtn');
+                btn.textContent = 'Calculating...';
+                btn.disabled = true;
+
+                var score  = calculateScore();
+                var bioAge = calculateBioAge();
+
+                fetch('https://script.google.com/macros/s/AKfycby_WSZe_RNKjvcx3MrFNdry-LBpkNO9CplRxSIR7bMBHk0TmzV22RwcgO2PSnwtvQFPHw/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: name, email: email, phone: phone, wellnessScore: score, bioAge: bioAge, answers: JSON.stringify(answers), source: 'Wellness Assessment' })
+                })
+                .then(function() { showResults(score, bioAge); })
+                .catch(function() { showResults(score, bioAge); });
+            };
+
+            function showResults(score, bioAge) {
+                setTimeout(function() {
+                    document.getElementById('scoreNumber').textContent = '--';
+                    document.getElementById('bioAgeText').textContent = 'Estimated Biological Age: ' + bioAge + ' years';
+                    showScreen('screen-results');
+                    animateScore(score);
+                }, 600);
+            }
+
+            document.getElementById('exploreRetreatBtn').addEventListener('click', closeAssessment);
+
+        })();
     </script>
 
 
