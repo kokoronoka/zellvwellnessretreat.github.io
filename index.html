@@ -182,93 +182,117 @@
 
         <div class="gold-rule"></div>
 
-        <div class="symptoms-grid">
+        <p class="symptoms-instruction">Tap everything that applies to you</p>
 
-          <div class="symptom-item">
+        <!-- Live counter + progress bar -->
+        <div class="symptoms-counter-wrap">
+          <div class="symptoms-counter-bar">
+            <div class="symptoms-counter-fill" id="symptomsCounterFill"></div>
+          </div>
+          <p class="symptoms-counter-text">
+            <span id="symptomsCount">0</span> of 8 symptoms selected
+          </p>
+        </div>
+
+        <div class="symptoms-grid" id="symptomsGrid">
+
+          <div class="symptom-item" data-symptom="fatigue">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-fatigue.jpg" alt="Constant fatigue"> -->
                <img src="assets/images/symptom-fatigue.png"  alt="Constant fatigue">
               <div class="symptom-img-placeholder"><span class="symptom-icon">😴</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Constant fatigue</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="sleep">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-sleep.jpg" alt="Poor sleep"> -->
                <img src="assets/images/symptom-sleep.png" alt="Poor sleep">
               <div class="symptom-img-placeholder"><span class="symptom-icon">🌙</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Poor sleep</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="stress">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-stress.jpg" alt="Stress and burnout"> -->
                <img src="assets/images/symptom-stress.png" alt="Stress and burnout">
               <div class="symptom-img-placeholder"><span class="symptom-icon">😰</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Stress and burnout</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="hormone">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-hormone.jpg" alt="Hormonal imbalance"> -->
                <img src="assets/images/symptom-hormone.png" alt="Hormonal imbalance">
               <div class="symptom-img-placeholder"><span class="symptom-icon">⚖️</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Hormonal imbalance</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="weight">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-weight.jpg" alt="Weight gain"> -->
                <img src="assets/images/symptom-weight.png" alt="Weight gain">
               <div class="symptom-img-placeholder"><span class="symptom-icon">📈</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Weight gain</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="brainfog">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-brainfog.jpg" alt="Brain fog"> -->
                <img src="assets/images/symptom-brainfog.png" alt="Brain fog">
               <div class="symptom-img-placeholder"><span class="symptom-icon">🧠</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Brain fog</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="energy">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-energy.jpg" alt="Low energy"> -->
                <img src="assets/images/symptom-energy.png" alt="Low energy">
               <div class="symptom-img-placeholder"><span class="symptom-icon">🔋</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Low energy</span>
             </div>
           </div>
 
-          <div class="symptom-item">
+          <div class="symptom-item" data-symptom="aging">
             <div class="symptom-img-wrap">
               <!-- Replace with: <img src="assets/images/symptom-aging.jpg" alt="Premature aging"> -->
                <img src="assets/images/symptom-aging.png" alt="Premature aging">
               <div class="symptom-img-placeholder"><span class="symptom-icon">⏳</span></div>
               <div class="symptom-overlay"></div>
+              <div class="symptom-check">✓</div>
               <span class="symptom-text">Premature aging</span>
             </div>
           </div>
 
         </div>
 
-        <p class="symptoms-closing">
+        <p class="symptoms-closing" id="symptomsClosing">
           Then this retreat was designed for <em>you</em>.
         </p>
+
+        <a href="#pricing" class="btn-symptoms-cta" id="symptomsCta" style="display:none;">
+          See How We Can Help →
+        </a>
 
       </div>
     </section>
@@ -332,10 +356,10 @@
                                 </div>
 
                                 <ul class="card-symptoms-list">
-                                    <li>Low energy.</li>
-                                    <li>Slower recovery.</li>
-                                    <li>Less drive.</li>
-                                    <li>Poor sleep.</li>
+                                    <li>Executives</li>
+                                    <li>Entrepreneurs</li>
+                                    <li>High performers</li>
+                                    <li>Men 35+</li>
                                     <li>Growing belly fat.</li>
                                 </ul>
 
@@ -355,10 +379,10 @@
                                 <h4 class="band-retreat-name">MEN'S VITALITY RETREAT</h4>
                                 <p class="band-powered">POWERED BY ZÉLL-V CELLULAR THERAPY</p>
                                 <div class="band-badges-row">
-                                    <span>✦ Rejuvenate Your Body</span>
-                                    <span>✦ Optimize Performance</span>
-                                    <span>✦ Restore Hormone Balance</span>
-                                    <span>✦ Reclaim Your Confidence</span>
+                                    <span>✦ Better energy</span>
+                                    <span>✦ Better recovery</span>
+                                    <span>✦ Better focus</span>
+                                    <span>✦ Better hormone balance</span>
                                 </div>
                                 <p class="band-tagline">
                                     RESTORE. RECHARGE. RECLAIM YOUR PRIME.
@@ -393,10 +417,10 @@
                                 </div>
 
                                 <ul class="card-symptoms-list">
-                                    <li>Fatigue.</li>
-                                    <li>Hormonal changes.</li>
-                                    <li>Dull skin.</li>
-                                    <li>Poor sleep.</li>
+                                    <li>Women 35+</li>
+                                    <li>Perimenopause</li>
+                                    <li>Stress management</li>
+                                    <li>Beauty and longevity seekers</li>
                                     <li>Loss of confidence.</li>
                                 </ul>
 
@@ -416,10 +440,10 @@
                                 <h4 class="band-retreat-name">WOMEN'S REJUVENATION RETREAT</h4>
                                 <p class="band-powered">POWERED BY ZÉLL-V CELLULAR THERAPY</p>
                                 <div class="band-badges-row">
-                                    <span>✦ Rejuvenate From Within</span>
-                                    <span>✦ Balance Hormones</span>
-                                    <span>✦ Glow Naturally</span>
-                                    <span>✦ Embrace Your Feminine Vitality</span>
+                                    <span>✦ Better sleep</span>
+                                    <span>✦ Hormonal support</span>
+                                    <span>✦ Skin vitality</span>
+                                    <span>✦ Energy restoration</span>
                                 </div>
                                 <p class="band-tagline">
                                     RENEW YOUR ENERGY. RECLAIM YOUR GLOW.
@@ -1002,6 +1026,134 @@
     </section>
 
     <!-- ========================================
+         SECTION: WELLNESS EXPERTS LINEUP
+    ======================================== -->
+    <section class="experts-section" id="experts" aria-labelledby="experts-heading">
+        <div class="experts-header">
+            <span class="section-label">MEDICAL EXCELLENCE</span>
+            <h2 id="experts-heading">Wellness Experts Lineup</h2>
+            <div class="gold-rule"></div>
+            <p class="experts-sub">
+                Guided by an international team of physicians and specialists in
+                cellular therapy, anti-aging, and regenerative medicine.
+            </p>
+            <p class="experts-drag-hint">← Drag to explore →</p>
+        </div>
+
+        <div class="experts-carousel-wrap" id="expertsCarouselWrap">
+            <div class="experts-track" id="expertsTrack">
+
+                <!-- EXPERT 1 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-1.jpg" alt="Dato Dr Nor Shahidah Khairullah"> -->
+                         <img src="assets/images/expert-1.jpg" alt="Dato Dr Nor Shahidah Khairullah">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>DATO Dr Nor Shahidah Khairullah Frcpath</h3>
+                        <p>Consultant Aesthetics, Anti-Ageing &amp; Rejuvenation Medicine / Global Doctors Specialist Center / CEO &amp; Medical Director, Molecular Research Laboratory, Malaysian Liver Foundation</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 2 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-2.jpg" alt="Prof Dr Harry Yeo Kar Kiat"> -->
+                         <img src="assets/images/expert-2.jpg" alt="Prof Dr Harry Yeo Kar Kiat">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Prof Dr Harry Yeo Kar Kiat MD PhD</h3>
+                        <p>Medical Director &amp; Head Of Medical Unit Of ZÉLL-V</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 3 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-3.jpg" alt="Dr Harald Lehmann"> -->
+                         <img src="assets/images/expert-3.jpg" alt="Dr Harald Lehmann">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Harald Lehmann</h3>
+                        <p>Orthopaedic Surgeon and Traumatologist</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 4 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-4.jpg" alt="Dr Peter Cremer"> -->
+                         <img src="assets/images/expert-4.jpg" alt="Dr Peter Cremer">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Peter Cremer</h3>
+                        <p>Director and owner of the Edith-Liebergeld-Institute, Kiefersfelden, Germany. Medical Specialties: Holistic Medicine, Cellular Therapy</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 5 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-5.jpg" alt="Dr Marco Sam Keng Fai"> -->
+                         <img src="assets/images/expert-5.jpg" alt="Dr Marco Sam Keng Fai">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Marco Sam Keng Fai</h3>
+                        <p>Medical Specialist in Anti-Ageing / Medical Director and Owner of Private Clinic Perfect Beauty Group, Macau</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 6 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-6.jpg" alt="Dr Haryani"> -->
+                         <img src="assets/images/expert-6.jpg" alt="Dr Haryani">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Haryani</h3>
+                        <p>Medical Specialist in Aesthetics Medicine / Medical Director and Owner of Clinic TIARA ESTETIKA, Indonesia</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 7 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-7.jpg" alt="Dr Yaroslav Vasilcisin"> -->
+                         <img src="assets/images/expert-7.jpg" alt="Dr Yaroslav Vasilcisin">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Yaroslav Vasilcisin</h3>
+                        <p>Orthopaedic Surgeon and Traumatologist</p>
+                    </div>
+                </div>
+
+                <!-- EXPERT 8 -->
+                <div class="expert-card">
+                    <div class="expert-img-wrap">
+                        <!-- Replace with: <img src="assets/images/expert-8.jpg" alt="Dr Michael Männel"> -->
+                         <img src="assets/images/expert-8.jpg" alt="Dr Michael Männel">
+                        <div class="expert-img-placeholder"><span>Photo</span></div>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Dr Michael Männel</h3>
+                        <p>Medical Doctor and Researcher in Cellular Therapy and Molecular Biology</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="experts-dots" id="expertsDots"></div>
+    </section>
+
+    <!-- ========================================
        SECTION: CURATED WELLNESS PRODUCTS INCLUDED
   ======================================== -->
     <section class="products-section" id="products" aria-labelledby="products-heading">
@@ -1112,187 +1264,151 @@
     </section>
 
     <!-- ========================================
+         SECTION: SCARCITY / LIMITED SLOTS
+    ======================================== -->
+    <section class="scarcity-section" id="scarcity">
+        <div class="scarcity-inner">
+            <div class="scarcity-card">
+                <div class="scarcity-glow-border"></div>
+                <div class="scarcity-card-content">
+                    <span class="scarcity-label">⏳ LIMITED AVAILABILITY</span>
+                    <h3 class="scarcity-heading">
+                        Only <span id="slotsLeft">3</span> of 10 Spots Left This Month
+                    </h3>
+                    <div class="scarcity-dots" id="scarcityDots"></div>
+                    <a href="#pricing" class="btn-scarcity-cta">Reserve Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
        SECTION C: WHAT'S INCLUDED — Full-width image rows
   ======================================== -->
     <section class="included-section" id="services" aria-labelledby="services-heading">
 
-        <!-- Section header — outside the rows -->
         <div class="included-header-wrap">
             <div class="included-header">
                 <span class="section-label">WHAT'S INCLUDED IN YOUR RETREAT</span>
                 <h2 id="services-heading">Everything Your Body Has Been Waiting For</h2>
                 <div class="gold-rule"></div>
+                <p class="included-drag-hint">← Drag to explore →</p>
             </div>
         </div>
 
-        <!-- Full width rows — no container restriction -->
-        <div class="included-rows-full">
+        <div class="included-carousel-wrap" id="includedCarouselWrap">
+            <div class="included-track" id="includedTrack">
 
-            <!-- ROW 1 -->
-            <div class="included-row-full">
-                <div class="row-bg" id="row-bg-1">
-                    <!-- Replace with:
-            <img src="assets/images/service-health.jpg" alt="Predictive Health Intelligence"> -->
-                    <img src="assets/images/doctor.png" alt="Predictive Health Intelligence">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">01</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">🔬</div>
-                            <h3>Predictive Health Intelligence</h3>
-                            <p>Understand your health at a deeper level through advanced assessments that reveal your
-                                current status, hidden risks, and future health tendencies. By analyzing at the cellular
-                                level,
-                                we detect early signs of stress and inflammation, shifting you from reactive care to
-                                preventive wellness.</p>
-                        </div>
+                <!-- CARD 1 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-1">
+                        <img src="assets/images/doctor.png" alt="Predictive Health Intelligence">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">01</span>
+                        <div class="included-icon-wrap">🔬</div>
+                        <h3>Predictive Health Intelligence</h3>
+                        <p>Understand your health at a deeper level through advanced assessments that reveal your current status, hidden risks, and future health tendencies. By analyzing at the cellular level, we detect early signs of stress and inflammation, shifting you from reactive care to preventive wellness.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- ROW 2 -->
-            <div class="included-row-full row-reverse">
-                <div class="row-bg" id="row-bg-2">
-                    <!-- Replace with:
-            <img src="assets/images/service-detox.jpg" alt="Cellular Detoxification"> -->
-                    <img src="assets/images/service-detox.png" alt="Cellular Detoxification">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">02</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">🌿</div>
-                            <h3>Cellular Detoxification &amp; Reset</h3>
-                            <p>Clear what your body no longer needs. Our protocols support natural cellular detox
-                                pathways,
-                                reduce internal toxic load, and create an optimal internal environment for regeneration.
-                                A true biological reset — not a superficial cleanse.</p>
-                        </div>
+                <!-- CARD 2 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-2">
+                        <img src="assets/images/service-detox.png" alt="Cellular Detoxification">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">02</span>
+                        <div class="included-icon-wrap">🌿</div>
+                        <h3>Cellular Detoxification &amp; Reset</h3>
+                        <p>Clear what your body no longer needs. Our protocols support natural cellular detox pathways, reduce internal toxic load, and create an optimal internal environment for regeneration. A true biological reset — not a superficial cleanse.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- ROW 3 -->
-            <div class="included-row-full">
-                <div class="row-bg" id="row-bg-3">
-                    <!-- Replace with:
-            <img src="assets/images/service-boost.jpg" alt="Boosting"> -->
-                    <img src="assets/images/service-boost.png" alt="Boosting">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">03</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">⚡</div>
-                            <h3>Boosting to a New Biological High</h3>
-                            <p>Activate your body's full potential. This phase enhances energy production, metabolic
-                                performance, and overall physiological efficiency, helping your body function beyond its
-                                normal baseline.</p>
-                        </div>
+                <!-- CARD 3 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-3">
+                        <img src="assets/images/service-boost.png" alt="Boosting">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">03</span>
+                        <div class="included-icon-wrap">⚡</div>
+                        <h3>Boosting to a New Biological High</h3>
+                        <p>Activate your body's full potential. This phase enhances energy production, metabolic performance, and overall physiological efficiency, helping your body function beyond its normal baseline.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- ROW 4 -->
-            <div class="included-row-full row-reverse">
-                <div class="row-bg" id="row-bg-4">
-                    <!-- Replace with:
-            <img src="assets/images/service-rejuvenate.jpg" alt="Cellular Rejuvenation"> -->
-                    <img src="assets/images/service-rejuvenate.png" alt="Cellular Rejuvenation">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">04</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">✨</div>
-                            <h3>Cellular Rejuvenation</h3>
-                            <p>Physician-guided regenerative therapies using cellular therapy that support energy,
-                                recovery,
-                                healthy aging, and tissue repair at the cellular level, helping your body restore and
-                                function
-                                more optimally from within.</p>
-                        </div>
+                <!-- CARD 4 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-4">
+                        <img src="assets/images/service-rejuvenate.png" alt="Cellular Rejuvenation">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">04</span>
+                        <div class="included-icon-wrap">✨</div>
+                        <h3>Cellular Rejuvenation</h3>
+                        <p>Physician-guided regenerative therapies using cellular therapy that support energy, recovery, healthy aging, and tissue repair at the cellular level, helping your body restore and function more optimally from within.</p>
                     </div>
                 </div>
-            </div>
 
 
-            <!-- ROW 6 -->
-            <div class="included-row-full">
-                <div class="row-bg" id="row-bg-6">
-                    <!-- Replace with:
-            <img src="assets/images/service-luxury.jpg" alt="Luxury Wellness"> -->
-                    <img src="assets/images/service-luxury.png" alt="Luxury Wellness">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">05</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">🏨</div>
-                            <h3>Luxury Wellness Experience</h3>
-                            <p>Premium accommodation, restorative spa therapies, seamless transport, and personalized
-                                hospitality in a private, curated wellness environment.</p>
-                        </div>
+
+                <!-- CARD 6 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-6">
+                        <img src="assets/images/service-luxury.png" alt="Luxury Wellness">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">05</span>
+                        <div class="included-icon-wrap">🏨</div>
+                        <h3>Luxury Wellness Experience</h3>
+                        <p>Premium accommodation, restorative spa therapies, seamless transport, and personalized hospitality in a private, curated wellness environment.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- ROW 7 -->
-            <div class="included-row-full row-reverse">
-                <div class="row-bg" id="row-bg-7">
-                    <!-- Replace with:
-            <img src="assets/images/service-nutrition.jpg" alt="Nutrition for Longevity"> -->
-                    <img src="assets/images/service-nutrition.png" alt="Nutrition for Longevity">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">06</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">🥗</div>
-                            <h3>Nutrition for Longevity</h3>
-                            <p>Personalized wellness meals designed by in-house nutritionists to support metabolic
-                                health,
-                                cellular function, and long-term vitality based on your individual needs.</p>
-                        </div>
+                <!-- CARD 7 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-7">
+                        <img src="assets/images/service-nutrition.png" alt="Nutrition for Longevity">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">06</span>
+                        <div class="included-icon-wrap">🥗</div>
+                        <h3>Nutrition for Longevity</h3>
+                        <p>Personalized wellness meals designed by in-house nutritionists to support metabolic health, cellular function, and long-term vitality based on your individual needs.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- ROW 8 -->
-            <div class="included-row-full ">
-                <div class="row-bg" id="row-bg-8">
-                    <!-- Replace with:
-            <img src="assets/images/service-beyond.jpg" alt="Wellness Beyond Your Stay"> -->
-                    <img src="assets/images/service-beyond.png" alt="Wellness Beyond Your Stay">
-                </div>
-                <div class="row-overlay"></div>
-                <div class="row-content-wrap">
-                    <div class="row-content">
-                        <div class="row-number">07</div>
-                        <div class="row-body">
-                            <div class="row-icon-wrap">🎯</div>
-                            <h3>Wellness Beyond Your Stay</h3>
-                            <p>Leave with a personalized health roadmap and targeted supplements to sustain and continue
-                                your transformation beyond the retreat.</p>
-                        </div>
+                <!-- CARD 8 -->
+                <div class="included-card">
+                    <div class="included-card-bg" id="row-bg-8">
+                        <img src="assets/images/service-beyond.png" alt="Wellness Beyond Your Stay">
+                    </div>
+                    <div class="included-card-overlay"></div>
+                    <div class="included-card-content">
+                        <span class="included-number">07</span>
+                        <div class="included-icon-wrap">🎯</div>
+                        <h3>Wellness Beyond Your Stay</h3>
+                        <p>Leave with a personalized health roadmap and targeted supplements to sustain and continue your transformation beyond the retreat.</p>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
+
+        <!-- Dot indicators -->
+        <div class="included-dots" id="includedDots"></div>
 
         <!-- Bottom quote -->
         <div class="included-quote-wrap">
             <div class="included-quote">
-                <p>"This is not a checklist of treatments. It is a carefully sequenced programme where every element
-                    works together — so you leave not just rested, but genuinely transformed."</p>
+                <p>"This is not a checklist of treatments. It is a carefully sequenced programme where every element works together — so you leave not just rested, but genuinely transformed."</p>
             </div>
         </div>
 
@@ -1538,6 +1654,139 @@
 
             </div>
         </div><!-- /.results-content -->
+    </section>
+
+    <!-- ========================================
+         SECTION: REAL TRANSFORMATION STORIES
+    ======================================== -->
+    <section class="stories-section" id="stories" aria-labelledby="stories-heading">
+        <div class="stories-inner">
+
+            <div class="stories-header">
+                <span class="section-label">REAL PEOPLE. REAL EXPERIENCES.</span>
+                <h2 id="stories-heading">Real Transformation Stories</h2>
+                <div class="gold-rule"></div>
+                <p class="stories-sub">See the measurable change our guests experience — in their own words, and in their results.</p>
+            </div>
+
+            <!-- BEFORE / AFTER PHOTOS -->
+            <div class="stories-block">
+                <h3 class="stories-block-title">Before &amp; After</h3>
+                <div class="ba-photo-grid">
+
+                    <div class="ba-photo-card">
+                        <!-- Replace with:
+                        <img src="assets/images/ba-1.jpg" alt="Before and after 1"> -->
+                        <div class="ba-photo-placeholder">
+                            <span>Before / After Photo 1</span>
+                        </div>
+                    </div>
+
+                    <div class="ba-photo-card">
+                        <!-- Replace with:
+                        <img src="assets/images/ba-2.jpg" alt="Before and after 2"> -->
+                        <div class="ba-photo-placeholder">
+                            <span>Before / After Photo 2</span>
+                        </div>
+                    </div>
+
+                    <div class="ba-photo-card">
+                        <!-- Replace with:
+                        <img src="assets/images/ba-3.jpg" alt="Before and after 3"> -->
+                        <div class="ba-photo-placeholder">
+                            <span>Before / After Photo 3</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- VIDEO TESTIMONIALS -->
+            <div class="stories-block">
+                <h3 class="stories-block-title">Video Testimonials</h3>
+                <div class="video-testimonial-grid">
+
+                    <div class="video-testimonial-card">
+                        <!-- Replace with:
+                        <video controls poster="assets/images/video-poster-1.jpg">
+                            <source src="assets/videos/testimonial-1.mp4" type="video/mp4">
+                        </video> -->
+                        <div class="video-placeholder">
+                            <span class="video-play-icon">▶</span>
+                            <span>Testimonial Video 1</span>
+                        </div>
+                    </div>
+
+                    <div class="video-testimonial-card">
+                        <!-- Replace with:
+                        <video controls poster="assets/images/video-poster-2.jpg">
+                            <source src="assets/videos/testimonial-2.mp4" type="video/mp4">
+                        </video> -->
+                        <div class="video-placeholder">
+                            <span class="video-play-icon">▶</span>
+                            <span>Testimonial Video 2</span>
+                        </div>
+                    </div>
+
+                    <div class="video-testimonial-card">
+                        <!-- Replace with:
+                        <video controls poster="assets/images/video-poster-3.jpg">
+                            <source src="assets/videos/testimonial-3.mp4" type="video/mp4">
+                        </video> -->
+                        <div class="video-placeholder">
+                            <span class="video-play-icon">▶</span>
+                            <span>Testimonial Video 3</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CASE STUDIES -->
+            <div class="stories-block">
+                <h3 class="stories-block-title">Case Studies</h3>
+                <div class="case-study-grid">
+
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <!-- Replace with:
+                            <img src="assets/images/case-1.jpg" alt="Case study 1"> -->
+                            <div class="case-img-placeholder">
+                                <span>Case Study Photo</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <span class="case-tag">Vitality Restored</span>
+                            <h4>From Burnout to Breakthrough</h4>
+                            <p>A senior executive's journey from chronic fatigue and stress to renewed energy and clarity in just 3 days.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-study-card">
+                        <div class="case-study-img">
+                            <!-- Replace with:
+                            <img src="assets/images/case-2.jpg" alt="Case study 2"> -->
+                            <div class="case-img-placeholder">
+                                <span>Case Study Photo</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <span class="case-tag">Healthy Aging</span>
+                            <h4>Reclaiming Vitality at 50</h4>
+                            <p>How targeted cellular therapy helped balance hormones and restore confidence and energy.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="stories-cta">
+                <a href="#pricing" class="btn-stories-primary">Reserve Your Retreat</a>
+                <button class="btn-stories-secondary" id="storiesAssessmentBtn">Take Free Wellness Assessment</button>
+            </div>
+
+        </div>
     </section>
 
     <!-- ========================================
@@ -2169,20 +2418,170 @@
     </script>
 
     <script>
-        // Included rows — scroll reveal + image zoom
-        (function () {
-            var rows = document.querySelectorAll('.included-row-full');
-            if (!rows.length) return;
+        (function() {
+            var wrap = document.getElementById('includedCarouselWrap');
+            var track = document.getElementById('includedTrack');
+            var dotsWrap = document.getElementById('includedDots');
 
-            var rowObserver = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    }
+            if (!wrap || !track) return;
+
+            var cards = track.querySelectorAll('.included-card');
+            var totalCards = cards.length;
+
+            for (var i = 0; i < totalCards; i++) {
+                var dot = document.createElement('span');
+                dot.className = 'inc-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('data-index', i);
+                dotsWrap.appendChild(dot);
+            }
+
+            var isDown = false;
+            var startX = 0;
+            var startTranslate = 0;
+            var currentTranslate = 0;
+            var maxTranslate = 0;
+
+            function calcMax() {
+                maxTranslate = Math.max(0, track.scrollWidth - wrap.clientWidth);
+            }
+
+            function setTranslate(x) {
+                x = Math.max(-maxTranslate, Math.min(0, x));
+                currentTranslate = x;
+                track.style.transform = 'translateX(' + x + 'px)';
+                updateDots();
+            }
+
+            function updateDots() {
+                var progress = maxTranslate > 0 ? Math.abs(currentTranslate) / maxTranslate : 0;
+                var activeIndex = Math.round(progress * (totalCards - 1));
+                dotsWrap.querySelectorAll('.inc-dot').forEach(function(d, idx) {
+                    d.classList.toggle('active', idx === activeIndex);
                 });
-            }, { threshold: 0.2 });
+            }
 
-            rows.forEach(function (row) { rowObserver.observe(row); });
+            wrap.addEventListener('mousedown', function(e) {
+                isDown = true;
+                wrap.classList.add('dragging');
+                startX = e.pageX;
+                startTranslate = currentTranslate;
+                calcMax();
+            });
+
+            window.addEventListener('mousemove', function(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                setTranslate(startTranslate + (e.pageX - startX));
+            });
+
+            window.addEventListener('mouseup', function() {
+                isDown = false;
+                wrap.classList.remove('dragging');
+            });
+
+            wrap.addEventListener('touchstart', function(e) {
+                isDown = true;
+                startX = e.touches[0].pageX;
+                startTranslate = currentTranslate;
+                calcMax();
+            }, { passive: true });
+
+            wrap.addEventListener('touchmove', function(e) {
+                if (!isDown) return;
+                setTranslate(startTranslate + (e.touches[0].pageX - startX));
+            }, { passive: true });
+
+            wrap.addEventListener('touchend', function() { isDown = false; });
+
+            dotsWrap.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('inc-dot')) return;
+                calcMax();
+                var index = parseInt(e.target.getAttribute('data-index'));
+                var target = -(maxTranslate / (totalCards - 1)) * index;
+                track.style.transition = 'transform 0.4s ease';
+                setTranslate(target);
+                setTimeout(function() { track.style.transition = ''; }, 400);
+            });
+
+            window.addEventListener('resize', function() {
+                calcMax();
+                setTranslate(currentTranslate);
+            });
+
+            setTimeout(calcMax, 100);
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var items = document.querySelectorAll('.symptom-item');
+            var countEl = document.getElementById('symptomsCount');
+            var fillEl = document.getElementById('symptomsCounterFill');
+            var closingEl = document.getElementById('symptomsClosing');
+            var ctaEl = document.getElementById('symptomsCta');
+
+            if (!items.length) return;
+
+            var selected = {};
+            var totalSymptoms = items.length;
+
+            var messages = {
+                low: "You're doing well — but prevention starts <em>now</em>.",
+                mid: "Your body is sending signals worth listening to.",
+                high: "Then this retreat was designed for <em>you</em>."
+            };
+
+            function updateUI() {
+                var count = Object.keys(selected).filter(function(k) {
+                    return selected[k];
+                }).length;
+
+                countEl.textContent = count;
+
+                var pct = (count / totalSymptoms) * 100;
+                fillEl.style.width = pct + '%';
+
+                closingEl.classList.remove('intensity-low', 'intensity-mid', 'intensity-high');
+
+                if (count === 0) {
+                    closingEl.innerHTML = 'Tap the symptoms above that apply to you.';
+                    ctaEl.classList.remove('show');
+                } else if (count <= 2) {
+                    closingEl.innerHTML = messages.low;
+                    closingEl.classList.add('intensity-low');
+                    ctaEl.classList.add('show');
+                } else if (count <= 5) {
+                    closingEl.innerHTML = messages.mid;
+                    closingEl.classList.add('intensity-mid');
+                    ctaEl.classList.add('show');
+                } else {
+                    closingEl.innerHTML = messages.high;
+                    closingEl.classList.add('intensity-high');
+                    ctaEl.classList.add('show');
+                }
+            }
+
+            items.forEach(function(item) {
+                var symptomKey = item.getAttribute('data-symptom');
+
+                item.addEventListener('click', function() {
+                    var isSelected = !selected[symptomKey];
+                    selected[symptomKey] = isSelected;
+
+                    item.classList.toggle('selected', isSelected);
+
+                    if (isSelected) {
+                        item.classList.add('just-selected');
+                        setTimeout(function() {
+                            item.classList.remove('just-selected');
+                        }, 300);
+                    }
+
+                    updateUI();
+                });
+            });
+
+            updateUI();
         })();
     </script>
 
@@ -2378,6 +2777,25 @@
             window.addEventListener('resize', updateTimeline);
 
             updateTimeline();
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var section = document.getElementById('scarcity');
+            if (!section) return;
+
+            var totalSlots = 10;
+            var slotsLeft = 3;
+            var slotsBooked = totalSlots - slotsLeft;
+
+            var dotsWrap = document.getElementById('scarcityDots');
+
+            for (var i = 0; i < totalSlots; i++) {
+                var dot = document.createElement('span');
+                dot.className = 'scarcity-dot ' + (i < slotsBooked ? 'filled' : 'empty');
+                dotsWrap.appendChild(dot);
+            }
         })();
     </script>
 
@@ -2578,6 +2996,24 @@
                 });
             }
 
+            var storiesAssessmentBtn = document.getElementById('storiesAssessmentBtn');
+            if (storiesAssessmentBtn) {
+                storiesAssessmentBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.assessment-screen').forEach(function(s) {
+                        s.classList.remove('active');
+                    });
+                    document.getElementById('screen-intro').classList.add('active');
+                    progressWrap.style.display = 'none';
+                    progressBar.style.width = '0%';
+                    currentQuestion = 0;
+                    answers = {};
+                    document.querySelectorAll('.q-option.selected').forEach(function(opt) {
+                        opt.classList.remove('selected');
+                    });
+                    overlay.classList.add('open');
+                });
+            }
+
             setTimeout(function() {
                 overlay.classList.add('open');
             }, 2000);
@@ -2710,6 +3146,103 @@
 
             document.getElementById('exploreRetreatBtn').addEventListener('click', closeAssessment);
 
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var wrap = document.getElementById('expertsCarouselWrap');
+            var track = document.getElementById('expertsTrack');
+            var dotsWrap = document.getElementById('expertsDots');
+
+            if (!wrap || !track) return;
+
+            var cards = track.querySelectorAll('.expert-card');
+            var totalCards = cards.length;
+
+            for (var i = 0; i < totalCards; i++) {
+                var dot = document.createElement('span');
+                dot.className = 'exp-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('data-index', i);
+                dotsWrap.appendChild(dot);
+            }
+
+            var isDown = false;
+            var startX = 0;
+            var scrollLeftStart = 0;
+            var currentTranslate = 0;
+            var maxTranslate = 0;
+
+            function calcMaxTranslate() {
+                maxTranslate = Math.max(0, track.scrollWidth - wrap.clientWidth);
+            }
+
+            function setTranslate(x) {
+                x = Math.max(-maxTranslate, Math.min(0, x));
+                currentTranslate = x;
+                track.style.transform = 'translateX(' + x + 'px)';
+                updateActiveDot();
+            }
+
+            function updateActiveDot() {
+                var progress = maxTranslate > 0 ? Math.abs(currentTranslate) / maxTranslate : 0;
+                var activeIndex = Math.round(progress * (totalCards - 1));
+                dotsWrap.querySelectorAll('.exp-dot').forEach(function(d, idx) {
+                    d.classList.toggle('active', idx === activeIndex);
+                });
+            }
+
+            wrap.addEventListener('mousedown', function(e) {
+                isDown = true;
+                wrap.classList.add('dragging');
+                startX = e.pageX;
+                scrollLeftStart = currentTranslate;
+                calcMaxTranslate();
+            });
+
+            window.addEventListener('mousemove', function(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                setTranslate(scrollLeftStart + (e.pageX - startX));
+            });
+
+            window.addEventListener('mouseup', function() {
+                isDown = false;
+                wrap.classList.remove('dragging');
+            });
+
+            wrap.addEventListener('touchstart', function(e) {
+                isDown = true;
+                startX = e.touches[0].pageX;
+                scrollLeftStart = currentTranslate;
+                calcMaxTranslate();
+            }, { passive: true });
+
+            wrap.addEventListener('touchmove', function(e) {
+                if (!isDown) return;
+                setTranslate(scrollLeftStart + (e.touches[0].pageX - startX));
+            }, { passive: true });
+
+            wrap.addEventListener('touchend', function() {
+                isDown = false;
+            });
+
+            dotsWrap.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('exp-dot')) return;
+                calcMaxTranslate();
+                var index = parseInt(e.target.getAttribute('data-index'));
+                var targetTranslate = -(maxTranslate / (totalCards - 1)) * index;
+                track.style.transition = 'transform 0.4s ease';
+                setTranslate(targetTranslate);
+                setTimeout(function() { track.style.transition = ''; }, 400);
+            });
+
+            window.addEventListener('resize', function() {
+                calcMaxTranslate();
+                setTranslate(currentTranslate);
+            });
+
+            setTimeout(calcMaxTranslate, 100);
         })();
     </script>
 
