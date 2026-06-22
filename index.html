@@ -473,114 +473,117 @@
     <script>
         (function () {
 
-            function initAudienceSwipe() {
+            function initAudienceCarousel() {
 
-                if (window.innerWidth > 768) return;
+                var wrap = document.querySelector('.audience-swipe-wrap');
+                var track = document.querySelector('.audience-cards-row');
+                var dot0 = document.querySelector('.swipe-dot[data-index="0"]');
+                var dot1 = document.querySelector('.swipe-dot[data-index="1"]');
 
-                var row = document.querySelector(
-                    '.audience-cards-row'
-                );
-                var wrap = document.querySelector(
-                    '.audience-swipe-wrap'
-                );
-                var dot0 = document.querySelector(
-                    '.swipe-dot[data-index="0"]'
-                );
-                var dot1 = document.querySelector(
-                    '.swipe-dot[data-index="1"]'
-                );
+                if (!wrap || !track) return;
 
-                if (!row || !wrap) {
-                    console.log('Swipe: elements not found');
-                    return;
+                var totalCards = 2;
+                var isDown = false;
+                var startX = 0;
+                var startTranslate = 0;
+                var currentTranslate = 0;
+                var maxTranslate = 0;
+                var currentIndex = 0;
+
+                function calcMax() {
+                    maxTranslate = Math.max(0, track.scrollWidth - wrap.clientWidth);
                 }
 
-                console.log('Swipe: initialised');
-
-                var current = 0;
-                var tX = 0;
-                var tY = 0;
-                var moving = false;
-
-                function goTo(n) {
-                    current = n;
-                    if (n === 1) {
-                        row.classList.add('swiped');
-                    } else {
-                        row.classList.remove('swiped');
-                    }
-                    if (dot0) dot0.classList.toggle(
-                        'active', n === 0
-                    );
-                    if (dot1) dot1.classList.toggle(
-                        'active', n === 1
-                    );
-                    console.log('Swipe: goTo', n);
+                function setTranslate(x, animate) {
+                    x = Math.max(-maxTranslate, Math.min(0, x));
+                    currentTranslate = x;
+                    track.style.transition = animate ? 'transform 0.4s ease' : 'none';
+                    track.style.transform = 'translateX(' + x + 'px)';
+                    updateDots();
                 }
 
-                /* Touch start */
-                wrap.addEventListener('touchstart',
-                    function (e) {
-                        tX = e.touches[0].clientX;
-                        tY = e.touches[0].clientY;
-                        moving = true;
-                        console.log('touchstart', tX, tY);
-                    },
-                    { passive: true }
-                );
-
-                /* Touch end */
-                wrap.addEventListener('touchend',
-                    function (e) {
-                        if (!moving) return;
-                        moving = false;
-
-                        var ex = e.changedTouches[0].clientX;
-                        var ey = e.changedTouches[0].clientY;
-                        var dx = tX - ex;
-                        var dy = tY - ey;
-
-                        console.log('touchend dx:', dx, 'dy:', dy);
-
-                        /* Horizontal swipe only */
-                        if (
-                            Math.abs(dx) > 40 &&
-                            Math.abs(dx) > Math.abs(dy)
-                        ) {
-                            if (dx > 0 && current === 0) {
-                                goTo(1);
-                            } else if (dx < 0 && current === 1) {
-                                goTo(0);
-                            }
-                        }
-                    },
-                    { passive: true }
-                );
-
-                /* Dot clicks */
-                if (dot0) {
-                    dot0.addEventListener('click', function () {
-                        console.log('dot0 clicked');
-                        goTo(0);
-                    });
+                function updateDots() {
+                    var progress = maxTranslate > 0
+                        ? Math.abs(currentTranslate) / maxTranslate
+                        : 0;
+                    currentIndex = Math.round(progress * (totalCards - 1));
+                    if (dot0) dot0.classList.toggle('active', currentIndex === 0);
+                    if (dot1) dot1.classList.toggle('active', currentIndex === 1);
                 }
 
-                if (dot1) {
-                    dot1.addEventListener('click', function () {
-                        console.log('dot1 clicked');
-                        goTo(1);
-                    });
+                function snapToNearest() {
+                    calcMax();
+                    var target = -(maxTranslate / (totalCards - 1)) * currentIndex;
+                    setTranslate(target, true);
                 }
 
+                function goTo(index) {
+                    calcMax();
+                    currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+                    var target = maxTranslate > 0
+                        ? -(maxTranslate / (totalCards - 1)) * currentIndex
+                        : 0;
+                    setTranslate(target, true);
+                }
+
+                /* ── MOUSE DRAG ── */
+                wrap.addEventListener('mousedown', function (e) {
+                    isDown = true;
+                    wrap.classList.add('dragging');
+                    startX = e.pageX;
+                    startTranslate = currentTranslate;
+                    calcMax();
+                });
+
+                window.addEventListener('mousemove', function (e) {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    setTranslate(startTranslate + (e.pageX - startX), false);
+                });
+
+                window.addEventListener('mouseup', function () {
+                    if (!isDown) return;
+                    isDown = false;
+                    wrap.classList.remove('dragging');
+                    snapToNearest();
+                });
+
+                /* ── TOUCH DRAG ── */
+                wrap.addEventListener('touchstart', function (e) {
+                    isDown = true;
+                    startX = e.touches[0].pageX;
+                    startTranslate = currentTranslate;
+                    calcMax();
+                }, { passive: true });
+
+                wrap.addEventListener('touchmove', function (e) {
+                    if (!isDown) return;
+                    setTranslate(startTranslate + (e.touches[0].pageX - startX), false);
+                }, { passive: true });
+
+                wrap.addEventListener('touchend', function () {
+                    if (!isDown) return;
+                    isDown = false;
+                    snapToNearest();
+                });
+
+                /* ── DOT CLICKS ── */
+                if (dot0) dot0.addEventListener('click', function () { goTo(0); });
+                if (dot1) dot1.addEventListener('click', function () { goTo(1); });
+
+                /* ── RESIZE ── */
+                window.addEventListener('resize', function () {
+                    calcMax();
+                    goTo(currentIndex);
+                });
+
+                setTimeout(calcMax, 100);
             }
 
-            /* Run on DOM ready */
             if (document.readyState === 'loading') {
-                document.addEventListener(
-                    'DOMContentLoaded', initAudienceSwipe
-                );
+                document.addEventListener('DOMContentLoaded', initAudienceCarousel);
             } else {
-                initAudienceSwipe();
+                initAudienceCarousel();
             }
 
         })();

@@ -5331,6 +5331,38 @@ video.hero-video,
   }
 }
 
+/* ── AUDIENCE CAROUSEL — drag/grab behaviour (all viewports) ── */
+.audience-swipe-wrap {
+  cursor: grab;
+  user-select: none;
+}
+
+.audience-swipe-wrap.dragging {
+  cursor: grabbing;
+}
+
+.audience-cards-row {
+  will-change: transform;
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .audience-cards-row {
+    width: 200%;
+    flex-direction: row !important;
+  }
+
+  .audience-card {
+    width: 100%;
+    flex: 0 0 100%;
+    pointer-events: auto;
+  }
+
+  .audience-swipe-wrap.dragging .audience-card * {
+    pointer-events: none;
+  }
+}
+
 /* ── AUDIENCE MOBILE SWIPE ── */
 
 /* Hide dots and hint on desktop */
