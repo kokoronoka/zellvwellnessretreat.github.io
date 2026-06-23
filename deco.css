@@ -2617,9 +2617,37 @@ video.hero-video,
 }
 
 .outcome-icon {
-  font-size: 36px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--gold-dark);
+}
+
+.outcome-icon svg {
+  width: 26px;
+  height: 26px;
   display: block;
-  margin-bottom: 16px;
+}
+
+.outcome-card:hover .outcome-icon {
+  color: var(--gold);
+  transition: color 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .outcome-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .outcome-icon svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .outcome-card h4 {
@@ -3290,17 +3318,36 @@ video.hero-video,
 }
 
 .included-icon-wrap {
-  font-size: 28px;
   width: 52px;
   height: 52px;
-  background: rgba(200,169,81,0.15);
-  border: 1px solid rgba(200,169,81,0.35);
-  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(200,169,81,0.15);
+  border: 1px solid rgba(200,169,81,0.35);
+  border-radius: 12px;
   margin-bottom: 14px;
   backdrop-filter: blur(4px);
+  color: white;
+}
+
+.included-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .included-icon-wrap {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .included-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .included-card-content h3 {
@@ -8740,9 +8787,37 @@ img, video, iframe {
 }
 
 .trust-stat-icon {
-  font-size: 36px;
-  line-height: 1;
-  margin-bottom: 4px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  color: var(--gold-dark);
+}
+
+.trust-stat-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.trust-stat-card:hover .trust-stat-icon {
+  color: var(--gold);
+  transition: color 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .trust-stat-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .trust-stat-icon svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .trust-stat-value {
@@ -9248,8 +9323,6 @@ body {
 }
 
 .malaysia-icon {
-  font-size: 26px;
-  line-height: 1;
   flex-shrink: 0;
   width: 44px;
   height: 44px;
@@ -9259,6 +9332,19 @@ body {
   background: white;
   border: 1px solid var(--gold-border);
   border-radius: 12px;
+  color: var(--gold-dark);
+}
+
+.malaysia-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.malaysia-list li:hover .malaysia-icon {
+  background: var(--gold-pale, rgba(200,169,81,0.1));
+  border-color: var(--gold);
+  transition: all 0.25s ease;
 }
 
 .malaysia-image-wrap {
@@ -9337,7 +9423,11 @@ body {
   .malaysia-icon {
     width: 36px;
     height: 36px;
-    font-size: 20px;
+  }
+
+  .malaysia-icon svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -9553,18 +9643,38 @@ body {
 }
 
 .activity-icon {
-  font-size: 20px;
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--gold-pale, #FBF7EF);
-  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
+  vertical-align: middle;
+  color: var(--gold-dark);
+}
+
+.activity-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.timeline-activities li:hover .activity-icon {
+  color: var(--gold);
+  transition: color 0.25s ease;
 }
 
 @media (max-width: 768px) {
+  .activity-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .activity-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
   .timeline-section {
     padding: 60px 0;
   }
