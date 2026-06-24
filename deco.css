@@ -10544,6 +10544,11 @@ body {
   margin: 0;
 }
 
+.faq-answer p strong {
+  font-weight: 700 !important;
+  color: var(--gold-dark);
+}
+
 .faq-cta {
   display: flex;
   justify-content: center;
