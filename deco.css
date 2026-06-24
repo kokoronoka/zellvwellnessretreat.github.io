@@ -9289,6 +9289,14 @@ body {
   margin: 0;
 }
 
+#symptomsClosing,
+.symptoms-closing {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
 .symptoms-closing em {
   color: var(--gold-dark);
   font-style: italic;
