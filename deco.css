@@ -3263,6 +3263,7 @@ video.hero-video,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Per-card placeholder colours */
@@ -3287,14 +3288,20 @@ video.hero-video,
   );
 }
 
+/* Fixed grid rows so heading and description align the same across all cards */
 .included-card-content {
   position: relative;
   z-index: 2;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows:
+    1fr
+    auto
+    auto
+    56px
+    1fr;
   padding: 32px 28px;
+  box-sizing: border-box;
 }
 
 .included-number {
@@ -3302,19 +3309,18 @@ video.hero-video,
   font-size: 56px;
   color: rgba(200,169,81,0.25);
   line-height: 1;
-  margin-bottom: -10px;
 }
 
 .included-icon-wrap {
   width: 52px;
   height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: rgba(200,169,81,0.15);
   border: 1px solid rgba(200,169,81,0.35);
   border-radius: 12px;
-  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 0;
   backdrop-filter: blur(4px);
   color: white;
 }
@@ -3338,20 +3344,25 @@ video.hero-video,
   }
 }
 
+/* Fixed-height heading row — text aligns to bottom so 1-line and 2-line headings end at the same Y */
 .included-card-content h3 {
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 500;
   color: white;
-  margin-bottom: 12px;
-  line-height: 1.25;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
 }
 
+/* Description starts right after heading, same position on every card */
 .included-card-content p {
   font-size: 14px;
   line-height: 1.7;
   color: rgba(255,255,255,0.75);
-  margin: 0;
+  margin: 10px 0 0;
+  align-self: start;
 }
 
 .included-dots {
@@ -3415,6 +3426,12 @@ video.hero-video,
   }
 
   .included-card-content {
+    grid-template-rows:
+      1fr
+      auto
+      auto
+      48px
+      1fr;
     padding: 24px 20px;
   }
 
@@ -9427,7 +9444,7 @@ body {
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
-  z-index: 3;
+  z-index: 5;
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -9455,6 +9472,39 @@ body {
 .symptom-item.selected .symptom-text {
   color: white;
   font-weight: 700;
+  opacity: 0;
+}
+
+/* Detail overlay — hidden by default */
+.symptom-detail {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: rgba(13,27,42,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: inherit;
+}
+
+.symptom-detail p {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.7;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.symptom-item.selected .symptom-detail {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 @keyframes symptomSelectPulse {
@@ -9529,6 +9579,14 @@ body {
     font-size: 12px;
     top: 8px;
     right: 8px;
+  }
+
+  .symptom-detail {
+    padding: 14px;
+  }
+
+  .symptom-detail p {
+    font-size: 12px;
   }
 }
 
@@ -10550,6 +10608,8 @@ body {
   line-height: 1.75;
   padding: 0 24px 22px;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .faq-answer p strong {
@@ -10603,35 +10663,114 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .faq-section {
-    padding: 60px 0;
+    padding: 56px 0;
   }
 
   .faq-inner {
     padding: 0 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .faq-header {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .faq-header .section-label {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 12px;
   }
 
   .faq-header h2 {
-    font-size: clamp(26px, 7vw, 34px);
+    font-size: clamp(24px, 6.5vw, 32px);
+    line-height: 1.2;
+  }
+
+  .faq-header .gold-rule {
+    margin: 16px auto;
+  }
+
+  .faq-sub {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .faq-list {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   .faq-question {
-    padding: 18px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 16px 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  .faq-question span:first-child {
     font-size: 14px;
+    line-height: 1.5;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    hyphens: auto;
+    display: block;
+  }
+
+  .faq-toggle-icon {
+    flex: 0 0 auto;
+    font-size: 18px;
+    margin-top: 1px;
+  }
+
+  .faq-answer {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .faq-answer p {
     font-size: 13px;
-    padding: 0 18px 18px;
+    line-height: 1.7;
+    padding: 0 16px 16px;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
   }
 
   .faq-cta {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+    width: 100%;
   }
 
   .btn-faq-primary,
@@ -10639,7 +10778,36 @@ body {
     width: 100%;
     max-width: 320px;
     text-align: center;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    font-size: 13px;
   }
+
+}
+
+@media (max-width: 480px) {
+
+  .faq-inner {
+    padding: 0 16px;
+  }
+
+  .faq-question {
+    padding: 14px 14px;
+  }
+
+  .faq-question span:first-child {
+    font-size: 13px;
+  }
+
+  .faq-answer p {
+    font-size: 12px;
+    padding: 0 14px 14px;
+  }
+
+  .faq-toggle-icon {
+    font-size: 16px;
+  }
+
 }
 
 /* ── WELLNESS EXPERTS LINEUP ── */
