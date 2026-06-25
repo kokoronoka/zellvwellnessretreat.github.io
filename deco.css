@@ -4868,6 +4868,7 @@ video.hero-video,
 .loc-col {
   border-left: 1px solid var(--warm-grey);
   padding-left: 28px;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -4909,7 +4910,27 @@ video.hero-video,
   max-width: none;
 }
 
+.loc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  flex-shrink: 0;
+  color: var(--gold-light);
+}
+
+.loc-icon svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
 .loc-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 400;
@@ -4923,6 +4944,9 @@ video.hero-video,
 .loc-phone a:hover { color: var(--gold); }
 
 .loc-hours p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 300;
