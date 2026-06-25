@@ -73,7 +73,10 @@
 
                 <!-- Right: CTA button -->
                 <div class="navbar-cta">
-                    <a href="#pricing" class="btn-nav">Reserve Now</a>
+                    <a href="#pricing" class="btn-nav btn-nav-save">
+                        <span class="btn-save-main">Reserve Now</span>
+                        <span class="btn-save-badge">Save Up to 25%</span>
+                    </a>
                 </div>
 
                 <!-- Mobile hamburger -->
@@ -116,7 +119,7 @@
 
             <p class="experience-overview-text">
                 A fully doctor-guided cellular recovery experience combining state-of-the-art personalized health
-                assessment, cellular rejuvenation therapies, detoxification, anti-aging treatments and luxury wellness
+                assessment, cellular rejuvenation therapies, detoxification, anti-ageing treatments and luxury wellness
                 experience.
             </p>
 
@@ -368,10 +371,6 @@
 
             </div>
 
-            <p class="symptoms-closing" id="symptomsClosing">
-                Then this retreat was designed for <em>you</em>.
-            </p>
-
             <a href="#pricing" class="btn-symptoms-cta" id="symptomsCta" style="display:none;">
                 See How We Can Help →
             </a>
@@ -407,7 +406,7 @@
         <div class="audience-content">
 
             <div class="audience-header">
-                <h2 class="section-heading fade-in" id="audience-heading">Personalized your cellular wellness retreat
+                <h2 class="section-heading fade-in" id="audience-heading">Personalized Your Cellular Wellness Retreat
                 </h2>
             </div>
 
@@ -686,13 +685,19 @@
 
             <p class="why-subtext fade-in">
                 We’re redefining how people approach aging and health. Through
-                advanced regenerative medicine, transformative anti-aging
+                advanced regenerative medicine, transformative anti-ageing
                 therapies, and cutting-edge diagnostics, we empower you to
                 reclaim your vitality and optimize your well-being.
 
             </p>
 
             <p class="why-tagline fade-in">Your Perfect Healing Holiday</p>
+
+            <!-- CTA Buttons -->
+            <div class="why-cta-row fade-in">
+                <a href="#pricing" class="btn-why-primary">Reserve Your Retreat</a>
+                <button class="btn-why-secondary" id="whyAssessmentBtn">Take Free Wellness Assessment</button>
+            </div>
 
         </div>
     </section>
@@ -1112,7 +1117,7 @@
                                 <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5" />
                             </svg></div>
                         <h3>Feed Your Body Right with Personalized Nutrition</h3>
-                        <p>Physician-guided regenerative therapies using cellular therapy that support energy, recovery,
+                        <p>Physician-guided regenerative therapies using cellular health that support energy, recovery,
                             healthy aging, and tissue repair at the cellular level, helping your body restore and
                             function more optimally from within.</p>
                     </div>
@@ -1274,13 +1279,13 @@
                 <h2 class="specialists-heading fade-in" id="specialists-heading">Guided By International Wellness
                     Specialists</h2>
                 <p class="specialists-body fade-in">Our program is supported by specialists and medical professionals
-                    from Germany and Switzerland, with deep experience in cellular therapy and regenerative wellness.
+                    from Germany and Switzerland, with deep experience in cellular health  and regenerative wellness.
                 </p>
 
                 <div class="expertise-grid fade-in">
                     <div class="expertise-tile">
                         <span class="expertise-icon" aria-hidden="true">⚗</span>
-                        <span class="expertise-label">Cellular Therapy</span>
+                        <span class="expertise-label">Cellular-based Solutions</span>
                     </div>
                     <div class="expertise-tile">
                         <span class="expertise-icon" aria-hidden="true">↻</span>
@@ -1321,7 +1326,7 @@
             <div class="gold-rule"></div>
             <p class="experts-sub">
                 Guided by an international team of physicians and specialists in
-                cellular therapy, anti-aging, and regenerative medicine.
+                cellular health, anti-ageing, and regenerative medicine.
             </p>
             <p class="experts-drag-hint">← Drag to explore →</p>
         </div>
@@ -1654,7 +1659,7 @@
                         <h3 class="product-3d-name">ZÉLL-V NMN</h3>
                         <p class="product-3d-desc">Boosts NAD+ levels for mitochondrial
                             function, cognitive clarity, and
-                            powerful anti-aging support.</p>
+                            powerful anti-ageing support.</p>
                         <div class="product-3d-pills">
                             <span>🧠 Clarity</span>
                             <span>⚡ Mitochondria</span>
@@ -1920,7 +1925,7 @@
                             provides a <strong>comprehensive,
                                 medical-grade cellular rejuvenation
                                 ecosystem</strong>. Led by an elite
-                            panel of physicians and anti-aging
+                            panel of physicians and anti-ageing
                             experts, we combine advanced cellular
                             diagnostics, bespoke clinical
                             therapies, and a curated sanctuary
@@ -2035,7 +2040,7 @@
 
                     <!-- Column 1: Address & Details -->
                     <div class="loc-col fade-in">
-                        <h3 class="loc-col-heading">KL Hub</h3>
+                        <h3 class="loc-col-heading">ZELL-V Wellness Hub</h3>
                         <div class="loc-col-underline" aria-hidden="true"></div>
                         <address class="loc-address">
                             ZÉLL-V Wellness Hub <br>
@@ -2095,8 +2100,10 @@
     </footer>
 
     <!-- Sticky floating reservation button -->
-    <a href="#pricing" class="sticky-reserve-btn" aria-label="Reserve your retreat for RM 7,500">Reserve Now —
-        RM&nbsp;7,500</a>
+    <a href="#pricing" class="sticky-reserve-btn sticky-cta-save" aria-label="Reserve your retreat for RM 7,500">
+        <span class="btn-save-main">Reserve Now</span>
+        <span class="btn-save-badge">Save Up to 25%</span>
+    </a>
 
     <!-- ========================================
        SCRIPT: Scroll Animations + Nav
@@ -2500,17 +2507,35 @@
 
         <div class="wa-popup" id="waPopup">
             <div class="wa-popup-header">
-                <span class="wa-popup-title">Chat With Us</span>
+                <span class="wa-popup-title">Choose Who to Chat With</span>
                 <button class="wa-popup-close" id="waClose">✕</button>
             </div>
 
             <div class="wa-outlets">
 
-                <a class="wa-outlet-btn" href="https://wa.me/60127032363" target="_blank" rel="noopener">
+                <a class="wa-outlet-btn" href="https://wa.me/60123663278" target="_blank" rel="noopener">
                     <div class="wa-outlet-info">
-                        <span class="wa-outlet-name">KL Hub</span>
-                        <span class="wa-outlet-address">Level 4, Menara Ruyi, Off Jalan Syed Putra, Kuala Lumpur</span>
-                        <span class="wa-outlet-hours">Mon–Sat: 9am–8pm · Sun &amp; PH: 9am–5pm</span>
+                        <span class="wa-outlet-name">Elliot</span>
+                        <span class="wa-outlet-address">ZÉLL-V Wellness Hub, Menara Ruyi, Off Jalan Syed Putra, Kuala Lumpur</span>
+                        <span class="wa-outlet-hours">+6012-366 3278</span>
+                    </div>
+                    <span class="wa-outlet-arrow">→</span>
+                </a>
+
+                <a class="wa-outlet-btn" href="https://wa.me/60123361159" target="_blank" rel="noopener">
+                    <div class="wa-outlet-info">
+                        <span class="wa-outlet-name">Ivy</span>
+                        <span class="wa-outlet-address">ZÉLL-V Wellness Hub, Menara Ruyi, Off Jalan Syed Putra, Kuala Lumpur</span>
+                        <span class="wa-outlet-hours">+6012-336 1159</span>
+                    </div>
+                    <span class="wa-outlet-arrow">→</span>
+                </a>
+
+                <a class="wa-outlet-btn" href="https://wa.me/60125288513" target="_blank" rel="noopener">
+                    <div class="wa-outlet-info">
+                        <span class="wa-outlet-name">Zhi Yang</span>
+                        <span class="wa-outlet-address">ZÉLL-V Wellness Hub, Menara Ruyi, Off Jalan Syed Putra, Kuala Lumpur</span>
+                        <span class="wa-outlet-hours">+6012-528 8513</span>
                     </div>
                     <span class="wa-outlet-arrow">→</span>
                 </a>
@@ -2672,19 +2697,12 @@
             var items = document.querySelectorAll('.symptom-item');
             var countEl = document.getElementById('symptomsCount');
             var fillEl = document.getElementById('symptomsCounterFill');
-            var closingEl = document.getElementById('symptomsClosing');
             var ctaEl = document.getElementById('symptomsCta');
 
             if (!items.length) return;
 
             var selected = {};
             var totalSymptoms = items.length;
-
-            var messages = {
-                low: "You're doing well — but prevention starts <em>now</em>.",
-                mid: "Your body is sending signals worth listening to.",
-                high: "Then this retreat was designed for <em>you</em>."
-            };
 
             function updateUI() {
                 var count = Object.keys(selected).filter(function (k) {
@@ -2696,22 +2714,9 @@
                 var pct = (count / totalSymptoms) * 100;
                 fillEl.style.width = pct + '%';
 
-                closingEl.classList.remove('intensity-low', 'intensity-mid', 'intensity-high');
-
                 if (count === 0) {
-                    closingEl.innerHTML = 'Tap the symptoms above that apply to you.';
                     ctaEl.classList.remove('show');
-                } else if (count <= 2) {
-                    closingEl.innerHTML = messages.low;
-                    closingEl.classList.add('intensity-low');
-                    ctaEl.classList.add('show');
-                } else if (count <= 5) {
-                    closingEl.innerHTML = messages.mid;
-                    closingEl.classList.add('intensity-mid');
-                    ctaEl.classList.add('show');
                 } else {
-                    closingEl.innerHTML = messages.high;
-                    closingEl.classList.add('intensity-high');
                     ctaEl.classList.add('show');
                 }
             }
@@ -3193,6 +3198,24 @@
             var faqAssessmentBtn = document.getElementById('faqAssessmentBtn');
             if (faqAssessmentBtn) {
                 faqAssessmentBtn.addEventListener('click', function () {
+                    document.querySelectorAll('.assessment-screen').forEach(function (s) {
+                        s.classList.remove('active');
+                    });
+                    document.getElementById('screen-intro').classList.add('active');
+                    progressWrap.style.display = 'none';
+                    progressBar.style.width = '0%';
+                    currentQuestion = 0;
+                    answers = {};
+                    document.querySelectorAll('.q-option.selected').forEach(function (opt) {
+                        opt.classList.remove('selected');
+                    });
+                    overlay.classList.add('open');
+                });
+            }
+
+            var whyAssessmentBtn = document.getElementById('whyAssessmentBtn');
+            if (whyAssessmentBtn) {
+                whyAssessmentBtn.addEventListener('click', function () {
                     document.querySelectorAll('.assessment-screen').forEach(function (s) {
                         s.classList.remove('active');
                     });

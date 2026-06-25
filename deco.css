@@ -346,6 +346,57 @@ p {
   border-color: white;
 }
 
+.btn-nav-save {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 8px 20px !important;
+  gap: 2px;
+}
+
+.btn-save-main {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.btn-save-badge {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.15);
+  padding: 2px 8px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.btn-nav-save:hover .btn-save-badge {
+  background: rgba(255,255,255,0.25);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .btn-nav-save {
+    padding: 6px 16px !important;
+  }
+
+  .btn-save-main {
+    font-size: 10px;
+  }
+
+  .btn-save-badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+}
+
 /* Scrolled state */
 .navbar.scrolled {
   background: rgba(255,255,255,0.96);
@@ -818,6 +869,66 @@ video.hero-video,
   letter-spacing: 0.04em;
   margin-top: 8px;
   max-width: none;
+}
+
+.why-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.btn-why-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-why-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(200,169,81,0.4);
+}
+
+.btn-why-secondary {
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-dark);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-why-secondary:hover {
+  background: var(--gold-pale, rgba(200,169,81,0.08));
+  border-color: var(--gold-dark);
+}
+
+@media (max-width: 768px) {
+  .why-cta-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-why-primary,
+  .btn-why-secondary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
 }
 
 
