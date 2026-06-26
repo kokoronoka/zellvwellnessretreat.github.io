@@ -549,6 +549,9 @@
                 <span class="swipe-dot" data-index="1"></span>
             </div>
 
+            <!-- Drag hint — mobile only -->
+            <p class="audience-drag-hint">← Drag to explore →</p>
+
             <!-- Mobile swipe hint -->
             <div class="swipe-hint" id="swipeHint">
                 <span>← Swipe to see Women's Retreat →</span>
@@ -715,23 +718,12 @@
   ======================================== -->
     <section class="comparison-section" id="why" aria-labelledby="comparison-heading">
 
-        <!-- Full section background split -->
+        <!-- Full section background — right tree image only -->
         <div class="comparison-bg-split">
-
-            <!-- Left tree image -->
-            <div class="comparison-bg-left" id="comparison-bg-left">
-                <img src="assets/images/tree-left.png" alt="Withered tree">
-                <!-- Replace with cropped left half of tree image -->
-            </div>
-
-            <!-- Right tree image -->
             <div class="comparison-bg-right" id="comparison-bg-right">
                 <img src="assets/images/tree-right.png" alt="Flourishing tree">
-                <!-- Replace with cropped right half of tree image -->
             </div>
-
         </div>
-
 
         <!-- Dark overlay -->
         <div class="comparison-overlay"></div>
@@ -748,24 +740,7 @@
 
             <div class="comparison-cards">
 
-                <!-- LEFT CARD: Conventional -->
-                <div class="comparison-card card-left fade-in">
-                    <div class="card-badge badge-grey">Conventional</div>
-                    <h3 class="card-title-left">Typical Wellness Retreat</h3>
-                    <div class="card-callout callout-red">
-                        <p class="callout-heading">The Problem with Typical Retreats:</p>
-                        <p>They give you a "vacation high." You drink green juice and get a massage, but 48 hours after
-                            returning home to work, your stress, bloating, and fatigue come right back — because the
-                            root cause was never found.</p>
-                    </div>
-                    <ul class="card-bullets-x">
-                        <li>Generic Relaxation</li>
-                        <li>Spa &amp; Massage Only</li>
-                        <li>Temporary Relief</li>
-                    </ul>
-                </div>
-
-                <!-- RIGHT CARD: ZÉLL-V -->
+                <!-- ZÉLL-V CARD ONLY -->
                 <div class="comparison-card card-right fade-in">
                     <div class="card-badge badge-gold">ZÉLL-V Method</div>
                     <h3 class="card-title-right">The ZÉLL-V Approach</h3>
@@ -799,6 +774,8 @@
             <!-- LEFT: Text content -->
             <div class="malaysia-text">
                 <span class="section-label">THE DESTINATION</span>
+
+                <div class="malaysia-text-centered">
                 <h2 id="malaysia-heading">Why Malaysia?</h2>
                 <div class="gold-rule"></div>
 
@@ -886,6 +863,7 @@
                         <span>Cultural Richness</span>
                     </li>
                 </ul>
+                </div>
             </div>
 
             <!-- RIGHT: Image -->
@@ -1286,53 +1264,18 @@
             <!-- Top: centred text -->
             <div class="specialists-text-top">
                 <p class="section-label fade-in">INTERNATIONAL EXPERTISE</p>
-                <h2 class="specialists-heading fade-in" id="specialists-heading">Guided By International Wellness Specialists</h2>
-                <p class="specialists-body fade-in">Our program is supported by specialists and medical professionals from Germany and Switzerland, with deep experience in cellular health and regenerative wellness.</p>
+                <h2 class="specialists-heading fade-in" id="specialists-heading">Guided By International Wellness
+                    Specialists</h2>
+
+                <div class="gold-rule"></div>
+                <p class="experts-sub">
+                    Guided by an international team of physicians and specialists in
+                    cellular health, anti-ageing, and regenerative medicine.
+                </p>
+                <p class="experts-drag-hint">← Drag to explore →</p>
             </div>
 
-            <!-- Middle: image -->
-            <div class="specialists-image-wrap fade-in">
-                <img src="assets/images/medicalteam.png" alt="ZÉLL-V Medical Team">
-                <p class="specialists-caption">Our team of German &amp; Swiss certified wellness specialists</p>
-            </div>
 
-            <!-- Bottom: expertise tiles horizontal row -->
-            <div class="expertise-grid fade-in">
-                <div class="expertise-tile">
-                    <span class="expertise-icon" aria-hidden="true">⚗</span>
-                    <span class="expertise-label">Cellular-based Solutions</span>
-                </div>
-                <div class="expertise-tile">
-                    <span class="expertise-icon" aria-hidden="true">↻</span>
-                    <span class="expertise-label">Regenerative Wellness</span>
-                </div>
-                <div class="expertise-tile">
-                    <span class="expertise-icon" aria-hidden="true">♥</span>
-                    <span class="expertise-label">Holistic Health Optimization</span>
-                </div>
-                <div class="expertise-tile">
-                    <span class="expertise-icon" aria-hidden="true">⬡</span>
-                    <span class="expertise-label">Preventive Wellness Strategies</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ========================================
-         SECTION: WELLNESS EXPERTS LINEUP
-    ======================================== -->
-    <section class="experts-section" id="experts" aria-labelledby="experts-heading">
-        <div class="experts-header">
-            <span class="section-label">MEDICAL EXCELLENCE</span>
-            <h2 id="experts-heading">Wellness Experts Lineup</h2>
-            <div class="gold-rule"></div>
-            <p class="experts-sub">
-                Guided by an international team of physicians and specialists in
-                cellular health, anti-ageing, and regenerative medicine.
-            </p>
-            <p class="experts-drag-hint">← Drag to explore →</p>
         </div>
 
         <div class="experts-carousel-wrap" id="expertsCarouselWrap">
@@ -1394,9 +1337,8 @@
                 </div>
 
                 <!-- EXPERT 5 -->
-                <div class="expert-card">
+                <!-- <div class="expert-card">
                     <div class="expert-img-wrap">
-                        <!-- Replace with: <img src="assets/images/expert-5.jpg" alt="Dr Marco Sam Keng Fai"> -->
                         <img src="assets/images/expert-5.jpg" alt="Dr Marco Sam Keng Fai">
                         <div class="expert-img-placeholder"><span>Photo</span></div>
                     </div>
@@ -1405,12 +1347,11 @@
                         <p>Medical Specialist in Anti-Ageing / Medical Director and Owner of Private Clinic Perfect
                             Beauty Group, Macau</p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EXPERT 6 -->
-                <div class="expert-card">
+                <!-- <div class="expert-card">
                     <div class="expert-img-wrap">
-                        <!-- Replace with: <img src="assets/images/expert-6.jpg" alt="Dr Haryani"> -->
                         <img src="assets/images/expert-6.jpg" alt="Dr Haryani">
                         <div class="expert-img-placeholder"><span>Photo</span></div>
                     </div>
@@ -1419,7 +1360,7 @@
                         <p>Medical Specialist in Aesthetics Medicine / Medical Director and Owner of Clinic TIARA
                             ESTETIKA, Indonesia</p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EXPERT 7 -->
                 <div class="expert-card">
@@ -1448,9 +1389,54 @@
                 </div>
 
             </div>
+            <div class="experts-dots" id="expertsDots"></div>
         </div>
 
-        <div class="experts-dots" id="expertsDots"></div>
+        
+
+
+    </section>
+
+
+    <!-- ========================================
+         SECTION: WELLNESS EXPERTS LINEUP
+    ======================================== -->
+    <section class="experts-section" id="experts" aria-labelledby="experts-heading">
+        <div class="experts-header">
+            <span class="section-label">MEDICAL EXCELLENCE</span>
+            <h2 id="experts-heading">Wellness Experts Lineup</h2>
+            <div class="gold-rule"></div>
+            <p class="experts-sub">
+            <p class="specialists-body fade-in">Our program is supported by specialists and medical professionals , with deep experience in cellular health and regenerative wellness.</p>
+            </p>
+            <div class="specialists-image-wrap fade-in">
+                <img src="assets/images/V Wellness Group Photo.jpg" alt="ZÉLL-V Medical Team">
+                <!-- <p class="specialists-caption">Our team of German &amp; Swiss certified wellness specialists</p> -->
+            </div>
+            <!-- <p class="experts-drag-hint">← Drag to explore →</p> -->
+        </div>
+
+        <!-- Bottom: expertise tiles horizontal row -->
+        <div class="expertise-grid fade-in">
+            <div class="expertise-tile">
+                <span class="expertise-icon" aria-hidden="true">⚗</span>
+                <span class="expertise-label">Cellular-based Solutions</span>
+            </div>
+            <div class="expertise-tile">
+                <span class="expertise-icon" aria-hidden="true">↻</span>
+                <span class="expertise-label">Regenerative Wellness</span>
+            </div>
+            <div class="expertise-tile">
+                <span class="expertise-icon" aria-hidden="true">♥</span>
+                <span class="expertise-label">Holistic Health Optimization</span>
+            </div>
+            <div class="expertise-tile">
+                <span class="expertise-icon" aria-hidden="true">⬡</span>
+                <span class="expertise-label">Preventive Wellness Strategies</span>
+            </div>
+        </div>
+
+
     </section>
 
 
@@ -1495,6 +1481,8 @@
 
                         <!-- Two column checklist -->
                         <ul class="pricing-checklist">
+                            <li>Airport transfer and chauffeur included</li>
+                            <li>3-day 2-night accommodation included</li>
                             <li>Comprehensive Health Assessment</li>
                             <li>Body Composition Analysis</li>
                             <li>Cellular Wellness Screening</li>
@@ -1586,7 +1574,7 @@
                 <h2 id="products-heading">Curated Wellness Products Included</h2>
                 <div class="gold-rule"></div>
                 <p>Your retreat includes specially selected wellness support
-                    products — ZÉLL-V Phytogreen, ZÉLL-V Platinum Plus 3, and
+                    products <br> — ZÉLL-V Phytogreen, ZÉLL-V Platinum Plus 3, and
                     ZÉLL-V NMN — designed to complement your recovery and
                     cellular wellness optimization.</p>
             </div>
@@ -1612,15 +1600,28 @@
                             premium phytonutrients.</p>
                         <div class="product-3d-pills">
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Energy
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21c4-3 7-7 7-11a7 7 0 10-14 0c0 4 3 8 7 11z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14c1.5-1.5 1.5-3.5 0-6-1.5 2.5-1.5 4.5 0 6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21c4-3 7-7 7-11a7 7 0 10-14 0c0 4 3 8 7 11z" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 14c1.5-1.5 1.5-3.5 0-6-1.5 2.5-1.5 4.5 0 6z" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Detox
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Immunity
                             </span>
                         </div>
@@ -1648,15 +1649,28 @@
                             comprehensive biological restoration.</p>
                         <div class="product-3d-pills">
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v3M12 18v3M5 5l2 2M17 17l2 2M3 12h3M18 12h3M5 19l2-2M17 7l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3v3M12 18v3M5 5l2 2M17 17l2 2M3 12h3M18 12h3M5 19l2-2M17 7l2-2"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
                                 Rejuvenation
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                                 Hormones
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
                                 Aging
                             </span>
                         </div>
@@ -1684,15 +1698,28 @@
                             powerful anti-ageing support.</p>
                         <div class="product-3d-pills">
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 8v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M11 8v3l2 2" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Clarity
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Mitochondria
                             </span>
                             <span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                                 Anti-Aging
                             </span>
                         </div>
@@ -1789,6 +1816,9 @@
             <h2 class="space-heading fade-in" id="space-heading">A Space To Finally Slow Down</h2>
             <p class="space-subtext fade-in">No rushing. No overthinking. No pressure. Just space for your body and mind
                 to breathe again.</p>
+
+            <!-- Drag hint -->
+            <p class="slowdown-drag-hint">← Drag to explore →</p>
 
             <div class="slowdown-scroll-wrap">
                 <div class="slowdown-scroll-track" id="slowdownScrollTrack">
@@ -1954,6 +1984,69 @@
                 </div>
 
             </div>
+
+            <div class="slowdown-drag-bar-wrap">
+                <div class="slowdown-drag-bar" id="slowdownDragBar">
+                    <div class="slowdown-drag-handle" id="slowdownDragHandle"></div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- ========================================
+         SECTION: AWARDS
+    ======================================== -->
+    <section class="awards-section" id="awards" aria-labelledby="awards-heading">
+      <div class="awards-inner">
+
+        <div class="awards-header">
+          <span class="section-label">RECOGNITION</span>
+          <h2 id="awards-heading">Award-Winning Wellness Excellence</h2>
+          <div class="gold-rule"></div>
+          <p class="awards-sub">Setting the benchmark in premium wellness experiences.</p>
+        </div>
+
+        <div class="awards-grid">
+
+          <!-- AWARD 1 -->
+          <div class="award-card">
+            <div class="award-frame">
+              <!-- Replace with:
+              <img src="assets/images/award-1.jpg" alt="Brandlaureate Entrepreneur Awards 2023"> -->
+              <img src="assets/images/award-Brandlaureate.jpg" alt="Brandlaureate Entrepreneur Awards 2023">
+              <div class="award-img-placeholder">
+              </div>
+            </div>
+            <p class="award-caption">Women Entrepreneur Of The Year Innovation In Cellular Therapies</p>
+          </div>
+
+          <!-- AWARD 2 -->
+          <div class="award-card">
+            <div class="award-frame">
+              <!-- Replace with:
+              <img src="assets/images/award-2.jpg" alt="GlobalHealth Asia Pacific Awards 2024"> -->
+              <img src="assets/images/award-global-health.jpg" alt="GlobalHealth Asia Pacific Awards 2024">
+              <div class="award-img-placeholder">
+              </div>
+            </div>
+            <p class="award-caption">Holistic Health And Wellness Centre Of The Year In Asia-Pacific</p>
+          </div>
+
+          <!-- AWARD 3 -->
+          <div class="award-card">
+            <div class="award-frame">
+              <!-- Replace with:
+              <img src="assets/images/award-3.jpg" alt="SME500 Singapore Award Winner 2024"> -->
+              <img src="assets/images/award-sme500.jpg" alt="SME500 Singapore Award Winner 2024">
+              <div class="award-img-placeholder">
+              </div>
+            </div>
+            <p class="award-caption">SME500 Singapore Award Winner 2024</p>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
     <!-- ========================================
@@ -2102,26 +2195,28 @@
                         <h3 class="loc-col-heading">ZÉLL-V Wellness Hub</h3>
                         <div class="loc-col-underline" aria-hidden="true"></div>
                         <address class="loc-address">
-                            No. 30A, Lorong Kapar, Jalan 2/87G<br>
-                            Off Jalan Syed Putra<br>
-                            58000 Kuala Lumpur, Malaysia
+                            ZÉLL-V Wellness Hub, Menara Ruyi<br>
+                            30A, Lorong Kapar Jalan 2/87G, Off, Jln Syed Putra<br>
+                            Taman Seputeh, 58000 Kuala Lumpur
                         </address>
                         <p class="loc-phone">
-                          <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3v6a4 4 0 008 0V3M10 21v-4M14 21v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/></svg></span>
-                          <a href="tel:+60123663278">+6012-366 3278 - Elliot</a>
-                        </p>
-                        <p class="loc-phone">
-                          <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3v6a4 4 0 008 0V3M10 21v-4M14 21v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/></svg></span>
-                          <a href="tel:+60123361159">+6012-336 1159 - Ivy</a>
-                        </p>
-                        <p class="loc-phone">
-                          <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3v6a4 4 0 008 0V3M10 21v-4M14 21v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/></svg></span>
-                          <a href="tel:+60125288513">+6012-528 8513 - Zhi Yang</a>
+                            <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3v6a4 4 0 008 0V3M10 21v-4M14 21v-4" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5" />
+                                </svg></span>
+                            <a href="tel:+60125288513">+6012-528 8513</a>
                         </p>
                         <div class="loc-hours">
                             <p>
-                              <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                              Mon – Sat: 9:00am – 8:00pm
+                                <span class="loc-icon"><svg viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                                        <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                                Mon – Sat: 9:00am – 8:00pm
                             </p>
                             <p class="loc-hours-sub">Sun &amp; PH: 9:00am – 5:00pm</p>
                         </div>
@@ -2131,12 +2226,12 @@
                     <div class="loc-map-col fade-in">
                         <div class="loc-map-wrap">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.792426212854!2d101.6789458112932!3d3.122144053303388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc493aebe14887%3A0x2551554c10c12d9b!2sMenara%20Ruyi!5e0!3m2!1sen!2smy!4v1782206160923!5m2!1sen!2smy"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8960202597677!2d101.6815639!3d3.1221948999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc499281e0d4eb%3A0x447f38b2d204a453!2sZ%C3%89LL-V%20Wellness%20Hub!5e0!3m2!1sen!2smy!4v1782451864512!5m2!1sen!2smy"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade" title="ZÉLL-V KL Hub Location">
+                                referrerpolicy="strict-origin-when-cross-origin" title="ZÉLL-V KL Hub Location">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/place/Menara+Ruyi/@3.122144053303388,101.6789458112932,17z"
+                        <a href="https://www.google.com/maps/place/Z%C3%89LL-V+Wellness+Hub/@3.1221949,101.6815639,17z"
                             target="_blank" rel="noopener" class="loc-map-link">
                             Open in Google Maps →
                         </a>
@@ -2155,7 +2250,6 @@
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#why">Why ZÉLL-V</a>
                 <a href="#journey">Journey</a>
-                <a href="#results">Results</a>
                 <a href="#pricing">Pricing</a>
             </nav>
 
@@ -2577,13 +2671,13 @@
 
         <div class="wa-popup" id="waPopup">
             <div class="wa-popup-header">
-                <span class="wa-popup-title">Choose Who to Chat With</span>
+                <span class="wa-popup-title">Talk to a real consultant</span>
                 <button class="wa-popup-close" id="waClose">✕</button>
             </div>
 
             <div class="wa-outlets">
 
-                <a class="wa-outlet-btn" href="https://wa.me/60123663278" target="_blank" rel="noopener">
+                <!-- <a class="wa-outlet-btn" href="https://wa.me/60123663278" target="_blank" rel="noopener">
                     <div class="wa-outlet-info">
                         <span class="wa-outlet-name">Elliot</span>
                         <span class="wa-outlet-address">ZÉLL-V Wellness Hub, Menara Ruyi, Off Jalan Syed Putra, Kuala
@@ -2601,11 +2695,11 @@
                         <span class="wa-outlet-hours">+6012-336 1159</span>
                     </div>
                     <span class="wa-outlet-arrow">→</span>
-                </a>
+                </a> -->
 
                 <a class="wa-outlet-btn" href="https://wa.me/60125288513" target="_blank" rel="noopener">
                     <div class="wa-outlet-info">
-                        <span class="wa-outlet-name">Zhi Yang</span>
+                        <span class="wa-outlet-name"></span>
                         <span class="wa-outlet-address">ZÉLL-V Wellness Hub, Menara Ruyi, Off Jalan Syed Putra, Kuala
                             Lumpur</span>
                         <span class="wa-outlet-hours">+6012-528 8513</span>
@@ -3597,6 +3691,133 @@
         })();
     </script>
 
+    <script>
+        (function () {
+            var track = document.getElementById('slowdownScrollTrack');
+            var wrap = track ? track.closest('.slowdown-scroll-wrap') : null;
+            var dragBar = document.getElementById('slowdownDragBar');
+            var dragHandle = document.getElementById('slowdownDragHandle');
+
+            if (!wrap || !track || !dragBar || !dragHandle) return;
+
+            var isDown = false;
+            var startX = 0;
+            var startTranslate = 0;
+            var currentTranslate = 0;
+            var maxTranslate = 0;
+            var autoSlideTimer = null;
+            var autoSlideSpeed = 0.5;
+            var isPaused = false;
+
+            function calcMax() {
+                maxTranslate = Math.max(0, track.scrollWidth - wrap.clientWidth);
+            }
+
+            function updateHandlePosition() {
+                var barWidth = dragBar.clientWidth;
+                var handleWidth = dragHandle.clientWidth;
+                var progress = maxTranslate > 0 ? Math.abs(currentTranslate) / maxTranslate : 0;
+                var maxHandleX = barWidth - handleWidth;
+                dragHandle.style.left = (progress * maxHandleX) + 'px';
+            }
+
+            function setTranslate(x) {
+                if (x <= -maxTranslate) {
+                    x = -maxTranslate;
+                } else if (x > 0) {
+                    x = 0;
+                }
+                currentTranslate = x;
+                track.style.transform = 'translateX(' + x + 'px)';
+                updateHandlePosition();
+            }
+
+            function autoSlideStep() {
+                if (!isPaused) {
+                    var next = currentTranslate - autoSlideSpeed;
+                    if (next <= -maxTranslate) { next = 0; }
+                    setTranslate(next);
+                }
+                autoSlideTimer = requestAnimationFrame(autoSlideStep);
+            }
+
+            function startAutoSlide() {
+                if (!autoSlideTimer) {
+                    autoSlideTimer = requestAnimationFrame(autoSlideStep);
+                }
+            }
+
+            /* Drag handle — mouse */
+            dragHandle.addEventListener('mousedown', function (e) {
+                isDown = true;
+                isPaused = true;
+                dragHandle.classList.add('dragging-handle');
+                startX = e.pageX;
+                startTranslate = currentTranslate;
+                calcMax();
+                e.preventDefault();
+            });
+
+            window.addEventListener('mousemove', function (e) {
+                if (!isDown) return;
+                e.preventDefault();
+                var dx = e.pageX - startX;
+                var ratio = maxTranslate / (dragBar.clientWidth - dragHandle.clientWidth);
+                setTranslate(startTranslate - (dx * ratio));
+            });
+
+            window.addEventListener('mouseup', function () {
+                if (!isDown) return;
+                isDown = false;
+                dragHandle.classList.remove('dragging-handle');
+                setTimeout(function () { isPaused = false; }, 1500);
+            });
+
+            /* Drag handle — touch */
+            dragHandle.addEventListener('touchstart', function (e) {
+                isDown = true;
+                isPaused = true;
+                startX = e.touches[0].pageX;
+                startTranslate = currentTranslate;
+                calcMax();
+            }, { passive: true });
+
+            dragHandle.addEventListener('touchmove', function (e) {
+                if (!isDown) return;
+                var dx = e.touches[0].pageX - startX;
+                var ratio = maxTranslate / (dragBar.clientWidth - dragHandle.clientWidth);
+                setTranslate(startTranslate - (dx * ratio));
+            }, { passive: true });
+
+            dragHandle.addEventListener('touchend', function () {
+                if (!isDown) return;
+                isDown = false;
+                setTimeout(function () { isPaused = false; }, 1500);
+            });
+
+            /* Click on bar track (not handle) jumps to position */
+            dragBar.addEventListener('click', function (e) {
+                if (e.target === dragHandle) return;
+                calcMax();
+                var rect = dragBar.getBoundingClientRect();
+                var progress = (e.clientX - rect.left) / dragBar.clientWidth;
+                isPaused = true;
+                setTranslate(-(progress * maxTranslate));
+                setTimeout(function () { isPaused = false; }, 1500);
+            });
+
+            window.addEventListener('resize', function () {
+                calcMax();
+                updateHandlePosition();
+            });
+
+            setTimeout(function () {
+                calcMax();
+                startAutoSlide();
+            }, 200);
+        })();
+    </script>
+
 
     <script>
         (function () {
@@ -3659,8 +3880,9 @@
         <div class="slots-toast-content">
             <span class="slots-toast-icon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </span>
             <span class="slots-toast-text">Limited to 5 guests per week for uncompromising personal care.</span>
