@@ -3938,6 +3938,144 @@
         })();
     </script>
 
+    <script>
+    (function() {
+      var sectionTimes = {};
+      var sectionStartTimes = {};
+      var observer;
+
+      /* Track every section with an id */
+      var sections = document.querySelectorAll(
+        'section[id]'
+      );
+
+      sections.forEach(function(section) {
+        sectionTimes[section.id] = 0;
+      });
+
+      observer = new IntersectionObserver(
+        function(entries) {
+          entries.forEach(function(entry) {
+            var id = entry.target.id;
+
+            if (entry.isIntersecting) {
+              /* Section just came into view
+                 — start timer */
+              sectionStartTimes[id] = Date.now();
+            } else {
+              /* Section just left view
+                 — stop timer and add
+                 elapsed time */
+              if (sectionStartTimes[id]) {
+                var elapsed = Date.now() -
+                  sectionStartTimes[id];
+                sectionTimes[id] += elapsed;
+                sectionStartTimes[id] = null;
+              }
+            }
+          });
+        },
+        { threshold: 0.3 }
+        /* Section counts as "viewed"
+           once 30% of it is visible */
+      );
+
+      sections.forEach(function(section) {
+        observer.observe(section);
+      });
+
+      var hasSent = false;
+
+      function sendData() {
+        if (hasSent) return;
+        hasSent = true;
+
+        /* Finalize any sections still
+           being actively viewed when
+           the visitor leaves */
+        Object.keys(sectionStartTimes).forEach(
+          function(id) {
+            if (sectionStartTimes[id]) {
+              var elapsed = Date.now() -
+                sectionStartTimes[id];
+              sectionTimes[id] += elapsed;
+            }
+          }
+        );
+
+        /* Convert milliseconds to seconds,
+           round to nearest whole number */
+        var dataToSend = {};
+        var hasAnyTime = false;
+
+        Object.keys(sectionTimes).forEach(
+          function(id) {
+            var seconds = Math.round(
+              sectionTimes[id] / 1000
+            );
+            dataToSend[id] = seconds;
+            if (seconds > 0) hasAnyTime = true;
+          }
+        );
+
+        /* Don't send empty/zero data */
+        if (!hasAnyTime) return;
+
+        var payload = JSON.stringify({
+          type: 'section_time_tracking',
+          page: window.location.pathname,
+          timestamp: new Date().toISOString(),
+          sectionTimes: dataToSend
+        });
+
+        /* Send to Google Sheets via
+           Apps Script */
+        fetch(
+          'https://script.google.com/macros/s/AKfycby_WSZe_RNKjvcx3MrFNdry-LBpkNO9CplRxSIR7bMBHk0TmzV22RwcgO2PSnwtvQFPHw/exec',
+          {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: payload
+          }
+        );
+      }
+
+      /* Trigger send when visitor closes
+         tab, navigates away, or switches
+         tabs for an extended period */
+      window.addEventListener(
+        'beforeunload', sendData
+      );
+
+      document.addEventListener(
+        'visibilitychange',
+        function() {
+          if (document.visibilityState ===
+            'hidden') {
+            sendData();
+          }
+        }
+      );
+
+      /* Fallback: also send every 30
+         seconds for long page visits,
+         in case beforeunload doesn't
+         fire reliably on mobile */
+      setInterval(function() {
+        if (!hasSent) {
+          hasSent = false;
+          /* allow periodic resend */
+          sendData();
+          hasSent = false;
+        }
+      }, 30000);
+
+    })();
+    </script>
+
 </body>
 
 </html>
