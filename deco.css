@@ -5562,6 +5562,24 @@ video.hero-video,
   font-weight: 500;
 }
 
+.wa-outlet-phone-large {
+  display: block !important;
+  font-family: var(--font-sans) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #25D366 !important;
+  letter-spacing: 0.5px !important;
+  margin-top: 8px !important;
+}
+
+.wa-outlet-info .wa-outlet-phone-large {
+  color: #25D366 !important;
+}
+
+.wa-outlets .wa-outlet-btn .wa-outlet-info .wa-outlet-phone-large {
+  color: #25D366 !important;
+}
+
 .wa-outlet-arrow {
   font-size: 18px;
   color: #ccc;
@@ -9939,13 +9957,12 @@ body {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 56px;
-  align-items: center;
+  align-items: start;
 }
 
 .malaysia-text {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .malaysia-text .section-label {
@@ -9953,16 +9970,14 @@ body {
 }
 
 .malaysia-text-centered {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .malaysia-image-wrap {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  margin-top: 120px;
+  width: 100%;
+  position: relative;
 }
 
 .malaysia-text .section-label {
@@ -10036,11 +10051,8 @@ body {
 }
 
 .malaysia-image-wrap {
-  width: 100%;
-  height: 0;
-  padding-bottom: 75%;
-  position: relative;
-  border-radius: 20px;
+  height: calc(100% - 120px);
+  min-height: 400px;
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(0,0,0,0.12);
 }
@@ -10053,6 +10065,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 20px;
 }
 
 .malaysia-img-placeholder {
@@ -10090,8 +10103,9 @@ body {
   }
 
   .malaysia-image-wrap {
-    padding-bottom: 65%;
-    height: auto;
+    margin-top: 100px;
+    height: calc(100% - 100px);
+    min-height: 320px;
   }
 }
 
@@ -10102,10 +10116,16 @@ body {
 
   .malaysia-inner {
     padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .malaysia-image-wrap {
-    padding-bottom: 65%;
+    position: relative;
+    margin-top: 0;
+    height: 0;
+    padding-bottom: 56.25%;
+    min-height: unset;
     order: -1;
   }
 
@@ -12354,5 +12374,75 @@ body {
 @media (max-width: 480px) {
   .award-frame {
     padding: 12px;
+  }
+}
+
+/* ── PHONE COUNTRY CODE SELECTOR ── */
+.phone-input-wrap {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phone-country-code {
+  flex: 0 0 auto;
+  width: 105px !important;
+  padding: 6px 8px !important;
+  height: 48px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+  border: 1px solid var(--gold-dark);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  color: white !important;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.phone-country-code:focus {
+  background: var(--gold-dark) !important;
+  border-color: var(--gold-dark) !important;
+  color: white !important;
+}
+
+.phone-country-code option {
+  background: #A8732A !important;
+  color: white !important;
+}
+
+select.phone-country-code {
+  background-color: var(--gold) !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Make the phone input border match the gold theme */
+.phone-input-wrap input[type="tel"] {
+  flex: 1;
+  border-radius: 0 10px 10px 0 !important;
+  border-left: none !important;
+  border-color: var(--gold-border) !important;
+}
+
+.phone-input-wrap input[type="tel"]:focus {
+  border-color: var(--gold) !important;
+}
+
+@media (max-width: 768px) {
+  .phone-country-code {
+    width: 95px !important;
+    padding: 6px 6px !important;
+    height: 48px !important;
+    font-size: 11px !important;
+    background-color: var(--gold) !important;
   }
 }
