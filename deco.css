@@ -5555,11 +5555,12 @@ video.hero-video,
 }
 
 .wa-outlet-name {
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 600;
-  color: #111;
-  flex: 1;
+  font-family: var(--font-sans) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+  display: block !important;
+  margin-bottom: 4px !important;
 }
 
 .wa-outlet-arrow {
@@ -5569,11 +5570,38 @@ video.hero-video,
   transition: all 0.2s ease;
 }
 
-.wa-outlet-address,
-.wa-outlet-hours,
-.wa-outlet-phone-large,
-.wa-outlet-info {
+.wa-outlet-address {
+  color: #555555 !important;
+  font-size: 13px !important;
+  display: block !important;
+  line-height: 1.5 !important;
+}
+
+.wa-outlet-hours {
   display: none;
+}
+
+.wa-outlet-phone-large {
+  display: block !important;
+  font-family: var(--font-sans) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #25D366 !important;
+  letter-spacing: 0.5px !important;
+  margin-top: 8px !important;
+  -webkit-text-fill-color: #25D366 !important;
+}
+
+.wa-outlet-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-outlet-btn {
+  background: white !important;
+  color: #111111 !important;
 }
 
 .wa-popup-note {
