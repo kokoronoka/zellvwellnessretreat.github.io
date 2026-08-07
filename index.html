@@ -2795,79 +2795,24 @@
 
     <!-- WhatsApp Floating Button + Outlet Selector -->
     <div class="wa-widget">
-
-        <div class="wa-popup" id="waPopup">
-            <div class="wa-popup-header">
-                <span class="wa-popup-title">Talk to a real consultant</span>
-                <button class="wa-popup-close" id="waClose">✕</button>
-            </div>
-
-            <div class="wa-outlets">
-
-                <a class="wa-outlet-btn" href="https://wa.me/60125288513" target="_blank" rel="noopener">
-                    <div class="wa-outlet-info">
-                        <span class="wa-outlet-name">ZÉLL-V Wellness Hub</span>
-                        <span class="wa-outlet-phone-large">012-5288513</span>
-                    </div>
-                    <span class="wa-outlet-arrow">→</span>
-                </a>
-
-            </div>
-
-            <p class="wa-popup-note">We'll respond within a few minutes 🌿</p>
-        </div>
-
-        <button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp">
-            <img src="assets/images/Android_App_Icon_2026.png" alt="WhatsApp" style="width:100%;
-                   height:100%;
-                   display:block;
-                   pointer-events:none;
-                   object-fit:cover;
-                   border-radius:50%;">
+        <a class="wa-fab"
+            id="waFab"
+            href="https://wa.me/60125288513?text=Hi%2C%20I%20am%20interested%20in%20the%20Z%C3%89LL-V%20Wellness%20Retreat.%20Could%20you%20share%20more%20details%3F"
+            target="_blank"
+            rel="noopener"
+            aria-label="Chat on WhatsApp">
+            <img
+                src="assets/images/Android_App_Icon_2026.png"
+                alt="WhatsApp"
+                style="width:100%;
+                       height:100%;
+                       display:block;
+                       pointer-events:none;
+                       object-fit:cover;
+                       border-radius:50%;">
             <span class="wa-pulse"></span>
-        </button>
-
+        </a>
     </div>
-
-    <script>
-        (function () {
-            var fab = document.getElementById('waFab');
-            var popup = document.getElementById('waPopup');
-            var close = document.getElementById('waClose');
-
-            if (!fab || !popup) return;
-
-            /* ONLY click — no touchend */
-            fab.addEventListener('click', function (e) {
-                e.stopPropagation();
-                popup.classList.toggle('open');
-            });
-
-            if (close) {
-                close.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    popup.classList.remove('open');
-                });
-            }
-
-            /* Close on outside click only */
-            document.addEventListener('click', function (e) {
-                if (!fab.contains(e.target) && !popup.contains(e.target)) {
-                    popup.classList.remove('open');
-                }
-            });
-
-            popup.addEventListener('click', function (e) {
-                e.stopPropagation();
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    popup.classList.remove('open');
-                }
-            });
-        })();
-    </script>
 
     <script>
         (function () {
